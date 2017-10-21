@@ -37,21 +37,13 @@ namespace Ufba.ShHome
 					0xff00ff,
 					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
-					"@GeneralizationToolboxItem;Ufba.ShHome.Dsl.dll", 
-					"Ufba.ShHome.GeneralizationToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"GeneralizationF1Keyword", 
-					"@GeneralizationToolboxBitmap;Ufba.ShHome.Dsl.dll", 
-					0xff00ff,
-					Index = 1)]
-	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
 					"@CommentToolboxItem;Ufba.ShHome.Dsl.dll", 
 					"Ufba.ShHome.CommentToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"CommentF1Keyword", 
 					"@CommentToolboxBitmap;Ufba.ShHome.Dsl.dll", 
 					0xff00ff,
-					Index = 2)]
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
 					"@CommentsReferenceTypesToolboxItem;Ufba.ShHome.Dsl.dll", 
 					"Ufba.ShHome.CommentsReferenceTypesToolboxItem", 
@@ -59,7 +51,7 @@ namespace Ufba.ShHome
 					"CommentsReferenceTypesF1Keyword", 
 					"@CommentsReferenceTypesToolboxBitmap;Ufba.ShHome.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
+					Index = 2)]
 	[VSShell::ProvideEditorFactory(typeof(ShHomeEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(ShHomeEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(ShHomeEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

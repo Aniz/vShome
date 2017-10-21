@@ -48,10 +48,6 @@ namespace Ufba.ShHome
 		/// </remarks>
 		public const string ToolboxFilterString = "ShHome.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify Generalization connector tool.
-		/// </summary>
-		public const string GeneralizationFilterString = "Generalization.1.0";
-		/// <summary>
 		/// Toolbox item filter string used to identify CommentsReferenceTypes connector tool.
 		/// </summary>
 		public const string CommentsReferenceTypesFilterString = "CommentsReferenceTypes.1.0";
@@ -102,7 +98,7 @@ namespace Ufba.ShHome
 		{
 			get
 			{
-				return 4;
+				return 3;
 			}
 		}
 		
@@ -167,29 +163,11 @@ namespace Ufba.ShHome
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Ufba.ShHome.GeneralizationToolboxItem":
-
-					// Add Generalization connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Ufba.ShHome.GeneralizationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						2, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("GeneralizationToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("GeneralizationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"GeneralizationF1Keyword", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("GeneralizationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(GeneralizationFilterString)
-						});
-					break;
 				case "Ufba.ShHome.CommentToolboxItem":
 					// Add Comment shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Ufba.ShHome.CommentToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						3, // Position relative to other items in the same toolbox tab.
+						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("CommentToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CommentToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -206,7 +184,7 @@ namespace Ufba.ShHome
 					// Add CommentsReferenceTypes connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Ufba.ShHome.CommentsReferenceTypesToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						4, // Position relative to other items in the same toolbox tab.
+						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("CommentsReferenceTypesToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CommentsReferenceTypesToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.

@@ -125,22 +125,6 @@
     <value>Class Diagrams</value>
     <comment>DisplayName for DslLibrary &apos;ShHome&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.NamedElement.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;NamedElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.NamedElement.DisplayName" xml:space="preserve">
-    <value>Named Element</value>
-    <comment>DisplayName for DomainClass &apos;NamedElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.NamedElement/Name.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.NamedElement/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElement&apos;</comment>
-  </data>
   <data name="Ufba.ShHome.ModelRoot.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;ModelRoot&apos;</comment>
@@ -189,22 +173,6 @@
     <value>Text</value>
     <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;Comment&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ClassOperation.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;ClassOperation&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassOperation.DisplayName" xml:space="preserve">
-    <value>Class Operation</value>
-    <comment>DisplayName for DomainClass &apos;ClassOperation&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassOperation/IsAbstract.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;IsAbstract&apos; on DomainClass &apos;ClassOperation&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassOperation/IsAbstract.DisplayName" xml:space="preserve">
-    <value>Is Abstract</value>
-    <comment>DisplayName for DomainProperty &apos;IsAbstract&apos; on DomainClass &apos;ClassOperation&apos;</comment>
-  </data>
   <data name="Ufba.ShHome.ModelType.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;ModelType&apos;</comment>
@@ -212,86 +180,6 @@
   <data name="Ufba.ShHome.ModelType.DisplayName" xml:space="preserve">
     <value>Model Type</value>
     <comment>DisplayName for DomainClass &apos;ModelType&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassModelElement.Description" xml:space="preserve">
-    <value>Element with a Description</value>
-    <comment>Description for DomainClass &apos;ClassModelElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassModelElement.DisplayName" xml:space="preserve">
-    <value>Class Model Element</value>
-    <comment>DisplayName for DomainClass &apos;ClassModelElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassModelElement/Description.Description" xml:space="preserve">
-    <value>This is a Description.</value>
-    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;ClassModelElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassModelElement/Description.DisplayName" xml:space="preserve">
-    <value>Description</value>
-    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;ClassModelElement&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association.Description" xml:space="preserve">
-    <value>Associations between Classes.</value>
-    <comment>Description for DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association.DisplayName" xml:space="preserve">
-    <value>Association</value>
-    <comment>DisplayName for DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/SourceMultiplicity.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;SourceMultiplicity&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/SourceMultiplicity.DisplayName" xml:space="preserve">
-    <value>Source Multiplicity</value>
-    <comment>DisplayName for DomainProperty &apos;SourceMultiplicity&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/SourceRoleName.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;SourceRoleName&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/SourceRoleName.DisplayName" xml:space="preserve">
-    <value>Source Role Name</value>
-    <comment>DisplayName for DomainProperty &apos;SourceRoleName&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/TargetMultiplicity.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;TargetMultiplicity&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/TargetMultiplicity.DisplayName" xml:space="preserve">
-    <value>Target Multiplicity</value>
-    <comment>DisplayName for DomainProperty &apos;TargetMultiplicity&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/TargetRoleName.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;TargetRoleName&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/TargetRoleName.DisplayName" xml:space="preserve">
-    <value>Target Role Name</value>
-    <comment>DisplayName for DomainProperty &apos;TargetRoleName&apos; on DomainClass &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Source.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;Source&apos; on DomainRelationship &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Source.DisplayName" xml:space="preserve">
-    <value>Source</value>
-    <comment>DisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Source.PropertyDisplayName" xml:space="preserve">
-    <value>Targets</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Target.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;Target&apos; on DomainRelationship &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Target.DisplayName" xml:space="preserve">
-    <value>Target</value>
-    <comment>DisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;Association&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Association/Target.PropertyDisplayName" xml:space="preserve">
-    <value>Sources</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;Association&apos;</comment>
   </data>
   <data name="Ufba.ShHome.ModelRootHasComments.Description" xml:space="preserve">
     <value></value>
@@ -324,46 +212,6 @@
   <data name="Ufba.ShHome.ModelRootHasComments/Comment.PropertyDisplayName" xml:space="preserve">
     <value>Model Root</value>
     <comment>PropertyDisplayName for DomainRole &apos;Comment&apos; on DomainRelationship &apos;ModelRootHasComments&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization.Description" xml:space="preserve">
-    <value>Inheritance between Classes.</value>
-    <comment>Description for DomainClass &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization.DisplayName" xml:space="preserve">
-    <value>Generalization</value>
-    <comment>DisplayName for DomainClass &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Discriminator.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;Discriminator&apos; on DomainClass &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Discriminator.DisplayName" xml:space="preserve">
-    <value>Discriminator</value>
-    <comment>DisplayName for DomainProperty &apos;Discriminator&apos; on DomainClass &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Superclass.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;Superclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Superclass.DisplayName" xml:space="preserve">
-    <value>Superclass</value>
-    <comment>DisplayName for DomainRole &apos;Superclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Superclass.PropertyDisplayName" xml:space="preserve">
-    <value>Subclasses</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Superclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Subclass.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;Subclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Subclass.DisplayName" xml:space="preserve">
-    <value>Subclass</value>
-    <comment>DisplayName for DomainRole &apos;Subclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.Generalization/Subclass.PropertyDisplayName" xml:space="preserve">
-    <value>Superclass</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Subclass&apos; on DomainRelationship &apos;Generalization&apos;</comment>
   </data>
   <data name="Ufba.ShHome.ModelRootHasTypes.Description" xml:space="preserve">
     <value></value>
@@ -593,77 +441,13 @@
     <value>BusinessRulesShapeNameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Ufba.ShHome.MultipleAssociationShape.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;MultipleAssociationShape&apos;</comment>
+  <data name="Ufba.ShHome.DeviceShape.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.DeviceShape</value>
+    <comment>Description for DomainClass &apos;DeviceShape&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.MultipleAssociationShape.DisplayName" xml:space="preserve">
-    <value>Multiple Association Shape</value>
-    <comment>DisplayName for DomainClass &apos;MultipleAssociationShape&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.AssociationConnector.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;AssociationConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.AssociationConnector.DisplayName" xml:space="preserve">
-    <value>Association Connector</value>
-    <comment>DisplayName for DomainClass &apos;AssociationConnector&apos;</comment>
-  </data>
-  <data name="AssociationConnectorTargetMultiplicityDefaultText" xml:space="preserve">
-    <value>TargetMultiplicity</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="AssociationConnectorSourceMultiplicityDefaultText" xml:space="preserve">
-    <value>SourceMultiplicity</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="AssociationConnectorTargetRoleNameDefaultText" xml:space="preserve">
-    <value>TargetRoleName</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="AssociationConnectorSourceRoleNameDefaultText" xml:space="preserve">
-    <value>SourceRoleName</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="Ufba.ShHome.MultipleAssociationRoleConnector.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;MultipleAssociationRoleConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.MultipleAssociationRoleConnector.DisplayName" xml:space="preserve">
-    <value>Multiple Association Role Connector</value>
-    <comment>DisplayName for DomainClass &apos;MultipleAssociationRoleConnector&apos;</comment>
-  </data>
-  <data name="MultipleAssociationRoleConnectorTargetMultiplicityDefaultText" xml:space="preserve">
-    <value>TargetMultiplicity</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MultipleAssociationRoleConnectorTargetRoleNameDefaultText" xml:space="preserve">
-    <value>TargetRoleName</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="Ufba.ShHome.AssociationClassConnector.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;AssociationClassConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.AssociationClassConnector.DisplayName" xml:space="preserve">
-    <value>Association Class Connector</value>
-    <comment>DisplayName for DomainClass &apos;AssociationClassConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.GeneralizationConnector.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;GeneralizationConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.GeneralizationConnector.DisplayName" xml:space="preserve">
-    <value>Generalization Connector</value>
-    <comment>DisplayName for DomainClass &apos;GeneralizationConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ImplementationConnector.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;ImplementationConnector&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ImplementationConnector.DisplayName" xml:space="preserve">
-    <value>Implementation Connector</value>
-    <comment>DisplayName for DomainClass &apos;ImplementationConnector&apos;</comment>
+  <data name="Ufba.ShHome.DeviceShape.DisplayName" xml:space="preserve">
+    <value>Device Shape</value>
+    <comment>DisplayName for DomainClass &apos;DeviceShape&apos;</comment>
   </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">
     <value></value>
@@ -672,6 +456,14 @@
   <data name="Ufba.ShHome.CommentConnector.DisplayName" xml:space="preserve">
     <value>Comment Connector</value>
     <comment>DisplayName for DomainClass &apos;CommentConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Connector1.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.Connector1</value>
+    <comment>Description for DomainClass &apos;Connector1&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Connector1.DisplayName" xml:space="preserve">
+    <value>Connector1</value>
+    <comment>DisplayName for DomainClass &apos;Connector1&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>Class Diagrams (*.vShome)|*.vShome</value>
@@ -699,14 +491,6 @@
   </data>
   <data name="ModelClassToolboxTooltip" xml:space="preserve">
     <value>Create a Class</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="GeneralizationToolboxItem" xml:space="preserve">
-    <value>Inheritance</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="GeneralizationToolboxTooltip" xml:space="preserve">
-    <value>Create a Generalization or Implementation link</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="CommentToolboxItem" xml:space="preserve">
@@ -850,16 +634,8 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MultipleAssociationShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\Relation.emf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>MultipleAssociationShape shape image</comment>
-  </data>
   <data name="ModelClassToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClassTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="GeneralizationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\resources\generalizationtool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="CommentToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

@@ -605,14 +605,15 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass MultipleAssociationShape
+	/// DomainClass DeviceShape
+	/// Description for Ufba.ShHome.DeviceShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.MultipleAssociationShape.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.MultipleAssociationShape.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.DeviceShape.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.DeviceShape.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("c7f059ab-f19c-40d9-91bb-3601fb3cc347")]
-	public partial class MultipleAssociationShape : DslDiagrams::ImageShape
+	[DslModeling::DomainObjectId("03242018-a17a-49de-8a9c-bccb9827b8f5")]
+	public partial class DeviceShape : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -677,9 +678,9 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MultipleAssociationShape.
+		/// Finds a decorator associated with DeviceShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMultipleAssociationShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindDeviceShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -687,6 +688,17 @@ namespace Ufba.ShHome
 		
 		#endregion
 		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
 		#endregion
 		#region Shape styles
 		/// <summary>
@@ -697,36 +709,47 @@ namespace Ufba.ShHome
 		{
 			base.InitializeResources(classStyleSet);
 			
-			// Outline pen settings for this shape.
-			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
-			outlinePen.Width = 0.01F;
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 128, 255, 255);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
 		}
 		
-		#endregion
 		/// <summary>
-		/// Provide the specific Image for this Shape class
+		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
-		protected override global::System.Drawing.Image Image
+		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				global::System.Resources.ResourceManager resourceManager = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MultipleAssociationShapeImage"));
+				return true;
 			}
 		}
+		
+		/// <summary>
+		/// Indicates the direction of the gradient.
+		/// </summary>
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		{
+			get
+			{
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+			}
+		}
+		#endregion
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MultipleAssociationShape domain class Id.
+		/// DeviceShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc7f059ab, 0xf19c, 0x40d9, 0x91, 0xbb, 0x36, 0x01, 0xfb, 0x3c, 0xc3, 0x47);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x03242018, 0xa17a, 0x49de, 0x8a, 0x9c, 0xbc, 0xcb, 0x98, 0x27, 0xb8, 0xf5);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MultipleAssociationShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public DeviceShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -736,7 +759,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MultipleAssociationShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public DeviceShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

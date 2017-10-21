@@ -12,125 +12,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass NamedElement
-	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.NamedElement.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.NamedElement.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
-	[DslModeling::DomainObjectId("1ba08539-40b9-4b77-80c6-7663de5733a8")]
-	public abstract partial class NamedElement : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// NamedElement domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1ba08539, 0x40b9, 0x4b77, 0x80, 0xc6, 0x76, 0x63, 0xde, 0x57, 0x33, 0xa8);
-		/// <summary>
-		/// Constructor.
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		protected NamedElement(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Name domain property code
-		
-		/// <summary>
-		/// Name domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x3ad458a6, 0x754f, 0x4f20, 0xad, 0xfc, 0xe6, 0x53, 0xce, 0x85, 0x7c, 0x93);
-		
-		/// <summary>
-		/// Storage for Name
-		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Name domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.NamedElement/Name.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.NamedElement/Name.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("")]
-		[DslModeling::ElementName]
-		[DslModeling::DomainObjectId("3ad458a6-754f-4f20-adfc-e653ce857c93")]
-		public global::System.String Name
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return namePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				NamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the NamedElement.Name domain property.
-		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<NamedElement, global::System.String>
-		{
-			private NamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the NamedElement.Name domain property value handler.
-			/// </summary>
-			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the NamedElement.Name domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return NameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(NamedElement element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.namePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(NamedElement element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.namePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-	}
-}
-namespace Ufba.ShHome
-{
-	/// <summary>
 	/// DomainClass ModelRoot
 	/// </summary>
 	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRoot.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
@@ -138,7 +19,7 @@ namespace Ufba.ShHome
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("e0be5be1-3d03-4c20-8d94-df0429281519")]
-	public partial class ModelRoot : NamedElement
+	public partial class ModelRoot : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -214,12 +95,12 @@ namespace Ufba.ShHome
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.ModelType.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Comment.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Comment.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.ModelType.DomainClassId)) 
 				{
 					return true;
 				}
@@ -248,20 +129,20 @@ namespace Ufba.ShHome
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Ufba.ShHome.ModelType sourceModelType1 = sourceElement as global::Ufba.ShHome.ModelType;
-			if (sourceModelType1 != null)
+			global::Ufba.ShHome.Comment sourceComment1 = sourceElement as global::Ufba.ShHome.Comment;
+			if (sourceComment1 != null)
 			{
-				// Create link for path ModelRootHasTypes.Types
-				this.Types.Add(sourceModelType1);
+				// Create link for path ModelRootHasComments.Comments
+				this.Comments.Add(sourceComment1);
 
 				return;
 			}
 				
-			global::Ufba.ShHome.Comment sourceComment2 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment2 != null)
+			global::Ufba.ShHome.ModelType sourceModelType2 = sourceElement as global::Ufba.ShHome.ModelType;
+			if (sourceModelType2 != null)
 			{
-				// Create link for path ModelRootHasComments.Comments
-				this.Comments.Add(sourceComment2);
+				// Create link for path ModelRootHasTypes.Types
+				this.Types.Add(sourceModelType2);
 
 				return;
 			}
@@ -288,29 +169,29 @@ namespace Ufba.ShHome
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Ufba.ShHome.ModelType sourceModelType1 = sourceElement as global::Ufba.ShHome.ModelType;
-			if (sourceModelType1 != null)
+			global::Ufba.ShHome.Comment sourceComment1 = sourceElement as global::Ufba.ShHome.Comment;
+			if (sourceComment1 != null)
 			{
-				// Delete link for path ModelRootHasTypes.Types
+				// Delete link for path ModelRootHasComments.Comments
 				
-				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasTypes.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceModelType1))
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasComments.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceComment1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Ufba.ShHome.ModelRootHasTypes.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasTypes.TypeDomainRoleId);
+					link.Delete(global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Ufba.ShHome.Comment sourceComment2 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment2 != null)
+			global::Ufba.ShHome.ModelType sourceModelType2 = sourceElement as global::Ufba.ShHome.ModelType;
+			if (sourceModelType2 != null)
 			{
-				// Delete link for path ModelRootHasComments.Comments
+				// Delete link for path ModelRootHasTypes.Types
 				
-				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasComments.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceComment2))
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasTypes.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceModelType2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId);
+					link.Delete(global::Ufba.ShHome.ModelRootHasTypes.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasTypes.TypeDomainRoleId);
 				}
 
 				return;
@@ -533,66 +414,6 @@ namespace Ufba.ShHome
 		}
 		
 		#endregion
-		#region Targets opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Targets.
-		/// </summary>
-		public virtual DslModeling::ReadOnlyLinkedElementCollection<ModelClass> Targets
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(global::Ufba.ShHome.Association.SourceDomainRoleId);
-			}
-		}
-		#endregion
-		#region Sources opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Sources.
-		/// </summary>
-		public virtual DslModeling::ReadOnlyLinkedElementCollection<ModelClass> Sources
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(global::Ufba.ShHome.Association.TargetDomainRoleId);
-			}
-		}
-		#endregion
-		#region Subclasses opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Subclasses.
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ModelClass> Subclasses
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelClass>, ModelClass>(global::Ufba.ShHome.Generalization.SuperclassDomainRoleId);
-			}
-		}
-		#endregion
-		#region Superclass opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Superclass.
-		/// </summary>
-		public virtual ModelClass Superclass
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.Generalization.SubclassDomainRoleId) as ModelClass;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.Generalization.SubclassDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace Ufba.ShHome
@@ -757,132 +578,6 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass ClassOperation
-	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.ClassOperation.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.ClassOperation.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("0f7cc8d0-4848-486f-aee1-dd565bfb206d")]
-	public partial class ClassOperation : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// ClassOperation domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0f7cc8d0, 0x4848, 0x486f, 0xae, 0xe1, 0xdd, 0x56, 0x5b, 0xfb, 0x20, 0x6d);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ClassOperation(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ClassOperation(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region IsAbstract domain property code
-		
-		/// <summary>
-		/// IsAbstract domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid IsAbstractDomainPropertyId = new global::System.Guid(0x4758d053, 0xfca8, 0x4f28, 0x8c, 0x59, 0x74, 0x6f, 0x8a, 0x74, 0x7f, 0x3d);
-		
-		/// <summary>
-		/// Storage for IsAbstract
-		/// </summary>
-		private global::System.Boolean isAbstractPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of IsAbstract domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ClassOperation/IsAbstract.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ClassOperation/IsAbstract.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("4758d053-fca8-4f28-8c59-746f8a747f3d")]
-		public global::System.Boolean IsAbstract
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return isAbstractPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				IsAbstractPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ClassOperation.IsAbstract domain property.
-		/// </summary>
-		internal sealed partial class IsAbstractPropertyHandler : DslModeling::DomainPropertyValueHandler<ClassOperation, global::System.Boolean>
-		{
-			private IsAbstractPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ClassOperation.IsAbstract domain property value handler.
-			/// </summary>
-			public static readonly IsAbstractPropertyHandler Instance = new IsAbstractPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ClassOperation.IsAbstract domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return IsAbstractDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Boolean GetValue(ClassOperation element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.isAbstractPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClassOperation element, global::System.Boolean newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.Boolean oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.isAbstractPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-	}
-}
-namespace Ufba.ShHome
-{
-	/// <summary>
 	/// DomainClass ModelType
 	/// </summary>
 	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
@@ -890,7 +585,7 @@ namespace Ufba.ShHome
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("2ef705e6-eacb-4b79-b5f0-214f52aa74fc")]
-	public abstract partial class ModelType : ClassModelElement
+	public abstract partial class ModelType : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1053,125 +748,6 @@ namespace Ufba.ShHome
 			// Fall through to base class if this class hasn't handled the unmerge.
 			base.MergeDisconnect(sourceElement);
 		}
-		#endregion
-	}
-}
-namespace Ufba.ShHome
-{
-	/// <summary>
-	/// DomainClass ClassModelElement
-	/// Element with a Description
-	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.ClassModelElement.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.ClassModelElement.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("c15e65ea-6081-4380-b1a0-1355ccaa2586")]
-	public abstract partial class ClassModelElement : NamedElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// ClassModelElement domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc15e65ea, 0x6081, 0x4380, 0xb1, 0xa0, 0x13, 0x55, 0xcc, 0xaa, 0x25, 0x86);
-		/// <summary>
-		/// Constructor.
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		protected ClassModelElement(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Description domain property code
-		
-		/// <summary>
-		/// Description domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid DescriptionDomainPropertyId = new global::System.Guid(0x9b0c55c2, 0x5c61, 0x4ee1, 0xae, 0x89, 0x7a, 0x1b, 0xf6, 0x9d, 0x21, 0xc3);
-		
-		/// <summary>
-		/// Storage for Description
-		/// </summary>
-		private global::System.String descriptionPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Description domain property.
-		/// This is a Description.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ClassModelElement/Description.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ClassModelElement/Description.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("")]
-		[DslModeling::DomainObjectId("9b0c55c2-5c61-4ee1-ae89-7a1bf69d21c3")]
-		public global::System.String Description
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return descriptionPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DescriptionPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ClassModelElement.Description domain property.
-		/// </summary>
-		internal sealed partial class DescriptionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClassModelElement, global::System.String>
-		{
-			private DescriptionPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ClassModelElement.Description domain property value handler.
-			/// </summary>
-			public static readonly DescriptionPropertyHandler Instance = new DescriptionPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ClassModelElement.Description domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return DescriptionDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClassModelElement element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.descriptionPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClassModelElement element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.descriptionPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
 		#endregion
 	}
 }
