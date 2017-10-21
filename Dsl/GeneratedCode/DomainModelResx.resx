@@ -213,6 +213,14 @@
     <value>Type Device</value>
     <comment>DisplayName for DomainProperty &apos;TypeDevice&apos; on DomainClass &apos;Device&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.Device/ReturnType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.Device.Return Type</value>
+    <comment>Description for DomainProperty &apos;ReturnType&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device/ReturnType.DisplayName" xml:space="preserve">
+    <value>Return Type</value>
+    <comment>DisplayName for DomainProperty &apos;ReturnType&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.ModelRootHasComments.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;ModelRootHasComments&apos;</comment>
@@ -681,6 +689,30 @@
     <value>Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery</value>
     <comment>Description for EnumerationLiteral &apos;AlarmAgainstRobbery&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.ReturnType/BOOL.DisplayName" xml:space="preserve">
+    <value>BOOL</value>
+    <comment>Display name for EnumerationLiteral &apos;BOOL&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ReturnType/BOOL.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ReturnType.BOOL</value>
+    <comment>Description for EnumerationLiteral &apos;BOOL&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ReturnType/RANGE.DisplayName" xml:space="preserve">
+    <value>RANGE</value>
+    <comment>Display name for EnumerationLiteral &apos;RANGE&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ReturnType/RANGE.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ReturnType.RANGE</value>
+    <comment>Description for EnumerationLiteral &apos;RANGE&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ReturnType/INFO.DisplayName" xml:space="preserve">
+    <value>INFO</value>
+    <comment>Display name for EnumerationLiteral &apos;INFO&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ReturnType/INFO.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ReturnType.INFO</value>
+    <comment>Description for EnumerationLiteral &apos;INFO&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.CommentBoxShape.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;CommentBoxShape&apos;</comment>
@@ -743,6 +775,10 @@
   </data>
   <data name="DShapeTypeDeviceDefaultText" xml:space="preserve">
     <value>TypeDevice</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="DShapeReturnTypeDefaultText" xml:space="preserve">
+    <value>ReturnType</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">

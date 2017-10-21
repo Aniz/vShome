@@ -105,6 +105,7 @@ namespace Ufba.ShHome
 				new DomainMemberInfo(typeof(Comment), "Text", Comment.TextDomainPropertyId, typeof(Comment.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(Device), "Name", Device.NameDomainPropertyId, typeof(Device.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Device), "TypeDevice", Device.TypeDeviceDomainPropertyId, typeof(Device.TypeDevicePropertyHandler)),
+				new DomainMemberInfo(typeof(Device), "ReturnType", Device.ReturnTypeDomainPropertyId, typeof(Device.ReturnTypePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -753,6 +754,35 @@ namespace Ufba.ShHome
 		/// </summary>
 		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AlarmAgainstRobbery.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		AlarmAgainstRobbery,
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainEnumeration: ReturnType
+	/// Description for Ufba.ShHome.ReturnType
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum ReturnType
+	{
+		/// <summary>
+		/// BOOL
+		/// Description for Ufba.ShHome.ReturnType.BOOL
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.ReturnType/BOOL.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		BOOL,
+		/// <summary>
+		/// RANGE
+		/// Description for Ufba.ShHome.ReturnType.RANGE
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.ReturnType/RANGE.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		RANGE,
+		/// <summary>
+		/// INFO
+		/// Description for Ufba.ShHome.ReturnType.INFO
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.ReturnType/INFO.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		INFO,
 	}
 }
 

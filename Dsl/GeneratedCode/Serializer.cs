@@ -3313,6 +3313,23 @@ namespace Ufba.ShHome
 					}
 				}
 			}
+			// ReturnType
+			if (!serializationContext.Result.Failed)
+			{
+				string attribReturnType = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "returnType");
+				if (attribReturnType != null)
+				{
+					ReturnType valueOfReturnType;
+					if (DslModeling::SerializationUtilities.TryGetValue<ReturnType>(serializationContext, attribReturnType, out valueOfReturnType))
+					{
+						instanceOfDevice.ReturnType = valueOfReturnType;
+					}
+					else
+					{	// Invalid property value, ignored.
+						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "returnType", typeof(ReturnType), attribReturnType);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -3757,6 +3774,16 @@ namespace Ufba.ShHome
 				if (!serializationContext.Result.Failed)
 				{
 					ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "typeDevice", serializedPropValue);
+				}
+			}
+			// ReturnType
+			if (!serializationContext.Result.Failed)
+			{
+				ReturnType propValue = instanceOfDevice.ReturnType;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<ReturnType>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "returnType", serializedPropValue);
 				}
 			}
 		}

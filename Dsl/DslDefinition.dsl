@@ -85,6 +85,11 @@
             <DomainEnumerationMoniker Name="TypeDevice" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="dea42edd-6702-4216-ae4b-e7e4bc271378" Description="Description for Ufba.ShHome.Device.Return Type" Name="ReturnType" DisplayName="Return Type">
+          <Type>
+            <DomainEnumerationMoniker Name="ReturnType" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -269,6 +274,13 @@
         <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery" Name="AlarmAgainstRobbery" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="ReturnType" Namespace="Ufba.ShHome" Description="Description for Ufba.ShHome.ReturnType">
+      <Literals>
+        <EnumerationLiteral Description="Description for Ufba.ShHome.ReturnType.BOOL" Name="BOOL" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.ReturnType.RANGE" Name="RANGE" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.ReturnType.INFO" Name="INFO" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <GeometryShape Id="f8a9826d-feac-4884-9a74-917b85bab175" Description="" Name="CommentBoxShape" DisplayName="Comment Box Shape" Namespace="Ufba.ShHome" FixedTooltipText="Comment Box Shape" FillColor="255, 255, 204" OutlineColor="204, 204, 102" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
@@ -301,6 +313,9 @@
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="TypeDevice" DisplayName="Type Device" DefaultText="TypeDevice" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="ReturnType" DisplayName="Return Type" DefaultText="ReturnType" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -387,6 +402,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="typeDevice">
             <DomainPropertyMoniker Name="Device/TypeDevice" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="returnType">
+            <DomainPropertyMoniker Name="Device/ReturnType" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -545,6 +563,14 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Device/TypeDevice" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="DShape/ReturnType" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Device/ReturnType" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

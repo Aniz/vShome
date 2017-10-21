@@ -299,6 +299,9 @@ namespace Ufba.ShHome
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.TypeDeviceDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeDevice").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.ReturnTypeDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ReturnType").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

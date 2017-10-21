@@ -1131,6 +1131,93 @@ namespace Ufba.ShHome
 		}
 		
 		#endregion
+		#region ReturnType domain property code
+		
+		/// <summary>
+		/// ReturnType domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ReturnTypeDomainPropertyId = new global::System.Guid(0xdea42edd, 0x6702, 0x4216, 0xae, 0x4b, 0xe7, 0xe4, 0xbc, 0x27, 0x13, 0x78);
+		
+		/// <summary>
+		/// Storage for ReturnType
+		/// </summary>
+		private ReturnType returnTypePropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of ReturnType domain property.
+		/// Description for Ufba.ShHome.Device.Return Type
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.Device/ReturnType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.Device/ReturnType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("dea42edd-6702-4216-ae4b-e7e4bc271378")]
+		public ReturnType ReturnType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return returnTypePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ReturnTypePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Device.ReturnType domain property.
+		/// </summary>
+		internal sealed partial class ReturnTypePropertyHandler : DslModeling::DomainPropertyValueHandler<Device, ReturnType>
+		{
+			private ReturnTypePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Device.ReturnType domain property value handler.
+			/// </summary>
+			public static readonly ReturnTypePropertyHandler Instance = new ReturnTypePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Device.ReturnType domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ReturnTypeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed ReturnType GetValue(Device element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.returnTypePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Device element, ReturnType newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				ReturnType oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.returnTypePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region ModelRoot opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ModelRoot.

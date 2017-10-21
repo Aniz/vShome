@@ -270,6 +270,8 @@
         <xsd:attribute name="name" type="xsd:string" />
         <!-- Property: TypeDevice -->
         <xsd:attribute name="typeDevice" type="TypeDevice" />
+        <!-- Property: ReturnType -->
+        <xsd:attribute name="returnType" type="ReturnType" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -611,6 +613,15 @@
       <xsd:enumeration value="AutomatedAirConditionerControl"/>
       <xsd:enumeration value="LockDoors"/>
       <xsd:enumeration value="AlarmAgainstRobbery"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ReturnType -->
+  <xsd:simpleType name="ReturnType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BOOL"/>
+      <xsd:enumeration value="RANGE"/>
+      <xsd:enumeration value="INFO"/>
     </xsd:restriction>
   </xsd:simpleType>
   
