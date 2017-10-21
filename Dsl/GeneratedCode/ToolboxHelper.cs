@@ -51,6 +51,14 @@ namespace Ufba.ShHome
 		/// Toolbox item filter string used to identify CommentsReferenceTypes connector tool.
 		/// </summary>
 		public const string CommentsReferenceTypesFilterString = "CommentsReferenceTypes.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify Actuator connector tool.
+		/// </summary>
+		public const string ActuatorFilterString = "Actuator.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify Sensor connector tool.
+		/// </summary>
+		public const string SensorFilterString = "Sensor.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -98,7 +106,7 @@ namespace Ufba.ShHome
 		{
 			get
 			{
-				return 3;
+				return 6;
 			}
 		}
 		
@@ -195,6 +203,58 @@ namespace Ufba.ShHome
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(CommentsReferenceTypesFilterString)
+						});
+					break;
+				case "Ufba.ShHome.DeviceToolboxItem":
+					// Add Device shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.DeviceToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("DeviceToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("DeviceToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Device", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("DeviceToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Ufba.ShHome.Device.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Ufba.ShHome.ActuatorToolboxItem":
+
+					// Add Actuator connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.ActuatorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						5, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ActuatorToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ActuatorToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Actuator", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ActuatorToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ActuatorFilterString)
+						});
+					break;
+				case "Ufba.ShHome.SensorToolboxItem":
+
+					// Add Sensor connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.SensorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						6, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("SensorToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SensorToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Sensor", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("SensorToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(SensorFilterString)
 						});
 					break;
 				default:

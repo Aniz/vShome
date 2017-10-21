@@ -71,12 +71,17 @@ namespace Ufba.ShHome
 				typeof(ModelClass),
 				typeof(Comment),
 				typeof(ModelType),
+				typeof(Device),
 				typeof(ModelRootHasComments),
 				typeof(ModelRootHasTypes),
 				typeof(CommentReferencesSubjects),
+				typeof(ModelHasDevices),
+				typeof(ModelTypeReferencesActuator),
+				typeof(ModelTypeReferencesSensor),
 				typeof(ShHomeDiagram),
 				typeof(CommentConnector),
-				typeof(Connector1),
+				typeof(ActuatorConnector),
+				typeof(SensorConnector),
 				typeof(CommentBoxShape),
 				typeof(DeviceShape),
 				typeof(ClassShape),
@@ -96,6 +101,7 @@ namespace Ufba.ShHome
 				new DomainMemberInfo(typeof(ModelClass), "Kind", ModelClass.KindDomainPropertyId, typeof(ModelClass.KindPropertyHandler)),
 				new DomainMemberInfo(typeof(ModelClass), "IsAbstract", ModelClass.IsAbstractDomainPropertyId, typeof(ModelClass.IsAbstractPropertyHandler)),
 				new DomainMemberInfo(typeof(Comment), "Text", Comment.TextDomainPropertyId, typeof(Comment.TextPropertyHandler)),
+				new DomainMemberInfo(typeof(Device), "Name", Device.NameDomainPropertyId, typeof(Device.NamePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -112,6 +118,12 @@ namespace Ufba.ShHome
 				new DomainRolePlayerInfo(typeof(ModelRootHasTypes), "Type", ModelRootHasTypes.TypeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(CommentReferencesSubjects), "Comment", CommentReferencesSubjects.CommentDomainRoleId),
 				new DomainRolePlayerInfo(typeof(CommentReferencesSubjects), "Subject", CommentReferencesSubjects.SubjectDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasDevices), "ModelRoot", ModelHasDevices.ModelRootDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasDevices), "Device", ModelHasDevices.DeviceDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesActuator), "ModelType", ModelTypeReferencesActuator.ModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesActuator), "Device", ModelTypeReferencesActuator.DeviceDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesSensor), "ModelType", ModelTypeReferencesSensor.ModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesSensor), "Device", ModelTypeReferencesSensor.DeviceDomainRoleId),
 			};
 		}
 		#endregion
@@ -133,16 +145,18 @@ namespace Ufba.ShHome
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(10);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
 				createElementMap.Add(typeof(ModelRoot), 0);
 				createElementMap.Add(typeof(ModelClass), 1);
 				createElementMap.Add(typeof(Comment), 2);
-				createElementMap.Add(typeof(ShHomeDiagram), 3);
-				createElementMap.Add(typeof(CommentConnector), 4);
-				createElementMap.Add(typeof(Connector1), 5);
-				createElementMap.Add(typeof(CommentBoxShape), 6);
-				createElementMap.Add(typeof(DeviceShape), 7);
-				createElementMap.Add(typeof(ClassShape), 8);
+				createElementMap.Add(typeof(Device), 3);
+				createElementMap.Add(typeof(ShHomeDiagram), 4);
+				createElementMap.Add(typeof(CommentConnector), 5);
+				createElementMap.Add(typeof(ActuatorConnector), 6);
+				createElementMap.Add(typeof(SensorConnector), 7);
+				createElementMap.Add(typeof(CommentBoxShape), 8);
+				createElementMap.Add(typeof(DeviceShape), 9);
+				createElementMap.Add(typeof(ClassShape), 10);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -159,12 +173,14 @@ namespace Ufba.ShHome
 				case 0: return new ModelRoot(partition, propertyAssignments);
 				case 1: return new ModelClass(partition, propertyAssignments);
 				case 2: return new Comment(partition, propertyAssignments);
-				case 3: return new ShHomeDiagram(partition, propertyAssignments);
-				case 4: return new CommentConnector(partition, propertyAssignments);
-				case 5: return new Connector1(partition, propertyAssignments);
-				case 6: return new CommentBoxShape(partition, propertyAssignments);
-				case 7: return new DeviceShape(partition, propertyAssignments);
-				case 8: return new ClassShape(partition, propertyAssignments);
+				case 3: return new Device(partition, propertyAssignments);
+				case 4: return new ShHomeDiagram(partition, propertyAssignments);
+				case 5: return new CommentConnector(partition, propertyAssignments);
+				case 6: return new ActuatorConnector(partition, propertyAssignments);
+				case 7: return new SensorConnector(partition, propertyAssignments);
+				case 8: return new CommentBoxShape(partition, propertyAssignments);
+				case 9: return new DeviceShape(partition, propertyAssignments);
+				case 10: return new ClassShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -187,10 +203,13 @@ namespace Ufba.ShHome
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
 				createElementLinkMap.Add(typeof(ModelRootHasComments), 0);
 				createElementLinkMap.Add(typeof(ModelRootHasTypes), 1);
 				createElementLinkMap.Add(typeof(CommentReferencesSubjects), 2);
+				createElementLinkMap.Add(typeof(ModelHasDevices), 3);
+				createElementLinkMap.Add(typeof(ModelTypeReferencesActuator), 4);
+				createElementLinkMap.Add(typeof(ModelTypeReferencesSensor), 5);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -208,6 +227,9 @@ namespace Ufba.ShHome
 				case 0: return new ModelRootHasComments(partition, roleAssignments, propertyAssignments);
 				case 1: return new ModelRootHasTypes(partition, roleAssignments, propertyAssignments);
 				case 2: return new CommentReferencesSubjects(partition, roleAssignments, propertyAssignments);
+				case 3: return new ModelHasDevices(partition, roleAssignments, propertyAssignments);
+				case 4: return new ModelTypeReferencesActuator(partition, roleAssignments, propertyAssignments);
+				case 5: return new ModelTypeReferencesSensor(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -378,6 +400,7 @@ namespace Ufba.ShHome
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId, true);
 			DomainRoles.Add(global::Ufba.ShHome.ModelRootHasTypes.TypeDomainRoleId, true);
+			DomainRoles.Add(global::Ufba.ShHome.ModelHasDevices.DeviceDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

@@ -698,3 +698,720 @@ namespace Ufba.ShHome
 		#endregion
 	}
 }
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelHasDevices
+	/// Description for Ufba.ShHome.ModelHasDevices
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelHasDevices.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelHasDevices.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("5586c5ea-8b4a-466c-9d53-32fad4940d9e")]
+	public partial class ModelHasDevices : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasDevices domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5586c5ea, 0x8b4a, 0x466c, 0x9d, 0x53, 0x32, 0xfa, 0xd4, 0x94, 0x0d, 0x9e);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasDevices link in the same Partition as the given ModelRoot
+		/// </summary>
+		/// <param name="source">ModelRoot to use as the source of the relationship.</param>
+		/// <param name="target">Device to use as the target of the relationship.</param>
+		public ModelHasDevices(ModelRoot source, Device target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasDevices.ModelRootDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasDevices.DeviceDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasDevices(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasDevices(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasDevices(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasDevices(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ModelRoot domain role code
+		
+		/// <summary>
+		/// ModelRoot domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelRootDomainRoleId = new global::System.Guid(0xdc394f86, 0x3538, 0x4acd, 0xa8, 0x64, 0xa7, 0x82, 0x37, 0x56, 0xf6, 0xb5);
+		
+		/// <summary>
+		/// DomainRole ModelRoot
+		/// Description for Ufba.ShHome.ModelHasDevices.ModelRoot
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelHasDevices/ModelRoot.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelHasDevices/ModelRoot.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Devices", PropertyDisplayNameKey="Ufba.ShHome.ModelHasDevices/ModelRoot.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("dc394f86-3538-4acd-a864-a7823756f6b5")]
+		public virtual ModelRoot ModelRoot
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelRoot)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelRootDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelRootDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ModelRoot of a Device
+		/// <summary>
+		/// Gets ModelRoot.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModelRoot GetModelRoot(Device element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DeviceDomainRoleId) as ModelRoot;
+		}
+		
+		/// <summary>
+		/// Sets ModelRoot.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModelRoot(Device element, ModelRoot newModelRoot)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, DeviceDomainRoleId, newModelRoot);
+		}
+		#endregion
+		#region Device domain role code
+		
+		/// <summary>
+		/// Device domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DeviceDomainRoleId = new global::System.Guid(0x10ad6d90, 0x0120, 0x4e7d, 0x99, 0xdb, 0x77, 0x17, 0xcb, 0xe9, 0x7e, 0xf9);
+		
+		/// <summary>
+		/// DomainRole Device
+		/// Description for Ufba.ShHome.ModelHasDevices.Device
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelHasDevices/Device.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelHasDevices/Device.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelRoot", PropertyDisplayNameKey="Ufba.ShHome.ModelHasDevices/Device.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("10ad6d90-0120-4e7d-99db-7717cbe97ef9")]
+		public virtual Device Device
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Device)DslModeling::DomainRoleInfo.GetRolePlayer(this, DeviceDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DeviceDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Devices of a ModelRoot
+		/// <summary>
+		/// Gets a list of Devices.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Device> GetDevices(ModelRoot element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Device>, Device>(element, ModelRootDomainRoleId);
+		}
+		#endregion
+		#region ModelRoot link accessor
+		/// <summary>
+		/// Get the list of ModelHasDevices links to a ModelRoot.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelHasDevices> GetLinksToDevices ( global::Ufba.ShHome.ModelRoot modelRootInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelHasDevices>(modelRootInstance, global::Ufba.ShHome.ModelHasDevices.ModelRootDomainRoleId);
+		}
+		#endregion
+		#region Device link accessor
+		/// <summary>
+		/// Get the ModelHasDevices link to a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelHasDevices GetLinkToModelRoot (global::Ufba.ShHome.Device deviceInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelHasDevices> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelHasDevices>(deviceInstance, global::Ufba.ShHome.ModelHasDevices.DeviceDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Device not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasDevices instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasDevices links between a given ModelRoot and a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelHasDevices> GetLinks( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelHasDevices> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelHasDevices>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelHasDevices> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelHasDevices>(source, global::Ufba.ShHome.ModelHasDevices.ModelRootDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelHasDevices link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasDevices link between a given ModelRootand a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelHasDevices GetLink( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelHasDevices> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelHasDevices>(source, global::Ufba.ShHome.ModelHasDevices.ModelRootDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelHasDevices link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelTypeReferencesActuator
+	/// Description for Ufba.ShHome.ModelTypeReferencesActuator
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesActuator.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesActuator.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("432baed8-f41b-478e-9a6d-a9ab3b739c6d")]
+	public partial class ModelTypeReferencesActuator : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelTypeReferencesActuator domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x432baed8, 0xf41b, 0x478e, 0x9a, 0x6d, 0xa9, 0xab, 0x3b, 0x73, 0x9c, 0x6d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelTypeReferencesActuator link in the same Partition as the given ModelType
+		/// </summary>
+		/// <param name="source">ModelType to use as the source of the relationship.</param>
+		/// <param name="target">Device to use as the target of the relationship.</param>
+		public ModelTypeReferencesActuator(ModelType source, Device target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTypeReferencesActuator.ModelTypeDomainRoleId, source), new DslModeling::RoleAssignment(ModelTypeReferencesActuator.DeviceDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesActuator(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesActuator(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesActuator(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesActuator(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ModelType domain role code
+		
+		/// <summary>
+		/// ModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelTypeDomainRoleId = new global::System.Guid(0x2121fa4e, 0x9284, 0x4b69, 0xb6, 0xae, 0x69, 0x2e, 0x67, 0x77, 0xa4, 0x5e);
+		
+		/// <summary>
+		/// DomainRole ModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesActuator.ModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesActuator/ModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesActuator/ModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Actuator", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesActuator/ModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("2121fa4e-9284-4b69-b6ae-692e6777a45e")]
+		public virtual ModelType ModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access FeatureHasActuator of a Device
+		/// <summary>
+		/// Gets a list of FeatureHasActuator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ModelType> GetFeatureHasActuator(Device element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, DeviceDomainRoleId);
+		}
+		#endregion
+		#region Device domain role code
+		
+		/// <summary>
+		/// Device domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DeviceDomainRoleId = new global::System.Guid(0x19a27655, 0xd83b, 0x40e6, 0xbe, 0x00, 0xaf, 0x56, 0x74, 0x76, 0x36, 0xd6);
+		
+		/// <summary>
+		/// DomainRole Device
+		/// Description for Ufba.ShHome.ModelTypeReferencesActuator.Device
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesActuator/Device.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesActuator/Device.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "FeatureHasActuator", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesActuator/Device.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("19a27655-d83b-40e6-be00-af56747636d6")]
+		public virtual Device Device
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Device)DslModeling::DomainRoleInfo.GetRolePlayer(this, DeviceDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DeviceDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Actuator of a ModelType
+		/// <summary>
+		/// Gets Actuator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Device GetActuator(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ModelTypeDomainRoleId) as Device;
+		}
+		
+		/// <summary>
+		/// Sets Actuator.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetActuator(ModelType element, Device newDevice)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ModelTypeDomainRoleId, newDevice);
+		}
+		#endregion
+		#region ModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesActuator link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesActuator GetLinkToActuator (global::Ufba.ShHome.ModelType modelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesActuator> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesActuator>(modelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesActuator.ModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Device link accessor
+		/// <summary>
+		/// Get the list of ModelTypeReferencesActuator links to a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesActuator> GetLinksToFeatureHasActuator ( global::Ufba.ShHome.Device deviceInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesActuator>(deviceInstance, global::Ufba.ShHome.ModelTypeReferencesActuator.DeviceDomainRoleId);
+		}
+		#endregion
+		#region ModelTypeReferencesActuator instance accessors
+		
+		/// <summary>
+		/// Get any ModelTypeReferencesActuator links between a given ModelType and a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesActuator> GetLinks( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesActuator> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesActuator>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesActuator> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesActuator>(source, global::Ufba.ShHome.ModelTypeReferencesActuator.ModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesActuator link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelTypeReferencesActuator link between a given ModelTypeand a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesActuator GetLink( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesActuator> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesActuator>(source, global::Ufba.ShHome.ModelTypeReferencesActuator.ModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesActuator link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelTypeReferencesSensor
+	/// Description for Ufba.ShHome.ModelTypeReferencesSensor
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesSensor.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesSensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("c8a4242b-72a8-48ed-aff4-0e859002bda0")]
+	public partial class ModelTypeReferencesSensor : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelTypeReferencesSensor domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc8a4242b, 0x72a8, 0x48ed, 0xaf, 0xf4, 0x0e, 0x85, 0x90, 0x02, 0xbd, 0xa0);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelTypeReferencesSensor link in the same Partition as the given ModelType
+		/// </summary>
+		/// <param name="source">ModelType to use as the source of the relationship.</param>
+		/// <param name="target">Device to use as the target of the relationship.</param>
+		public ModelTypeReferencesSensor(ModelType source, Device target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTypeReferencesSensor.ModelTypeDomainRoleId, source), new DslModeling::RoleAssignment(ModelTypeReferencesSensor.DeviceDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesSensor(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesSensor(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesSensor(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesSensor(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ModelType domain role code
+		
+		/// <summary>
+		/// ModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelTypeDomainRoleId = new global::System.Guid(0x44ce0027, 0x5065, 0x42ee, 0x9e, 0x06, 0x56, 0x1a, 0x5a, 0xdb, 0x61, 0xac);
+		
+		/// <summary>
+		/// DomainRole ModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesSensor.ModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesSensor/ModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesSensor/ModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Sensor", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesSensor/ModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("44ce0027-5065-42ee-9e06-561a5adb61ac")]
+		public virtual ModelType ModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access FeatureHasSensor of a Device
+		/// <summary>
+		/// Gets a list of FeatureHasSensor.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ModelType> GetFeatureHasSensor(Device element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, DeviceDomainRoleId);
+		}
+		#endregion
+		#region Device domain role code
+		
+		/// <summary>
+		/// Device domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DeviceDomainRoleId = new global::System.Guid(0x21c8fb67, 0xaa3c, 0x4fa1, 0x80, 0x9e, 0xc2, 0x06, 0x0c, 0xaa, 0x26, 0x16);
+		
+		/// <summary>
+		/// DomainRole Device
+		/// Description for Ufba.ShHome.ModelTypeReferencesSensor.Device
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesSensor/Device.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesSensor/Device.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "FeatureHasSensor", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesSensor/Device.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("21c8fb67-aa3c-4fa1-809e-c2060caa2616")]
+		public virtual Device Device
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Device)DslModeling::DomainRoleInfo.GetRolePlayer(this, DeviceDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DeviceDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Sensor of a ModelType
+		/// <summary>
+		/// Gets Sensor.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Device GetSensor(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ModelTypeDomainRoleId) as Device;
+		}
+		
+		/// <summary>
+		/// Sets Sensor.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetSensor(ModelType element, Device newDevice)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ModelTypeDomainRoleId, newDevice);
+		}
+		#endregion
+		#region ModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesSensor link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesSensor GetLinkToSensor (global::Ufba.ShHome.ModelType modelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesSensor> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesSensor>(modelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesSensor.ModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Device link accessor
+		/// <summary>
+		/// Get the list of ModelTypeReferencesSensor links to a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesSensor> GetLinksToFeatureHasSensor ( global::Ufba.ShHome.Device deviceInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesSensor>(deviceInstance, global::Ufba.ShHome.ModelTypeReferencesSensor.DeviceDomainRoleId);
+		}
+		#endregion
+		#region ModelTypeReferencesSensor instance accessors
+		
+		/// <summary>
+		/// Get any ModelTypeReferencesSensor links between a given ModelType and a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesSensor> GetLinks( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesSensor> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesSensor>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesSensor> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesSensor>(source, global::Ufba.ShHome.ModelTypeReferencesSensor.ModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesSensor link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelTypeReferencesSensor link between a given ModelTypeand a Device.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesSensor GetLink( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.Device target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesSensor> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesSensor>(source, global::Ufba.ShHome.ModelTypeReferencesSensor.ModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesSensor link in links )
+			{
+				if ( target.Equals(link.Device) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

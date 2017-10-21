@@ -612,7 +612,7 @@ namespace Ufba.ShHome
 	[DslDesign::DescriptionResource("Ufba.ShHome.DeviceShape.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("03242018-a17a-49de-8a9c-bccb9827b8f5")]
+	[DslModeling::DomainObjectId("fbc21c43-dc5b-43c6-99e4-7b6c63a64506")]
 	public partial class DeviceShape : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -686,6 +686,24 @@ namespace Ufba.ShHome
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
 		#endregion
 		#region Shape size
 		
@@ -701,21 +719,6 @@ namespace Ufba.ShHome
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 128, 255, 255);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -738,12 +741,65 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Name");
+			field1.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("DeviceShapeNameDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Name");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
 		#region Constructors, domain class Id
 	
 		/// <summary>
 		/// DeviceShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x03242018, 0xa17a, 0x49de, 0x8a, 0x9c, 0xbc, 0xcb, 0x98, 0x27, 0xb8, 0xf5);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfbc21c43, 0xdc5b, 0x43c6, 0x99, 0xe4, 0x7b, 0x6c, 0x63, 0xa6, 0x45, 0x06);
 		/// <summary>
 		/// Constructor
 		/// </summary>

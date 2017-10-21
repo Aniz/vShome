@@ -75,6 +75,21 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
+		#region Devices opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Devices.
+		/// Description for Ufba.ShHome.ModelHasDevices.ModelRoot
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Device> Devices
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Device>, Device>(global::Ufba.ShHome.ModelHasDevices.ModelRootDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -101,6 +116,11 @@ namespace Ufba.ShHome
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.ModelType.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Device.DomainClassId)) 
 				{
 					return true;
 				}
@@ -143,6 +163,15 @@ namespace Ufba.ShHome
 			{
 				// Create link for path ModelRootHasTypes.Types
 				this.Types.Add(sourceModelType2);
+
+				return;
+			}
+				
+			global::Ufba.ShHome.Device sourceDevice3 = sourceElement as global::Ufba.ShHome.Device;
+			if (sourceDevice3 != null)
+			{
+				// Create link for path ModelHasDevices.Devices
+				this.Devices.Add(sourceDevice3);
 
 				return;
 			}
@@ -192,6 +221,20 @@ namespace Ufba.ShHome
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::Ufba.ShHome.ModelRootHasTypes.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasTypes.TypeDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Ufba.ShHome.Device sourceDevice3 = sourceElement as global::Ufba.ShHome.Device;
+			if (sourceDevice3 != null)
+			{
+				// Delete link for path ModelHasDevices.Devices
+				
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelHasDevices.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceDevice3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Ufba.ShHome.ModelHasDevices.ModelRootDomainRoleId, global::Ufba.ShHome.ModelHasDevices.DeviceDomainRoleId);
 				}
 
 				return;
@@ -635,6 +678,44 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
+		#region Actuator opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Actuator.
+		/// Description for Ufba.ShHome.ModelTypeReferencesActuator.ModelType
+		/// </summary>
+		public virtual Device Actuator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesActuator.ModelTypeDomainRoleId) as Device;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesActuator.ModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Sensor opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Sensor.
+		/// Description for Ufba.ShHome.ModelTypeReferencesSensor.ModelType
+		/// </summary>
+		public virtual Device Sensor
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesSensor.ModelTypeDomainRoleId) as Device;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesSensor.ModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -747,6 +828,183 @@ namespace Ufba.ShHome
 			}
 			// Fall through to base class if this class hasn't handled the unmerge.
 			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainClass Device
+	/// Description for Ufba.ShHome.Device
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.Device.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.Device.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("08b1fe94-efc9-4944-8c54-037a147c9331")]
+	public partial class Device : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Device domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x08b1fe94, 0xefc9, 0x4944, 0x8c, 0x54, 0x03, 0x7a, 0x14, 0x7c, 0x93, 0x31);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Device(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Device(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xe36a8795, 0x537d, 0x4446, 0x86, 0xcd, 0x68, 0x48, 0x17, 0xd5, 0x58, 0x83);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Ufba.ShHome.Device.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.Device/Name.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.Device/Name.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e36a8795-537d-4446-86cd-684817d55883")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Device.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Device, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Device.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Device.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Device element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Device element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ModelRoot opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ModelRoot.
+		/// Description for Ufba.ShHome.ModelHasDevices.Device
+		/// </summary>
+		public virtual ModelRoot ModelRoot
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelHasDevices.DeviceDomainRoleId) as ModelRoot;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelHasDevices.DeviceDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region FeatureHasActuator opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of FeatureHasActuator.
+		/// Description for Ufba.ShHome.ModelTypeReferencesActuator.Device
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ModelType> FeatureHasActuator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.ModelTypeReferencesActuator.DeviceDomainRoleId);
+			}
+		}
+		#endregion
+		#region FeatureHasSensor opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of FeatureHasSensor.
+		/// Description for Ufba.ShHome.ModelTypeReferencesSensor.Device
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ModelType> FeatureHasSensor
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.ModelTypeReferencesSensor.DeviceDomainRoleId);
+			}
 		}
 		#endregion
 	}

@@ -19,6 +19,14 @@
             <DomainPath>ModelRootHasTypes.Types</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Device" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ModelHasDevices.Devices</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="381ea111-fcf2-4b57-b08f-87e37122b4db" Description="" Name="ModelClass" DisplayName="Model Class" Namespace="Ufba.ShHome">
@@ -59,6 +67,15 @@
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="08b1fe94-efc9-4944-8c54-037a147c9331" Description="Description for Ufba.ShHome.Device" Name="Device" DisplayName="Device" Namespace="Ufba.ShHome">
+      <Properties>
+        <DomainProperty Id="e36a8795-537d-4446-86cd-684817d55883" Description="Description for Ufba.ShHome.Device.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -106,6 +123,54 @@
         <DomainRole Id="4f55a23a-7939-48b3-92a5-d13f26fb77fc" Description="" Name="Subject" DisplayName="Subject" PropertyName="Comments" PropertyDisplayName="Comments">
           <RolePlayer>
             <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="5586c5ea-8b4a-466c-9d53-32fad4940d9e" Description="Description for Ufba.ShHome.ModelHasDevices" Name="ModelHasDevices" DisplayName="Model Has Devices" Namespace="Ufba.ShHome" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="dc394f86-3538-4acd-a864-a7823756f6b5" Description="Description for Ufba.ShHome.ModelHasDevices.ModelRoot" Name="ModelRoot" DisplayName="Model Root" PropertyName="Devices" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Devices">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelRoot" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="10ad6d90-0120-4e7d-99db-7717cbe97ef9" Description="Description for Ufba.ShHome.ModelHasDevices.Device" Name="Device" DisplayName="Device" PropertyName="ModelRoot" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model Root">
+          <RolePlayer>
+            <DomainClassMoniker Name="Device" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="432baed8-f41b-478e-9a6d-a9ab3b739c6d" Description="Description for Ufba.ShHome.ModelTypeReferencesActuator" Name="ModelTypeReferencesActuator" DisplayName="Model Type References Actuator" Namespace="Ufba.ShHome">
+      <Source>
+        <DomainRole Id="2121fa4e-9284-4b69-b6ae-692e6777a45e" Description="Description for Ufba.ShHome.ModelTypeReferencesActuator.ModelType" Name="ModelType" DisplayName="Model Type" PropertyName="Actuator" Multiplicity="One" PropertyDisplayName="Actuator">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="19a27655-d83b-40e6-be00-af56747636d6" Description="Description for Ufba.ShHome.ModelTypeReferencesActuator.Device" Name="Device" DisplayName="Device" PropertyName="FeatureHasActuator" Multiplicity="OneMany" PropertyDisplayName="Feature Has Actuator">
+          <RolePlayer>
+            <DomainClassMoniker Name="Device" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="c8a4242b-72a8-48ed-aff4-0e859002bda0" Description="Description for Ufba.ShHome.ModelTypeReferencesSensor" Name="ModelTypeReferencesSensor" DisplayName="Model Type References Sensor" Namespace="Ufba.ShHome">
+      <Source>
+        <DomainRole Id="44ce0027-5065-42ee-9e06-561a5adb61ac" Description="Description for Ufba.ShHome.ModelTypeReferencesSensor.ModelType" Name="ModelType" DisplayName="Model Type" PropertyName="Sensor" Multiplicity="ZeroOne" PropertyDisplayName="Sensor">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="21c8fb67-aa3c-4fa1-809e-c2060caa2616" Description="Description for Ufba.ShHome.ModelTypeReferencesSensor.Device" Name="Device" DisplayName="Device" PropertyName="FeatureHasSensor" Multiplicity="OneMany" PropertyDisplayName="Feature Has Sensor">
+          <RolePlayer>
+            <DomainClassMoniker Name="Device" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -180,11 +245,16 @@
         <TextDecorator Name="Comment" DisplayName="Comment" DefaultText="BusinessRulesShapeNameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="03242018-a17a-49de-8a9c-bccb9827b8f5" Description="Description for Ufba.ShHome.DeviceShape" Name="DeviceShape" DisplayName="Device Shape" Namespace="Ufba.ShHome" FixedTooltipText="Device Shape" FillColor="128, 255, 255" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="fbc21c43-dc5b-43c6-99e4-7b6c63a64506" Description="Description for Ufba.ShHome.DeviceShape" Name="DeviceShape" DisplayName="Device Shape" Namespace="Ufba.ShHome" FixedTooltipText="Device Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="6c2cbcc9-1c05-49ce-b1e9-b0fe3b2a7803" Description="" Name="CommentConnector" DisplayName="Comment Connector" Namespace="Ufba.ShHome" FixedTooltipText="Comment Connector" Color="113, 111, 110" DashStyle="Dot" Thickness="0.01" RoutingStyle="Straight" />
-    <Connector Id="30ead999-a9d0-40a3-aee3-2170008b132a" Description="Description for Ufba.ShHome.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="Ufba.ShHome" FixedTooltipText="Connector1" />
+    <Connector Id="6450202c-4c1c-41df-9326-c65c3cb41719" Description="Description for Ufba.ShHome.ActuatorConnector" Name="ActuatorConnector" DisplayName="Actuator Connector" Namespace="Ufba.ShHome" FixedTooltipText="Actuator Connector" />
+    <Connector Id="242600fd-4f55-4c97-927c-94b4628f7f14" Description="Description for Ufba.ShHome.SensorConnector" Name="SensorConnector" DisplayName="Sensor Connector" Namespace="Ufba.ShHome" FixedTooltipText="Sensor Connector" />
   </Connectors>
   <XmlSerializationBehavior Name="ShHomeSerializationBehavior" Namespace="Ufba.ShHome">
     <ClassData>
@@ -205,6 +275,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData RoleElementName="types">
             <DomainRelationshipMoniker Name="ModelRootHasTypes" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="devices">
+            <DomainRelationshipMoniker Name="ModelHasDevices" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -232,6 +305,14 @@
       </XmlClassData>
       <XmlClassData TypeName="ModelType" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeMoniker" ElementName="modelType" MonikerTypeName="ModelTypeMoniker">
         <DomainClassMoniker Name="ModelType" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="actuator">
+            <DomainRelationshipMoniker Name="ModelTypeReferencesActuator" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="sensor">
+            <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
+          </XmlRelationshipData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClassShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="classShapeMoniker" ElementName="classShape" MonikerTypeName="ClassShapeMoniker">
         <CompartmentShapeMoniker Name="ClassShape" />
@@ -245,11 +326,31 @@
       <XmlClassData TypeName="ShHomeDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="shHomeDiagramMoniker" ElementName="shHomeDiagram" MonikerTypeName="ShHomeDiagramMoniker">
         <DiagramMoniker Name="ShHomeDiagram" />
       </XmlClassData>
-      <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="connector1Moniker" ElementName="connector1" MonikerTypeName="Connector1Moniker">
-        <ConnectorMoniker Name="Connector1" />
+      <XmlClassData TypeName="Device" MonikerAttributeName="" SerializeId="true" MonikerElementName="deviceMoniker" ElementName="device" MonikerTypeName="DeviceMoniker">
+        <DomainClassMoniker Name="Device" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="Device/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasDevices" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasDevicesMoniker" ElementName="modelHasDevices" MonikerTypeName="ModelHasDevicesMoniker">
+        <DomainRelationshipMoniker Name="ModelHasDevices" />
       </XmlClassData>
       <XmlClassData TypeName="DeviceShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="deviceShapeMoniker" ElementName="deviceShape" MonikerTypeName="DeviceShapeMoniker">
         <GeometryShapeMoniker Name="DeviceShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ActuatorConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="actuatorConnectorMoniker" ElementName="actuatorConnector" MonikerTypeName="ActuatorConnectorMoniker">
+        <ConnectorMoniker Name="ActuatorConnector" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelTypeReferencesActuator" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesActuatorMoniker" ElementName="modelTypeReferencesActuator" MonikerTypeName="ModelTypeReferencesActuatorMoniker">
+        <DomainRelationshipMoniker Name="ModelTypeReferencesActuator" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelTypeReferencesSensor" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesSensorMoniker" ElementName="modelTypeReferencesSensor" MonikerTypeName="ModelTypeReferencesSensorMoniker">
+        <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
+      </XmlClassData>
+      <XmlClassData TypeName="SensorConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="sensorConnectorMoniker" ElementName="sensorConnector" MonikerTypeName="SensorConnectorMoniker">
+        <ConnectorMoniker Name="SensorConnector" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -269,6 +370,44 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="ModelClass" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ModelTypeReferencesActuatorBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ModelTypeReferencesActuator" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Device" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ModelTypeReferencesSensorBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Device" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -310,11 +449,34 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="CommentBoxShape" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Device" />
+        <ParentElementPath>
+          <DomainPath>ModelHasDevices.ModelRoot/!ModelRoot</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="DeviceShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Device/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="DeviceShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="CommentConnector" />
         <DomainRelationshipMoniker Name="CommentReferencesSubjects" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ActuatorConnector" />
+        <DomainRelationshipMoniker Name="ModelTypeReferencesActuator" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="SensorConnector" />
+        <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -334,6 +496,15 @@
       </ElementTool>
       <ConnectionTool Name="CommentsReferenceTypes" ToolboxIcon="resources\commentlinktool.bmp" Caption="Comment Link" Tooltip="Link a comment to an element" HelpKeyword="CommentsReferenceTypesF1Keyword">
         <ConnectionBuilderMoniker Name="ShHome/CommentReferencesSubjectsBuilder" />
+      </ConnectionTool>
+      <ElementTool Name="Device" ToolboxIcon="C:\Users\ana.ufba\Documents\Visual Studio 2015\Projects\Language4\Dsl\Resources\ElementToolBitmap.bmp" Caption="Device" Tooltip="Device" HelpKeyword="Device">
+        <DomainClassMoniker Name="Device" />
+      </ElementTool>
+      <ConnectionTool Name="Actuator" ToolboxIcon="C:\Users\ana.ufba\Documents\Visual Studio 2015\Projects\Language4\Dsl\Resources\FlowTool.bmp" Caption="Actuator" Tooltip="Actuator" HelpKeyword="Actuator">
+        <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesActuatorBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Sensor" ToolboxIcon="C:\Users\ana.ufba\Documents\Visual Studio 2015\Projects\Language4\Dsl\Resources\ObjectFlowTool.bmp" Caption="Sensor" Tooltip="Sensor" HelpKeyword="Sensor">
+        <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesSensorBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

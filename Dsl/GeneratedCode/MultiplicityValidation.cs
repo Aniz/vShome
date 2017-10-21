@@ -10,5 +10,61 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
+namespace Ufba.ShHome
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public abstract partial class ModelType
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateModelTypeMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Actuator == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ModelType", "", "Actuator"),
+						"DSL0001", this);
+			}
+		} // ValidateModelTypeMultiplicity
+	} // class ModelType
+} // Ufba.ShHome
+
+namespace Ufba.ShHome
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Device
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateDeviceMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.FeatureHasActuator.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Device", "", "FeatureHasActuator"),
+						"DSL0001", this);
+			}
+			if (this.FeatureHasSensor.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Device", "", "FeatureHasSensor"),
+						"DSL0001", this);
+			}
+		} // ValidateDeviceMultiplicity
+	} // class Device
+} // Ufba.ShHome
+
 	
  

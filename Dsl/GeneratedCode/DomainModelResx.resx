@@ -181,6 +181,22 @@
     <value>Model Type</value>
     <comment>DisplayName for DomainClass &apos;ModelType&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.Device.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.Device</value>
+    <comment>Description for DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device.DisplayName" xml:space="preserve">
+    <value>Device</value>
+    <comment>DisplayName for DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device/Name.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.Device.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.ModelRootHasComments.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;ModelRootHasComments&apos;</comment>
@@ -272,6 +288,102 @@
   <data name="Ufba.ShHome.CommentReferencesSubjects/Subject.PropertyDisplayName" xml:space="preserve">
     <value>Comments</value>
     <comment>PropertyDisplayName for DomainRole &apos;Subject&apos; on DomainRelationship &apos;CommentReferencesSubjects&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelHasDevices</value>
+    <comment>Description for DomainClass &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices.DisplayName" xml:space="preserve">
+    <value>Model Has Devices</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/ModelRoot.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelHasDevices.ModelRoot</value>
+    <comment>Description for DomainRole &apos;ModelRoot&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/ModelRoot.DisplayName" xml:space="preserve">
+    <value>Model Root</value>
+    <comment>DisplayName for DomainRole &apos;ModelRoot&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/ModelRoot.PropertyDisplayName" xml:space="preserve">
+    <value>Devices</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ModelRoot&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/Device.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelHasDevices.Device</value>
+    <comment>Description for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/Device.DisplayName" xml:space="preserve">
+    <value>Device</value>
+    <comment>DisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelHasDevices/Device.PropertyDisplayName" xml:space="preserve">
+    <value>Model Root</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelHasDevices&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesActuator</value>
+    <comment>Description for DomainClass &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator.DisplayName" xml:space="preserve">
+    <value>Model Type References Actuator</value>
+    <comment>DisplayName for DomainClass &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/ModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesActuator.ModelType</value>
+    <comment>Description for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/ModelType.DisplayName" xml:space="preserve">
+    <value>Model Type</value>
+    <comment>DisplayName for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/ModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Actuator</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/Device.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesActuator.Device</value>
+    <comment>Description for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/Device.DisplayName" xml:space="preserve">
+    <value>Device</value>
+    <comment>DisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesActuator/Device.PropertyDisplayName" xml:space="preserve">
+    <value>Feature Has Actuator</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesActuator&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesSensor</value>
+    <comment>Description for DomainClass &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor.DisplayName" xml:space="preserve">
+    <value>Model Type References Sensor</value>
+    <comment>DisplayName for DomainClass &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/ModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesSensor.ModelType</value>
+    <comment>Description for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/ModelType.DisplayName" xml:space="preserve">
+    <value>Model Type</value>
+    <comment>DisplayName for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/ModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Sensor</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ModelType&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/Device.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesSensor.Device</value>
+    <comment>Description for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/Device.DisplayName" xml:space="preserve">
+    <value>Device</value>
+    <comment>DisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesSensor/Device.PropertyDisplayName" xml:space="preserve">
+    <value>Feature Has Sensor</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
   </data>
   <data name="Ufba.ShHome.AccessModifier/Public.DisplayName" xml:space="preserve">
     <value>Public</value>
@@ -449,6 +561,10 @@
     <value>Device Shape</value>
     <comment>DisplayName for DomainClass &apos;DeviceShape&apos;</comment>
   </data>
+  <data name="DeviceShapeNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;CommentConnector&apos;</comment>
@@ -457,13 +573,21 @@
     <value>Comment Connector</value>
     <comment>DisplayName for DomainClass &apos;CommentConnector&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.Connector1.Description" xml:space="preserve">
-    <value>Description for Ufba.ShHome.Connector1</value>
-    <comment>Description for DomainClass &apos;Connector1&apos;</comment>
+  <data name="Ufba.ShHome.ActuatorConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ActuatorConnector</value>
+    <comment>Description for DomainClass &apos;ActuatorConnector&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.Connector1.DisplayName" xml:space="preserve">
-    <value>Connector1</value>
-    <comment>DisplayName for DomainClass &apos;Connector1&apos;</comment>
+  <data name="Ufba.ShHome.ActuatorConnector.DisplayName" xml:space="preserve">
+    <value>Actuator Connector</value>
+    <comment>DisplayName for DomainClass &apos;ActuatorConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.SensorConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.SensorConnector</value>
+    <comment>Description for DomainClass &apos;SensorConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.SensorConnector.DisplayName" xml:space="preserve">
+    <value>Sensor Connector</value>
+    <comment>DisplayName for DomainClass &apos;SensorConnector&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>Class Diagrams (*.vShome)|*.vShome</value>
@@ -507,6 +631,30 @@
   </data>
   <data name="CommentsReferenceTypesToolboxTooltip" xml:space="preserve">
     <value>Link a comment to an element</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="DeviceToolboxItem" xml:space="preserve">
+    <value>Device</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="DeviceToolboxTooltip" xml:space="preserve">
+    <value>Device</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ActuatorToolboxItem" xml:space="preserve">
+    <value>Actuator</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ActuatorToolboxTooltip" xml:space="preserve">
+    <value>Actuator</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="SensorToolboxItem" xml:space="preserve">
+    <value>Sensor</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SensorToolboxTooltip" xml:space="preserve">
+    <value>Sensor</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -644,6 +792,18 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="CommentsReferenceTypesToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\commentlinktool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="DeviceToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\Language4\Dsl\Resources\ElementToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ActuatorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\Language4\Dsl\Resources\FlowTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="SensorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\Language4\Dsl\Resources\ObjectFlowTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

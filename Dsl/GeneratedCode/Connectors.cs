@@ -162,15 +162,15 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass Connector1
-	/// Description for Ufba.ShHome.Connector1
+	/// DomainClass ActuatorConnector
+	/// Description for Ufba.ShHome.ActuatorConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.Connector1.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.Connector1.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ActuatorConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ActuatorConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("30ead999-a9d0-40a3-aee3-2170008b132a")]
-	public partial class Connector1 : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("6450202c-4c1c-41df-9326-c65c3cb41719")]
+	public partial class ActuatorConnector : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -235,9 +235,9 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with Connector1.
+		/// Finds a decorator associated with ActuatorConnector.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConnector1Decorator(string decoratorName)
+		public static DslDiagrams::Decorator FindActuatorConnectorDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -251,15 +251,15 @@ namespace Ufba.ShHome
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Connector1 domain class Id.
+		/// ActuatorConnector domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x30ead999, 0xa9d0, 0x40a3, 0xae, 0xe3, 0x21, 0x70, 0x00, 0x8b, 0x13, 0x2a);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6450202c, 0x4c1c, 0x41df, 0x93, 0x26, 0xc6, 0x5c, 0x3c, 0xb4, 0x17, 0x19);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Connector1(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ActuatorConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -269,7 +269,124 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Connector1(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ActuatorConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainClass SensorConnector
+	/// Description for Ufba.ShHome.SensorConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.SensorConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.SensorConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("242600fd-4f55-4c97-927c-94b4628f7f14")]
+	public partial class SensorConnector : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with SensorConnector.
+		/// </summary>
+		public static DslDiagrams::Decorator FindSensorConnectorDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// SensorConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x242600fd, 0x4f55, 0x4c97, 0x92, 0x7c, 0x94, 0xb4, 0x62, 0x8f, 0x7f, 0x14);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public SensorConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public SensorConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
