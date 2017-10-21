@@ -146,7 +146,7 @@ namespace Ufba.ShHome
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class CommentReferencesSubjectsBuilder
+	public static partial class SensorReferencesSubjectsBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -158,7 +158,7 @@ namespace Ufba.ShHome
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::Ufba.ShHome.Comment)
+			else if (candidate is global::Ufba.ShHome.Sensor)
 			{ 
 				return true;
 			}
@@ -214,13 +214,13 @@ namespace Ufba.ShHome
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::Ufba.ShHome.Comment)
+				if (candidateSource is global::Ufba.ShHome.Sensor)
 				{
 					if (candidateTarget is global::Ufba.ShHome.ModelClass)
 					{
-						global::Ufba.ShHome.Comment sourceComment = (global::Ufba.ShHome.Comment)candidateSource;
+						global::Ufba.ShHome.Sensor sourceSensor = (global::Ufba.ShHome.Sensor)candidateSource;
 						global::Ufba.ShHome.ModelClass targetModelClass = (global::Ufba.ShHome.ModelClass)candidateTarget;
-						if(targetModelClass == null || sourceComment == null || global::Ufba.ShHome.CommentReferencesSubjects.GetLinks(sourceComment, targetModelClass).Count > 0) return false;
+						if(targetModelClass == null || sourceSensor == null || global::Ufba.ShHome.SensorReferencesSubjects.GetLinks(sourceSensor, targetModelClass).Count > 0) return false;
 						return true;
 					}
 				}
@@ -252,13 +252,13 @@ namespace Ufba.ShHome
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::Ufba.ShHome.Comment)
+				if (source is global::Ufba.ShHome.Sensor)
 				{
 					if (target is global::Ufba.ShHome.ModelClass)
 					{
-						global::Ufba.ShHome.Comment sourceAccepted = (global::Ufba.ShHome.Comment)source;
+						global::Ufba.ShHome.Sensor sourceAccepted = (global::Ufba.ShHome.Sensor)source;
 						global::Ufba.ShHome.ModelClass targetAccepted = (global::Ufba.ShHome.ModelClass)target;
-						DslModeling::ElementLink result = new global::Ufba.ShHome.CommentReferencesSubjects(sourceAccepted, targetAccepted);
+						DslModeling::ElementLink result = new global::Ufba.ShHome.SensorReferencesSubjects(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -515,7 +515,7 @@ namespace Ufba.ShHome
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder CommentReferencesSubjectsBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder SensorReferencesSubjectsBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -541,11 +541,11 @@ namespace Ufba.ShHome
 				{				
 					if(targetShapeElement == null)
 					{
-						return CommentReferencesSubjectsBuilder.CanAcceptSource(sourceElement);
+						return SensorReferencesSubjectsBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return CommentReferencesSubjectsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return SensorReferencesSubjectsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -570,7 +570,7 @@ namespace Ufba.ShHome
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder CommentReferencesSubjectsBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder SensorReferencesSubjectsBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -584,7 +584,7 @@ namespace Ufba.ShHome
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				CommentReferencesSubjectsBuilder.Connect(sourceElement, targetElement);
+				SensorReferencesSubjectsBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		

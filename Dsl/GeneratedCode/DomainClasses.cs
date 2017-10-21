@@ -166,17 +166,17 @@ namespace Ufba.ShHome
 		{
 		}
 		#endregion
-		#region Comments opposite domain role accessor
+		#region Sensors opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Comments.
+		/// Gets a list of Sensors.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Comment> Comments
+		public virtual DslModeling::LinkedElementCollection<Sensor> Sensors
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Comment>, Comment>(global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Sensor>, Sensor>(global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId);
 			}
 		}
 		#endregion
@@ -219,7 +219,7 @@ namespace Ufba.ShHome
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Comment.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Sensor.DomainClassId)) 
 				{
 					return true;
 				}
@@ -257,11 +257,11 @@ namespace Ufba.ShHome
 				return;
 			}
 				
-			global::Ufba.ShHome.Comment sourceComment2 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment2 != null)
+			global::Ufba.ShHome.Sensor sourceSensor2 = sourceElement as global::Ufba.ShHome.Sensor;
+			if (sourceSensor2 != null)
 			{
-				// Create link for path ModelRootHasComments.Comments
-				this.Comments.Add(sourceComment2);
+				// Create link for path ModelRootHasSensors.Sensors
+				this.Sensors.Add(sourceSensor2);
 
 				return;
 			}
@@ -302,15 +302,15 @@ namespace Ufba.ShHome
 				return;
 			}
 				
-			global::Ufba.ShHome.Comment sourceComment2 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment2 != null)
+			global::Ufba.ShHome.Sensor sourceSensor2 = sourceElement as global::Ufba.ShHome.Sensor;
+			if (sourceSensor2 != null)
 			{
-				// Delete link for path ModelRootHasComments.Comments
+				// Delete link for path ModelRootHasSensors.Sensors
 				
-				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasComments.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceComment2))
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasSensors.GetLinks((global::Ufba.ShHome.ModelRoot)this, sourceSensor2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId);
+					link.Delete(global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId);
 				}
 
 				return;
@@ -533,34 +533,6 @@ namespace Ufba.ShHome
 		}
 		
 		#endregion
-		#region Targets opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Targets.
-		/// </summary>
-		public virtual DslModeling::ReadOnlyLinkedElementCollection<ModelClass> Targets
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(global::Ufba.ShHome.Association.SourceDomainRoleId);
-			}
-		}
-		#endregion
-		#region Sources opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Sources.
-		/// </summary>
-		public virtual DslModeling::ReadOnlyLinkedElementCollection<ModelClass> Sources
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(global::Ufba.ShHome.Association.TargetDomainRoleId);
-			}
-		}
-		#endregion
 		#region Subclasses opposite domain role accessor
 		
 		/// <summary>
@@ -598,19 +570,19 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass Comment
+	/// DomainClass Sensor
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.Comment.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.Comment.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.Sensor.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.Sensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4284669d-6579-48a6-8f26-01a7b4be76d1")]
-	public partial class Comment : DslModeling::ModelElement
+	public partial class Sensor : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Comment domain class Id.
+		/// Sensor domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x4284669d, 0x6579, 0x48a6, 0x8f, 0x26, 0x01, 0xa7, 0xb4, 0xbe, 0x76, 0xd1);
 		/// <summary>
@@ -618,7 +590,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Comment(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Sensor(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -628,7 +600,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Comment(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Sensor(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -648,8 +620,8 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// Gets or sets the value of Text domain property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Comment/Text.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Comment/Text.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.Sensor/Text.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.Sensor/Text.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::DomainObjectId("49a3f2b3-3522-4eab-b6ab-346016b43f99")]
 		public global::System.String Text
@@ -666,19 +638,19 @@ namespace Ufba.ShHome
 			}
 		}
 		/// <summary>
-		/// Value handler for the Comment.Text domain property.
+		/// Value handler for the Sensor.Text domain property.
 		/// </summary>
-		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<Comment, global::System.String>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<Sensor, global::System.String>
 		{
 			private TextPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Comment.Text domain property value handler.
+			/// Gets the singleton instance of the Sensor.Text domain property value handler.
 			/// </summary>
 			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Comment.Text domain property.
+			/// Gets the Id of the Sensor.Text domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -694,7 +666,7 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Comment element)
+			public override sealed global::System.String GetValue(Sensor element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.textPropertyStorage;
@@ -705,7 +677,7 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Comment element, global::System.String newValue)
+			public override sealed void SetValue(Sensor element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -729,12 +701,12 @@ namespace Ufba.ShHome
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId) as ModelRoot;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId) as ModelRoot;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -748,7 +720,7 @@ namespace Ufba.ShHome
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.CommentReferencesSubjects.CommentDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.SensorReferencesSubjects.SensorDomainRoleId);
 			}
 		}
 		#endregion
@@ -926,17 +898,17 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
-		#region Comments opposite domain role accessor
+		#region Sensors opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Comments.
+		/// Gets a list of Sensors.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Comment> Comments
+		public virtual DslModeling::LinkedElementCollection<Sensor> Sensors
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Comment>, Comment>(global::Ufba.ShHome.CommentReferencesSubjects.SubjectDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Sensor>, Sensor>(global::Ufba.ShHome.SensorReferencesSubjects.SubjectDomainRoleId);
 			}
 		}
 		#endregion
@@ -960,7 +932,7 @@ namespace Ufba.ShHome
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Comment.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Ufba.ShHome.Sensor.DomainClassId)) 
 				{
 					return true;
 				}
@@ -989,17 +961,17 @@ namespace Ufba.ShHome
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Ufba.ShHome.Comment sourceComment1 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment1 != null)
+			global::Ufba.ShHome.Sensor sourceSensor1 = sourceElement as global::Ufba.ShHome.Sensor;
+			if (sourceSensor1 != null)
 			{
-				// Create link for path CommentReferencesSubjects.Comments
-				this.Comments.Add(sourceComment1);
+				// Create link for path SensorReferencesSubjects.Sensors
+				this.Sensors.Add(sourceSensor1);
 
-				// Create link for path ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasComments.Comments
+				// Create link for path ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasSensors.Sensors
 						// Segments 0 and 1
-						global::Ufba.ShHome.ModelRoot commentHost1 = this.ModelRoot;
-						if ( commentHost1 == null ) throw new global::System.InvalidOperationException("Null encountered while traversing path 'ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasComments.Comments'.");
-				commentHost1.Comments.Add(sourceComment1);
+						global::Ufba.ShHome.ModelRoot sensorHost1 = this.ModelRoot;
+						if ( sensorHost1 == null ) throw new global::System.InvalidOperationException("Null encountered while traversing path 'ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasSensors.Sensors'.");
+				sensorHost1.Sensors.Add(sourceSensor1);
 
 				return;
 			}
@@ -1026,26 +998,26 @@ namespace Ufba.ShHome
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Ufba.ShHome.Comment sourceComment1 = sourceElement as global::Ufba.ShHome.Comment;
-			if (sourceComment1 != null)
+			global::Ufba.ShHome.Sensor sourceSensor1 = sourceElement as global::Ufba.ShHome.Sensor;
+			if (sourceSensor1 != null)
 			{
-				// Delete link for path CommentReferencesSubjects.Comments
+				// Delete link for path SensorReferencesSubjects.Sensors
 				
-				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.CommentReferencesSubjects.GetLinks(sourceComment1, (global::Ufba.ShHome.ModelType)this))
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.SensorReferencesSubjects.GetLinks(sourceSensor1, (global::Ufba.ShHome.ModelType)this))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Ufba.ShHome.CommentReferencesSubjects.SubjectDomainRoleId, global::Ufba.ShHome.CommentReferencesSubjects.CommentDomainRoleId);
+					link.Delete(global::Ufba.ShHome.SensorReferencesSubjects.SubjectDomainRoleId, global::Ufba.ShHome.SensorReferencesSubjects.SensorDomainRoleId);
 				}
 
-				// Delete link for path ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasComments.Comments
+				// Delete link for path ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasSensors.Sensors
 					// Segments 0 and 1
-					global::Ufba.ShHome.ModelRoot commentHost1 = this.ModelRoot;
-					if ( commentHost1 == null ) throw new global::System.InvalidOperationException("Null encountered while traversing path 'ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasComments.Comments'.");
+					global::Ufba.ShHome.ModelRoot sensorHost1 = this.ModelRoot;
+					if ( sensorHost1 == null ) throw new global::System.InvalidOperationException("Null encountered while traversing path 'ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasSensors.Sensors'.");
 				
-				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasComments.GetLinks((global::Ufba.ShHome.ModelRoot)commentHost1, sourceComment1))
+				foreach (DslModeling::ElementLink link in global::Ufba.ShHome.ModelRootHasSensors.GetLinks((global::Ufba.ShHome.ModelRoot)sensorHost1, sourceSensor1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId);
+					link.Delete(global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId, global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId);
 				}
 
 				return;

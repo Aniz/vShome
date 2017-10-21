@@ -17,10 +17,10 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Comment" />
+            <DomainClassMoniker Name="Sensor" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ModelRootHasComments.Comments</DomainPath>
+            <DomainPath>ModelRootHasSensors.Sensors</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -50,7 +50,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="4284669d-6579-48a6-8f26-01a7b4be76d1" Description="" Name="Comment" DisplayName="Comment" Namespace="Ufba.ShHome">
+    <DomainClass Id="4284669d-6579-48a6-8f26-01a7b4be76d1" Description="" Name="Sensor" DisplayName="Sensor" Namespace="Ufba.ShHome">
       <Properties>
         <DomainProperty Id="49a3f2b3-3522-4eab-b6ab-346016b43f99" Description="" Name="Text" DisplayName="Text" DefaultValue="">
           <Type>
@@ -75,11 +75,11 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Comment" />
+            <DomainClassMoniker Name="Sensor" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>CommentReferencesSubjects.Comments</DomainPath>
-            <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasComments.Comments</DomainPath>
+            <DomainPath>SensorReferencesSubjects.Sensors</DomainPath>
+            <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot/ModelRootHasSensors.Sensors</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -99,60 +99,18 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="f7eaef8a-5c51-4098-9514-17d1dce88874" Description="Associations between Classes." Name="Association" DisplayName="Association" InheritanceModifier="Abstract" Namespace="Ufba.ShHome" AllowsDuplicates="true">
-      <Notes>This is the abstract base relationship of the several kinds of association between Classes.
-      It defines the Properties that are attached to each association.</Notes>
-      <Properties>
-        <DomainProperty Id="fd71ac0d-0df2-4b35-811d-18097595b0ab" Description="" Name="SourceMultiplicity" DisplayName="Source Multiplicity" DefaultValue="ZeroMany">
-          <Type>
-            <DomainEnumerationMoniker Name="Multiplicity" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="44399264-fd48-4f6e-aa3d-1de7a81adc86" Description="" Name="SourceRoleName" DisplayName="Source Role Name" DefaultValue="">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="a8bbf30b-9559-4037-ba1b-a102f42c370c" Description="" Name="TargetMultiplicity" DisplayName="Target Multiplicity" DefaultValue="ZeroMany">
-          <Type>
-            <DomainEnumerationMoniker Name="Multiplicity" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="0da12e2d-b75e-460f-9044-110b55150885" Description="" Name="TargetRoleName" DisplayName="Target Role Name" DefaultValue="">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
+    <DomainRelationship Id="a21cfac0-57d7-423f-9331-e02f406905b8" Description="" Name="ModelRootHasSensors" DisplayName="Model Root Has Sensors" Namespace="Ufba.ShHome" IsEmbedding="true">
       <Source>
-        <DomainRole Id="0626a3e0-768b-4875-9e61-eb9c63e4b810" Description="" Name="Source" DisplayName="Source" PropertyName="Targets" PropertyDisplayName="Targets">
-          <Notes>The Targets property on a ModelClass will include all the elements targeted by every kind of Association.</Notes>
-          <RolePlayer>
-            <DomainClassMoniker Name="ModelClass" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="c15ca6ac-09f7-4b83-9cdc-c4191cc47009" Description="" Name="Target" DisplayName="Target" PropertyName="Sources" PropertyDisplayName="Sources">
-          <Notes>The Sources property on a ModelClass will include all the elements sourced by every kind of Association.</Notes>
-          <RolePlayer>
-            <DomainClassMoniker Name="ModelClass" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="a21cfac0-57d7-423f-9331-e02f406905b8" Description="" Name="ModelRootHasComments" DisplayName="Model Root Has Comments" Namespace="Ufba.ShHome" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="9d2645e3-945b-48eb-a8b5-e5a88f1ca2cb" Description="" Name="ModelRoot" DisplayName="Model Root" PropertyName="Comments" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Comments">
+        <DomainRole Id="9d2645e3-945b-48eb-a8b5-e5a88f1ca2cb" Description="" Name="ModelRoot" DisplayName="Model Root" PropertyName="Sensors" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Sensors">
           <RolePlayer>
             <DomainClassMoniker Name="ModelRoot" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="590a8a57-c219-405d-9d0a-abf8a1b9a323" Description="" Name="Comment" DisplayName="Comment" PropertyName="ModelRoot" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model Root">
+        <DomainRole Id="590a8a57-c219-405d-9d0a-abf8a1b9a323" Description="" Name="Sensor" DisplayName="Sensor" PropertyName="ModelRoot" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model Root">
           <RolePlayer>
-            <DomainClassMoniker Name="Comment" />
+            <DomainClassMoniker Name="Sensor" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -196,16 +154,16 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="0744a2a1-261a-40e2-ad1d-d590a9f01abc" Description="" Name="CommentReferencesSubjects" DisplayName="Comment References Subjects" Namespace="Ufba.ShHome">
+    <DomainRelationship Id="0744a2a1-261a-40e2-ad1d-d590a9f01abc" Description="" Name="SensorReferencesSubjects" DisplayName="Sensor References Subjects" Namespace="Ufba.ShHome">
       <Source>
-        <DomainRole Id="5f102ffd-9d32-4f2b-b1e8-cc6fc2555bc4" Description="" Name="Comment" DisplayName="Comment" PropertyName="Subjects" PropertyDisplayName="Subjects">
+        <DomainRole Id="5f102ffd-9d32-4f2b-b1e8-cc6fc2555bc4" Description="" Name="Sensor" DisplayName="Sensor" PropertyName="Subjects" PropertyDisplayName="Subjects">
           <RolePlayer>
-            <DomainClassMoniker Name="Comment" />
+            <DomainClassMoniker Name="Sensor" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="4f55a23a-7939-48b3-92a5-d13f26fb77fc" Description="" Name="Subject" DisplayName="Subject" PropertyName="Comments" PropertyDisplayName="Comments">
+        <DomainRole Id="4f55a23a-7939-48b3-92a5-d13f26fb77fc" Description="" Name="Subject" DisplayName="Subject" PropertyName="Sensors" PropertyDisplayName="Sensors">
           <RolePlayer>
             <DomainClassMoniker Name="ModelType" />
           </RolePlayer>
@@ -282,34 +240,9 @@
         <TextDecorator Name="Comment" DisplayName="Comment" DefaultText="BusinessRulesShapeNameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <ImageShape Id="c7f059ab-f19c-40d9-91bb-3601fb3cc347" Description="" Name="MultipleAssociationShape" DisplayName="Multiple Association Shape" Namespace="Ufba.ShHome" FixedTooltipText="Multiple Association Shape" InitialHeight="1" OutlineThickness="0.01" Image="Resources\Relation.emf" />
   </Shapes>
   <Connectors>
-    <Connector Id="9003480d-707f-44b5-843a-27d9ef9f7d00" Description="" Name="AssociationConnector" DisplayName="Association Connector" InheritanceModifier="Abstract" Namespace="Ufba.ShHome" FixedTooltipText="Association Connector" Color="113, 111, 110" Thickness="0.01">
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="TargetMultiplicity" DisplayName="Target Multiplicity" DefaultText="TargetMultiplicity" />
-      </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="SourceBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="SourceMultiplicity" DisplayName="Source Multiplicity" DefaultText="SourceMultiplicity" />
-      </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="TargetRoleName" DisplayName="Target Role Name" DefaultText="TargetRoleName" />
-      </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="SourceRoleName" DisplayName="Source Role Name" DefaultText="SourceRoleName" />
-      </ConnectorHasDecorators>
-    </Connector>
-    <Connector Id="931eac67-e6e0-427b-b430-26f76b44d84c" Description="" Name="MultipleAssociationRoleConnector" DisplayName="Multiple Association Role Connector" Namespace="Ufba.ShHome" FixedTooltipText="Multiple Association Role Connector" Color="113, 111, 110" Thickness="0.01">
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="TargetMultiplicity" DisplayName="Target Multiplicity" DefaultText="TargetMultiplicity" />
-      </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="TargetRoleName" DisplayName="Target Role Name" DefaultText="TargetRoleName" />
-      </ConnectorHasDecorators>
-    </Connector>
-    <Connector Id="b88462be-8aac-496d-b58b-547dabca8a1a" Description="" Name="AssociationClassConnector" DisplayName="Association Class Connector" Namespace="Ufba.ShHome" FixedTooltipText="Association Class Connector" Color="DarkGray" DashStyle="Dash" Thickness="0.01" />
     <Connector Id="5d829a43-1ded-46c8-bb62-f1e66a022b40" Description="" Name="GeneralizationConnector" DisplayName="Generalization Connector" Namespace="Ufba.ShHome" FixedTooltipText="Generalization Connector" Color="113, 111, 110" SourceEndStyle="HollowArrow" Thickness="0.01" />
-    <Connector Id="0d08af50-81f1-4df1-9326-855a96d11398" Description="" Name="ImplementationConnector" DisplayName="Implementation Connector" Namespace="Ufba.ShHome" FixedTooltipText="Implementation Connector" Color="113, 111, 110" DashStyle="Dash" SourceEndStyle="HollowArrow" Thickness="0.01" />
     <Connector Id="6c2cbcc9-1c05-49ce-b1e9-b0fe3b2a7803" Description="" Name="CommentConnector" DisplayName="Comment Connector" Namespace="Ufba.ShHome" FixedTooltipText="Comment Connector" Color="113, 111, 110" DashStyle="Dot" Thickness="0.01" RoutingStyle="Straight" />
   </Connectors>
   <XmlSerializationBehavior Name="ShHomeSerializationBehavior" Namespace="Ufba.ShHome">
@@ -322,25 +255,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="Association" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationMoniker" ElementName="association" MonikerTypeName="AssociationMoniker">
-        <DomainRelationshipMoniker Name="Association" />
-        <ElementData>
-          <XmlPropertyData XmlName="sourceMultiplicity">
-            <DomainPropertyMoniker Name="Association/SourceMultiplicity" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="sourceRoleName">
-            <DomainPropertyMoniker Name="Association/SourceRoleName" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="targetMultiplicity">
-            <DomainPropertyMoniker Name="Association/TargetMultiplicity" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="targetRoleName">
-            <DomainPropertyMoniker Name="Association/TargetRoleName" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ModelRootHasComments" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelRootHasCommentsMoniker" ElementName="modelRootHasComments" MonikerTypeName="ModelRootHasCommentsMoniker">
-        <DomainRelationshipMoniker Name="ModelRootHasComments" />
+      <XmlClassData TypeName="ModelRootHasSensors" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelRootHasSensorsMoniker" ElementName="modelRootHasSensors" MonikerTypeName="ModelRootHasSensorsMoniker">
+        <DomainRelationshipMoniker Name="ModelRootHasSensors" />
       </XmlClassData>
       <XmlClassData TypeName="Generalization" MonikerAttributeName="" SerializeId="true" MonikerElementName="generalizationMoniker" ElementName="generalization" MonikerTypeName="GeneralizationMoniker">
         <DomainRelationshipMoniker Name="Generalization" />
@@ -353,14 +269,14 @@
       <XmlClassData TypeName="ModelRootHasTypes" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelRootHasTypesMoniker" ElementName="modelRootHasTypes" MonikerTypeName="ModelRootHasTypesMoniker">
         <DomainRelationshipMoniker Name="ModelRootHasTypes" />
       </XmlClassData>
-      <XmlClassData TypeName="CommentReferencesSubjects" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentReferencesSubjectsMoniker" ElementName="commentReferencesSubjects" MonikerTypeName="CommentReferencesSubjectsMoniker">
-        <DomainRelationshipMoniker Name="CommentReferencesSubjects" />
+      <XmlClassData TypeName="SensorReferencesSubjects" MonikerAttributeName="" SerializeId="true" MonikerElementName="sensorReferencesSubjectsMoniker" ElementName="sensorReferencesSubjects" MonikerTypeName="SensorReferencesSubjectsMoniker">
+        <DomainRelationshipMoniker Name="SensorReferencesSubjects" />
       </XmlClassData>
       <XmlClassData TypeName="ModelRoot" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelRootMoniker" ElementName="modelRoot" MonikerTypeName="ModelRootMoniker">
         <DomainClassMoniker Name="ModelRoot" />
         <ElementData>
-          <XmlRelationshipData RoleElementName="comments">
-            <DomainRelationshipMoniker Name="ModelRootHasComments" />
+          <XmlRelationshipData RoleElementName="sensors">
+            <DomainRelationshipMoniker Name="ModelRootHasSensors" />
           </XmlRelationshipData>
           <XmlRelationshipData RoleElementName="types">
             <DomainRelationshipMoniker Name="ModelRootHasTypes" />
@@ -379,19 +295,16 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="subclasses">
             <DomainRelationshipMoniker Name="Generalization" />
           </XmlRelationshipData>
-          <XmlRelationshipData RoleElementName="targets">
-            <DomainRelationshipMoniker Name="Association" />
-          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="Comment" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentMoniker" ElementName="comment" MonikerTypeName="CommentMoniker">
-        <DomainClassMoniker Name="Comment" />
+      <XmlClassData TypeName="Sensor" MonikerAttributeName="" SerializeId="true" MonikerElementName="sensorMoniker" ElementName="sensor" MonikerTypeName="SensorMoniker">
+        <DomainClassMoniker Name="Sensor" />
         <ElementData>
           <XmlPropertyData XmlName="text">
-            <DomainPropertyMoniker Name="Comment/Text" />
+            <DomainPropertyMoniker Name="Sensor/Text" />
           </XmlPropertyData>
           <XmlRelationshipData RoleElementName="subjects">
-            <DomainRelationshipMoniker Name="CommentReferencesSubjects" />
+            <DomainRelationshipMoniker Name="SensorReferencesSubjects" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -420,23 +333,8 @@
       <XmlClassData TypeName="CommentBoxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentBoxShapeMoniker" ElementName="commentBoxShape" MonikerTypeName="CommentBoxShapeMoniker">
         <GeometryShapeMoniker Name="CommentBoxShape" />
       </XmlClassData>
-      <XmlClassData TypeName="MultipleAssociationShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="multipleAssociationShapeMoniker" ElementName="multipleAssociationShape" MonikerTypeName="MultipleAssociationShapeMoniker">
-        <ImageShapeMoniker Name="MultipleAssociationShape" />
-      </XmlClassData>
-      <XmlClassData TypeName="AssociationConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationConnectorMoniker" ElementName="associationConnector" MonikerTypeName="AssociationConnectorMoniker">
-        <ConnectorMoniker Name="AssociationConnector" />
-      </XmlClassData>
-      <XmlClassData TypeName="MultipleAssociationRoleConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="multipleAssociationRoleConnectorMoniker" ElementName="multipleAssociationRoleConnector" MonikerTypeName="MultipleAssociationRoleConnectorMoniker">
-        <ConnectorMoniker Name="MultipleAssociationRoleConnector" />
-      </XmlClassData>
-      <XmlClassData TypeName="AssociationClassConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationClassConnectorMoniker" ElementName="associationClassConnector" MonikerTypeName="AssociationClassConnectorMoniker">
-        <ConnectorMoniker Name="AssociationClassConnector" />
-      </XmlClassData>
       <XmlClassData TypeName="GeneralizationConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="generalizationConnectorMoniker" ElementName="generalizationConnector" MonikerTypeName="GeneralizationConnectorMoniker">
         <ConnectorMoniker Name="GeneralizationConnector" />
-      </XmlClassData>
-      <XmlClassData TypeName="ImplementationConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="implementationConnectorMoniker" ElementName="implementationConnector" MonikerTypeName="ImplementationConnectorMoniker">
-        <ConnectorMoniker Name="ImplementationConnector" />
       </XmlClassData>
       <XmlClassData TypeName="CommentConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentConnectorMoniker" ElementName="commentConnector" MonikerTypeName="CommentConnectorMoniker">
         <ConnectorMoniker Name="CommentConnector" />
@@ -467,13 +365,13 @@
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="CommentReferencesSubjectsBuilder">
+    <ConnectionBuilder Name="SensorReferencesSubjectsBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="CommentReferencesSubjects" />
+        <DomainRelationshipMoniker Name="SensorReferencesSubjects" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="Comment" />
+              <DomainClassMoniker Name="Sensor" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
@@ -508,15 +406,15 @@
         <CompartmentShapeMoniker Name="ClassShape" />
       </CompartmentShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="Comment" />
+        <DomainClassMoniker Name="Sensor" />
         <ParentElementPath>
-          <DomainPath>ModelRootHasComments.ModelRoot/!ModelRoot</DomainPath>
+          <DomainPath>ModelRootHasSensors.ModelRoot/!ModelRoot</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="CommentBoxShape/Comment" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Comment/Text" />
+              <DomainPropertyMoniker Name="Sensor/Text" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -526,7 +424,7 @@
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="CommentConnector" />
-        <DomainRelationshipMoniker Name="CommentReferencesSubjects" />
+        <DomainRelationshipMoniker Name="SensorReferencesSubjects" />
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="GeneralizationConnector" />
@@ -549,10 +447,10 @@
         <ConnectionBuilderMoniker Name="ShHome/GeneralizationBuilder" />
       </ConnectionTool>
       <ElementTool Name="Comment" ToolboxIcon="resources\commenttool.bmp" Caption="Comment" Tooltip="Create a Comment" HelpKeyword="CommentF1Keyword">
-        <DomainClassMoniker Name="Comment" />
+        <DomainClassMoniker Name="Sensor" />
       </ElementTool>
       <ConnectionTool Name="CommentsReferenceTypes" ToolboxIcon="resources\commentlinktool.bmp" Caption="Comment Link" Tooltip="Link a comment to an element" HelpKeyword="CommentsReferenceTypesF1Keyword">
-        <ConnectionBuilderMoniker Name="ShHome/CommentReferencesSubjectsBuilder" />
+        <ConnectionBuilderMoniker Name="ShHome/SensorReferencesSubjectsBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

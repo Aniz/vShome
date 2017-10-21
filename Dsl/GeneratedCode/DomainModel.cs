@@ -70,25 +70,19 @@ namespace Ufba.ShHome
 				typeof(NamedElement),
 				typeof(ModelRoot),
 				typeof(ModelClass),
-				typeof(Comment),
+				typeof(Sensor),
 				typeof(ClassOperation),
 				typeof(ModelType),
 				typeof(ClassModelElement),
-				typeof(Association),
-				typeof(ModelRootHasComments),
+				typeof(ModelRootHasSensors),
 				typeof(Generalization),
 				typeof(ModelRootHasTypes),
-				typeof(CommentReferencesSubjects),
+				typeof(SensorReferencesSubjects),
 				typeof(ShHomeDiagram),
-				typeof(AssociationConnector),
-				typeof(MultipleAssociationRoleConnector),
-				typeof(AssociationClassConnector),
 				typeof(GeneralizationConnector),
-				typeof(ImplementationConnector),
 				typeof(CommentConnector),
 				typeof(CommentBoxShape),
 				typeof(ClassShape),
-				typeof(MultipleAssociationShape),
 				typeof(global::Ufba.ShHome.FixUpDiagram),
 				typeof(global::Ufba.ShHome.ConnectorRolePlayerChanged),
 			};
@@ -105,13 +99,9 @@ namespace Ufba.ShHome
 				new DomainMemberInfo(typeof(NamedElement), "Name", NamedElement.NameDomainPropertyId, typeof(NamedElement.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(ModelClass), "Kind", ModelClass.KindDomainPropertyId, typeof(ModelClass.KindPropertyHandler)),
 				new DomainMemberInfo(typeof(ModelClass), "IsAbstract", ModelClass.IsAbstractDomainPropertyId, typeof(ModelClass.IsAbstractPropertyHandler)),
-				new DomainMemberInfo(typeof(Comment), "Text", Comment.TextDomainPropertyId, typeof(Comment.TextPropertyHandler)),
+				new DomainMemberInfo(typeof(Sensor), "Text", Sensor.TextDomainPropertyId, typeof(Sensor.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(ClassOperation), "IsAbstract", ClassOperation.IsAbstractDomainPropertyId, typeof(ClassOperation.IsAbstractPropertyHandler)),
 				new DomainMemberInfo(typeof(ClassModelElement), "Description", ClassModelElement.DescriptionDomainPropertyId, typeof(ClassModelElement.DescriptionPropertyHandler)),
-				new DomainMemberInfo(typeof(Association), "SourceMultiplicity", Association.SourceMultiplicityDomainPropertyId, typeof(Association.SourceMultiplicityPropertyHandler)),
-				new DomainMemberInfo(typeof(Association), "SourceRoleName", Association.SourceRoleNameDomainPropertyId, typeof(Association.SourceRoleNamePropertyHandler)),
-				new DomainMemberInfo(typeof(Association), "TargetMultiplicity", Association.TargetMultiplicityDomainPropertyId, typeof(Association.TargetMultiplicityPropertyHandler)),
-				new DomainMemberInfo(typeof(Association), "TargetRoleName", Association.TargetRoleNameDomainPropertyId, typeof(Association.TargetRoleNamePropertyHandler)),
 				new DomainMemberInfo(typeof(Generalization), "Discriminator", Generalization.DiscriminatorDomainPropertyId, typeof(Generalization.DiscriminatorPropertyHandler)),
 			};
 		}
@@ -123,16 +113,14 @@ namespace Ufba.ShHome
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(Association), "Source", Association.SourceDomainRoleId),
-				new DomainRolePlayerInfo(typeof(Association), "Target", Association.TargetDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ModelRootHasComments), "ModelRoot", ModelRootHasComments.ModelRootDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ModelRootHasComments), "Comment", ModelRootHasComments.CommentDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelRootHasSensors), "ModelRoot", ModelRootHasSensors.ModelRootDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelRootHasSensors), "Sensor", ModelRootHasSensors.SensorDomainRoleId),
 				new DomainRolePlayerInfo(typeof(Generalization), "Superclass", Generalization.SuperclassDomainRoleId),
 				new DomainRolePlayerInfo(typeof(Generalization), "Subclass", Generalization.SubclassDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelRootHasTypes), "ModelRoot", ModelRootHasTypes.ModelRootDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelRootHasTypes), "Type", ModelRootHasTypes.TypeDomainRoleId),
-				new DomainRolePlayerInfo(typeof(CommentReferencesSubjects), "Comment", CommentReferencesSubjects.CommentDomainRoleId),
-				new DomainRolePlayerInfo(typeof(CommentReferencesSubjects), "Subject", CommentReferencesSubjects.SubjectDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SensorReferencesSubjects), "Sensor", SensorReferencesSubjects.SensorDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SensorReferencesSubjects), "Subject", SensorReferencesSubjects.SubjectDomainRoleId),
 			};
 		}
 		#endregion
@@ -154,20 +142,16 @@ namespace Ufba.ShHome
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(17);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
 				createElementMap.Add(typeof(ModelRoot), 0);
 				createElementMap.Add(typeof(ModelClass), 1);
-				createElementMap.Add(typeof(Comment), 2);
+				createElementMap.Add(typeof(Sensor), 2);
 				createElementMap.Add(typeof(ClassOperation), 3);
 				createElementMap.Add(typeof(ShHomeDiagram), 4);
-				createElementMap.Add(typeof(MultipleAssociationRoleConnector), 5);
-				createElementMap.Add(typeof(AssociationClassConnector), 6);
-				createElementMap.Add(typeof(GeneralizationConnector), 7);
-				createElementMap.Add(typeof(ImplementationConnector), 8);
-				createElementMap.Add(typeof(CommentConnector), 9);
-				createElementMap.Add(typeof(CommentBoxShape), 10);
-				createElementMap.Add(typeof(ClassShape), 11);
-				createElementMap.Add(typeof(MultipleAssociationShape), 12);
+				createElementMap.Add(typeof(GeneralizationConnector), 5);
+				createElementMap.Add(typeof(CommentConnector), 6);
+				createElementMap.Add(typeof(CommentBoxShape), 7);
+				createElementMap.Add(typeof(ClassShape), 8);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -183,17 +167,13 @@ namespace Ufba.ShHome
 			{
 				case 0: return new ModelRoot(partition, propertyAssignments);
 				case 1: return new ModelClass(partition, propertyAssignments);
-				case 2: return new Comment(partition, propertyAssignments);
+				case 2: return new Sensor(partition, propertyAssignments);
 				case 3: return new ClassOperation(partition, propertyAssignments);
 				case 4: return new ShHomeDiagram(partition, propertyAssignments);
-				case 5: return new MultipleAssociationRoleConnector(partition, propertyAssignments);
-				case 6: return new AssociationClassConnector(partition, propertyAssignments);
-				case 7: return new GeneralizationConnector(partition, propertyAssignments);
-				case 8: return new ImplementationConnector(partition, propertyAssignments);
-				case 9: return new CommentConnector(partition, propertyAssignments);
-				case 10: return new CommentBoxShape(partition, propertyAssignments);
-				case 11: return new ClassShape(partition, propertyAssignments);
-				case 12: return new MultipleAssociationShape(partition, propertyAssignments);
+				case 5: return new GeneralizationConnector(partition, propertyAssignments);
+				case 6: return new CommentConnector(partition, propertyAssignments);
+				case 7: return new CommentBoxShape(partition, propertyAssignments);
+				case 8: return new ClassShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -216,11 +196,11 @@ namespace Ufba.ShHome
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
-				createElementLinkMap.Add(typeof(ModelRootHasComments), 0);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
+				createElementLinkMap.Add(typeof(ModelRootHasSensors), 0);
 				createElementLinkMap.Add(typeof(Generalization), 1);
 				createElementLinkMap.Add(typeof(ModelRootHasTypes), 2);
-				createElementLinkMap.Add(typeof(CommentReferencesSubjects), 3);
+				createElementLinkMap.Add(typeof(SensorReferencesSubjects), 3);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -235,10 +215,10 @@ namespace Ufba.ShHome
 			}
 			switch (index)
 			{
-				case 0: return new ModelRootHasComments(partition, roleAssignments, propertyAssignments);
+				case 0: return new ModelRootHasSensors(partition, roleAssignments, propertyAssignments);
 				case 1: return new Generalization(partition, roleAssignments, propertyAssignments);
 				case 2: return new ModelRootHasTypes(partition, roleAssignments, propertyAssignments);
-				case 3: return new CommentReferencesSubjects(partition, roleAssignments, propertyAssignments);
+				case 3: return new SensorReferencesSubjects(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -407,7 +387,7 @@ namespace Ufba.ShHome
 		public ShHomeDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId, true);
+			DomainRoles.Add(global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId, true);
 			DomainRoles.Add(global::Ufba.ShHome.ModelRootHasTypes.TypeDomainRoleId, true);
 			#endregion
 		}

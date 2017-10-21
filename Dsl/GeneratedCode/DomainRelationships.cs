@@ -12,521 +12,32 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainRelationship Association
-	/// Associations between Classes.
+	/// DomainRelationship ModelRootHasSensors
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.Association.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.Association.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(AllowsDuplicates = true)]
-	[DslModeling::DomainObjectId("f7eaef8a-5c51-4098-9514-17d1dce88874")]
-	public abstract partial class Association : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// Association domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf7eaef8a, 0x5c51, 0x4098, 0x95, 0x14, 0x17, 0xd1, 0xdc, 0xe8, 0x88, 0x74);
-	
-		/// <summary>
-		/// Constructor.
-		/// </summary>
-		/// <param name="partition">The Partition instance containing this ElementLink</param>
-		/// <param name="roleAssignments">A set of role assignments for roleplayer initialization</param>
-		/// <param name="propertyAssignments">A set of attribute assignments for attribute initialization</param>
-		protected Association(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Source domain role code
-		
-		/// <summary>
-		/// Source domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceDomainRoleId = new global::System.Guid(0x0626a3e0, 0x768b, 0x4875, 0x9e, 0x61, 0xeb, 0x9c, 0x63, 0xe4, 0xb8, 0x10);
-		
-		/// <summary>
-		/// DomainRole Source
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/Source.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/Source.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Targets", PropertyDisplayNameKey="Ufba.ShHome.Association/Source.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("0626a3e0-768b-4875-9e61-eb9c63e4b810")]
-		public abstract ModelClass Source
-		{
-			get;
-			set;
-		}
-				
-		#endregion
-		#region Static methods to access Sources of a ModelClass
-		/// <summary>
-		/// Gets a list of Sources.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::ReadOnlyLinkedElementCollection<ModelClass> GetSources(ModelClass element)
-		{
-			return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(element, TargetDomainRoleId);
-		}
-		#endregion
-		#region Target domain role code
-		
-		/// <summary>
-		/// Target domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetDomainRoleId = new global::System.Guid(0xc15ca6ac, 0x09f7, 0x4b83, 0x9c, 0xdc, 0xc4, 0x19, 0x1c, 0xc4, 0x70, 0x09);
-		
-		/// <summary>
-		/// DomainRole Target
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/Target.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/Target.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Sources", PropertyDisplayNameKey="Ufba.ShHome.Association/Target.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("c15ca6ac-09f7-4b83-9cdc-c4191cc47009")]
-		public abstract ModelClass Target
-		{
-			get;
-			set;
-		}
-				
-		#endregion
-		#region Static methods to access Targets of a ModelClass
-		/// <summary>
-		/// Gets a list of Targets.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::ReadOnlyLinkedElementCollection<ModelClass> GetTargets(ModelClass element)
-		{
-			return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ModelClass>, ModelClass>(element, SourceDomainRoleId);
-		}
-		#endregion
-		#region SourceMultiplicity domain property code
-		
-		/// <summary>
-		/// SourceMultiplicity domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceMultiplicityDomainPropertyId = new global::System.Guid(0xfd71ac0d, 0x0df2, 0x4b35, 0x81, 0x1d, 0x18, 0x09, 0x75, 0x95, 0xb0, 0xab);
-		
-		/// <summary>
-		/// Storage for SourceMultiplicity
-		/// </summary>
-		private Multiplicity sourceMultiplicityPropertyStorage = Multiplicity.ZeroMany;
-		
-		/// <summary>
-		/// Gets or sets the value of SourceMultiplicity domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/SourceMultiplicity.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/SourceMultiplicity.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue(Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("fd71ac0d-0df2-4b35-811d-18097595b0ab")]
-		public Multiplicity SourceMultiplicity
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return sourceMultiplicityPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				SourceMultiplicityPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Association.SourceMultiplicity domain property.
-		/// </summary>
-		internal sealed partial class SourceMultiplicityPropertyHandler : DslModeling::DomainPropertyValueHandler<Association, Multiplicity>
-		{
-			private SourceMultiplicityPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Association.SourceMultiplicity domain property value handler.
-			/// </summary>
-			public static readonly SourceMultiplicityPropertyHandler Instance = new SourceMultiplicityPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Association.SourceMultiplicity domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return SourceMultiplicityDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Multiplicity GetValue(Association element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.sourceMultiplicityPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Association element, Multiplicity newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Multiplicity oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.sourceMultiplicityPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region SourceRoleName domain property code
-		
-		/// <summary>
-		/// SourceRoleName domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceRoleNameDomainPropertyId = new global::System.Guid(0x44399264, 0xfd48, 0x4f6e, 0xaa, 0x3d, 0x1d, 0xe7, 0xa8, 0x1a, 0xdc, 0x86);
-		
-		/// <summary>
-		/// Storage for SourceRoleName
-		/// </summary>
-		private global::System.String sourceRoleNamePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of SourceRoleName domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/SourceRoleName.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/SourceRoleName.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("")]
-		[DslModeling::DomainObjectId("44399264-fd48-4f6e-aa3d-1de7a81adc86")]
-		public global::System.String SourceRoleName
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return sourceRoleNamePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				SourceRoleNamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Association.SourceRoleName domain property.
-		/// </summary>
-		internal sealed partial class SourceRoleNamePropertyHandler : DslModeling::DomainPropertyValueHandler<Association, global::System.String>
-		{
-			private SourceRoleNamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Association.SourceRoleName domain property value handler.
-			/// </summary>
-			public static readonly SourceRoleNamePropertyHandler Instance = new SourceRoleNamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Association.SourceRoleName domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return SourceRoleNameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Association element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.sourceRoleNamePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Association element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.sourceRoleNamePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region TargetMultiplicity domain property code
-		
-		/// <summary>
-		/// TargetMultiplicity domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetMultiplicityDomainPropertyId = new global::System.Guid(0xa8bbf30b, 0x9559, 0x4037, 0xba, 0x1b, 0xa1, 0x02, 0xf4, 0x2c, 0x37, 0x0c);
-		
-		/// <summary>
-		/// Storage for TargetMultiplicity
-		/// </summary>
-		private Multiplicity targetMultiplicityPropertyStorage = Multiplicity.ZeroMany;
-		
-		/// <summary>
-		/// Gets or sets the value of TargetMultiplicity domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/TargetMultiplicity.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/TargetMultiplicity.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue(Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("a8bbf30b-9559-4037-ba1b-a102f42c370c")]
-		public Multiplicity TargetMultiplicity
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return targetMultiplicityPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TargetMultiplicityPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Association.TargetMultiplicity domain property.
-		/// </summary>
-		internal sealed partial class TargetMultiplicityPropertyHandler : DslModeling::DomainPropertyValueHandler<Association, Multiplicity>
-		{
-			private TargetMultiplicityPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Association.TargetMultiplicity domain property value handler.
-			/// </summary>
-			public static readonly TargetMultiplicityPropertyHandler Instance = new TargetMultiplicityPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Association.TargetMultiplicity domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TargetMultiplicityDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Multiplicity GetValue(Association element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.targetMultiplicityPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Association element, Multiplicity newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Multiplicity oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.targetMultiplicityPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region TargetRoleName domain property code
-		
-		/// <summary>
-		/// TargetRoleName domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetRoleNameDomainPropertyId = new global::System.Guid(0x0da12e2d, 0xb75e, 0x460f, 0x90, 0x44, 0x11, 0x0b, 0x55, 0x15, 0x08, 0x85);
-		
-		/// <summary>
-		/// Storage for TargetRoleName
-		/// </summary>
-		private global::System.String targetRoleNamePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of TargetRoleName domain property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.Association/TargetRoleName.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.Association/TargetRoleName.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("")]
-		[DslModeling::DomainObjectId("0da12e2d-b75e-460f-9044-110b55150885")]
-		public global::System.String TargetRoleName
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return targetRoleNamePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TargetRoleNamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Association.TargetRoleName domain property.
-		/// </summary>
-		internal sealed partial class TargetRoleNamePropertyHandler : DslModeling::DomainPropertyValueHandler<Association, global::System.String>
-		{
-			private TargetRoleNamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Association.TargetRoleName domain property value handler.
-			/// </summary>
-			public static readonly TargetRoleNamePropertyHandler Instance = new TargetRoleNamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Association.TargetRoleName domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TargetRoleNameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Association element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.targetRoleNamePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Association element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.targetRoleNamePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region Source link accessor
-		/// <summary>
-		/// Get the list of Association links to a ModelClass.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.Association> GetLinksToTargets ( global::Ufba.ShHome.ModelClass sourceInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.Association>(sourceInstance, global::Ufba.ShHome.Association.SourceDomainRoleId);
-		}
-		#endregion
-		#region Target link accessor
-		/// <summary>
-		/// Get the list of Association links to a ModelClass.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.Association> GetLinksToSources ( global::Ufba.ShHome.ModelClass targetInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.Association>(targetInstance, global::Ufba.ShHome.Association.TargetDomainRoleId);
-		}
-		#endregion
-		#region Association instance accessors
-		
-		/// <summary>
-		/// Get any Association links between a given ModelClass and a ModelClass.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.Association> GetLinks( global::Ufba.ShHome.ModelClass source, global::Ufba.ShHome.ModelClass target )
-		{
-			global::System.Collections.Generic.List<global::Ufba.ShHome.Association> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.Association>();
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.Association> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.Association>(source, global::Ufba.ShHome.Association.SourceDomainRoleId);
-			foreach ( global::Ufba.ShHome.Association link in links )
-			{
-				if ( target.Equals(link.Target) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		#endregion
-	}
-}
-namespace Ufba.ShHome
-{
-	/// <summary>
-	/// DomainRelationship ModelRootHasComments
-	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasComments.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasComments.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasSensors.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasSensors.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("a21cfac0-57d7-423f-9331-e02f406905b8")]
-	public partial class ModelRootHasComments : DslModeling::ElementLink
+	public partial class ModelRootHasSensors : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ModelRootHasComments domain class Id.
+		/// ModelRootHasSensors domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa21cfac0, 0x57d7, 0x423f, 0x93, 0x31, 0xe0, 0x2f, 0x40, 0x69, 0x05, 0xb8);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ModelRootHasComments link in the same Partition as the given ModelRoot
+		/// Creates a ModelRootHasSensors link in the same Partition as the given ModelRoot
 		/// </summary>
 		/// <param name="source">ModelRoot to use as the source of the relationship.</param>
-		/// <param name="target">Comment to use as the target of the relationship.</param>
-		public ModelRootHasComments(ModelRoot source, Comment target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelRootHasComments.ModelRootDomainRoleId, source), new DslModeling::RoleAssignment(ModelRootHasComments.CommentDomainRoleId, target)}, null)
+		/// <param name="target">Sensor to use as the target of the relationship.</param>
+		public ModelRootHasSensors(ModelRoot source, Sensor target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelRootHasSensors.ModelRootDomainRoleId, source), new DslModeling::RoleAssignment(ModelRootHasSensors.SensorDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -535,7 +46,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModelRootHasComments(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ModelRootHasSensors(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -546,7 +57,7 @@ namespace Ufba.ShHome
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModelRootHasComments(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModelRootHasSensors(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -556,7 +67,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModelRootHasComments(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ModelRootHasSensors(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -567,7 +78,7 @@ namespace Ufba.ShHome
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModelRootHasComments(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModelRootHasSensors(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -582,9 +93,9 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// DomainRole ModelRoot
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasComments/ModelRoot.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasComments/ModelRoot.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Comments", PropertyDisplayNameKey="Ufba.ShHome.ModelRootHasComments/ModelRoot.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasSensors/ModelRoot.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasSensors/ModelRoot.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Sensors", PropertyDisplayNameKey="Ufba.ShHome.ModelRootHasSensors/ModelRoot.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("9d2645e3-945b-48eb-a8b5-e5a88f1ca2cb")]
 		public virtual ModelRoot ModelRoot
 		{
@@ -601,15 +112,15 @@ namespace Ufba.ShHome
 		}
 				
 		#endregion
-		#region Static methods to access ModelRoot of a Comment
+		#region Static methods to access ModelRoot of a Sensor
 		/// <summary>
 		/// Gets ModelRoot.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ModelRoot GetModelRoot(Comment element)
+		public static ModelRoot GetModelRoot(Sensor element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CommentDomainRoleId) as ModelRoot;
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SensorDomainRoleId) as ModelRoot;
 		}
 		
 		/// <summary>
@@ -617,72 +128,72 @@ namespace Ufba.ShHome
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetModelRoot(Comment element, ModelRoot newModelRoot)
+		public static void SetModelRoot(Sensor element, ModelRoot newModelRoot)
 		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, CommentDomainRoleId, newModelRoot);
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SensorDomainRoleId, newModelRoot);
 		}
 		#endregion
-		#region Comment domain role code
+		#region Sensor domain role code
 		
 		/// <summary>
-		/// Comment domain role Id.
+		/// Sensor domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid CommentDomainRoleId = new global::System.Guid(0x590a8a57, 0xc219, 0x405d, 0x9d, 0x0a, 0xab, 0xf8, 0xa1, 0xb9, 0xa3, 0x23);
+		public static readonly global::System.Guid SensorDomainRoleId = new global::System.Guid(0x590a8a57, 0xc219, 0x405d, 0x9d, 0x0a, 0xab, 0xf8, 0xa1, 0xb9, 0xa3, 0x23);
 		
 		/// <summary>
-		/// DomainRole Comment
+		/// DomainRole Sensor
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasComments/Comment.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasComments/Comment.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelRoot", PropertyDisplayNameKey="Ufba.ShHome.ModelRootHasComments/Comment.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelRootHasSensors/Sensor.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelRootHasSensors/Sensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelRoot", PropertyDisplayNameKey="Ufba.ShHome.ModelRootHasSensors/Sensor.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("590a8a57-c219-405d-9d0a-abf8a1b9a323")]
-		public virtual Comment Comment
+		public virtual Sensor Sensor
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (Comment)DslModeling::DomainRoleInfo.GetRolePlayer(this, CommentDomainRoleId);
+				return (Sensor)DslModeling::DomainRoleInfo.GetRolePlayer(this, SensorDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, CommentDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SensorDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access Comments of a ModelRoot
+		#region Static methods to access Sensors of a ModelRoot
 		/// <summary>
-		/// Gets a list of Comments.
+		/// Gets a list of Sensors.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Comment> GetComments(ModelRoot element)
+		public static DslModeling::LinkedElementCollection<Sensor> GetSensors(ModelRoot element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Comment>, Comment>(element, ModelRootDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Sensor>, Sensor>(element, ModelRootDomainRoleId);
 		}
 		#endregion
 		#region ModelRoot link accessor
 		/// <summary>
-		/// Get the list of ModelRootHasComments links to a ModelRoot.
+		/// Get the list of ModelRootHasSensors links to a ModelRoot.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelRootHasComments> GetLinksToComments ( global::Ufba.ShHome.ModelRoot modelRootInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelRootHasSensors> GetLinksToSensors ( global::Ufba.ShHome.ModelRoot modelRootInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasComments>(modelRootInstance, global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasSensors>(modelRootInstance, global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId);
 		}
 		#endregion
-		#region Comment link accessor
+		#region Sensor link accessor
 		/// <summary>
-		/// Get the ModelRootHasComments link to a Comment.
+		/// Get the ModelRootHasSensors link to a Sensor.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Ufba.ShHome.ModelRootHasComments GetLinkToModelRoot (global::Ufba.ShHome.Comment commentInstance)
+		public static global::Ufba.ShHome.ModelRootHasSensors GetLinkToModelRoot (global::Ufba.ShHome.Sensor sensorInstance)
 		{
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasComments> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasComments>(commentInstance, global::Ufba.ShHome.ModelRootHasComments.CommentDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Comment not obeyed.");
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasSensors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasSensors>(sensorInstance, global::Ufba.ShHome.ModelRootHasSensors.SensorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Sensor not obeyed.");
 			if ( links.Count == 0 )
 			{
 				return null;
@@ -693,20 +204,20 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
-		#region ModelRootHasComments instance accessors
+		#region ModelRootHasSensors instance accessors
 		
 		/// <summary>
-		/// Get any ModelRootHasComments links between a given ModelRoot and a Comment.
+		/// Get any ModelRootHasSensors links between a given ModelRoot and a Sensor.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelRootHasComments> GetLinks( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Comment target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelRootHasSensors> GetLinks( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Sensor target )
 		{
-			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelRootHasComments> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelRootHasComments>();
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasComments> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasComments>(source, global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId);
-			foreach ( global::Ufba.ShHome.ModelRootHasComments link in links )
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelRootHasSensors> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelRootHasSensors>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasSensors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasSensors>(source, global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelRootHasSensors link in links )
 			{
-				if ( target.Equals(link.Comment) )
+				if ( target.Equals(link.Sensor) )
 				{
 					outLinks.Add(link);
 				}
@@ -714,16 +225,16 @@ namespace Ufba.ShHome
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ModelRootHasComments link between a given ModelRootand a Comment.
+		/// Get the one ModelRootHasSensors link between a given ModelRootand a Sensor.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Ufba.ShHome.ModelRootHasComments GetLink( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Comment target )
+		public static global::Ufba.ShHome.ModelRootHasSensors GetLink( global::Ufba.ShHome.ModelRoot source, global::Ufba.ShHome.Sensor target )
 		{
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasComments> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasComments>(source, global::Ufba.ShHome.ModelRootHasComments.ModelRootDomainRoleId);
-			foreach ( global::Ufba.ShHome.ModelRootHasComments link in links )
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelRootHasSensors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelRootHasSensors>(source, global::Ufba.ShHome.ModelRootHasSensors.ModelRootDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelRootHasSensors link in links )
 			{
-				if ( target.Equals(link.Comment) )
+				if ( target.Equals(link.Sensor) )
 				{
 					return link;
 				}
@@ -1297,32 +808,32 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainRelationship CommentReferencesSubjects
+	/// DomainRelationship SensorReferencesSubjects
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.CommentReferencesSubjects.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.CommentReferencesSubjects.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.SensorReferencesSubjects.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.SensorReferencesSubjects.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("0744a2a1-261a-40e2-ad1d-d590a9f01abc")]
-	public partial class CommentReferencesSubjects : DslModeling::ElementLink
+	public partial class SensorReferencesSubjects : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// CommentReferencesSubjects domain class Id.
+		/// SensorReferencesSubjects domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0744a2a1, 0x261a, 0x40e2, 0xad, 0x1d, 0xd5, 0x90, 0xa9, 0xf0, 0x1a, 0xbc);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a CommentReferencesSubjects link in the same Partition as the given Comment
+		/// Creates a SensorReferencesSubjects link in the same Partition as the given Sensor
 		/// </summary>
-		/// <param name="source">Comment to use as the source of the relationship.</param>
+		/// <param name="source">Sensor to use as the source of the relationship.</param>
 		/// <param name="target">ModelType to use as the target of the relationship.</param>
-		public CommentReferencesSubjects(Comment source, ModelType target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CommentReferencesSubjects.CommentDomainRoleId, source), new DslModeling::RoleAssignment(CommentReferencesSubjects.SubjectDomainRoleId, target)}, null)
+		public SensorReferencesSubjects(Sensor source, ModelType target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SensorReferencesSubjects.SensorDomainRoleId, source), new DslModeling::RoleAssignment(SensorReferencesSubjects.SubjectDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1331,7 +842,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public CommentReferencesSubjects(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public SensorReferencesSubjects(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1342,7 +853,7 @@ namespace Ufba.ShHome
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public CommentReferencesSubjects(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public SensorReferencesSubjects(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1352,7 +863,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public CommentReferencesSubjects(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public SensorReferencesSubjects(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1363,49 +874,49 @@ namespace Ufba.ShHome
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public CommentReferencesSubjects(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public SensorReferencesSubjects(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
 		#endregion
-		#region Comment domain role code
+		#region Sensor domain role code
 		
 		/// <summary>
-		/// Comment domain role Id.
+		/// Sensor domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid CommentDomainRoleId = new global::System.Guid(0x5f102ffd, 0x9d32, 0x4f2b, 0xb1, 0xe8, 0xcc, 0x6f, 0xc2, 0x55, 0x5b, 0xc4);
+		public static readonly global::System.Guid SensorDomainRoleId = new global::System.Guid(0x5f102ffd, 0x9d32, 0x4f2b, 0xb1, 0xe8, 0xcc, 0x6f, 0xc2, 0x55, 0x5b, 0xc4);
 		
 		/// <summary>
-		/// DomainRole Comment
+		/// DomainRole Sensor
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.CommentReferencesSubjects/Comment.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.CommentReferencesSubjects/Comment.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Subjects", PropertyDisplayNameKey="Ufba.ShHome.CommentReferencesSubjects/Comment.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.SensorReferencesSubjects/Sensor.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.SensorReferencesSubjects/Sensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Subjects", PropertyDisplayNameKey="Ufba.ShHome.SensorReferencesSubjects/Sensor.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("5f102ffd-9d32-4f2b-b1e8-cc6fc2555bc4")]
-		public virtual Comment Comment
+		public virtual Sensor Sensor
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (Comment)DslModeling::DomainRoleInfo.GetRolePlayer(this, CommentDomainRoleId);
+				return (Sensor)DslModeling::DomainRoleInfo.GetRolePlayer(this, SensorDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, CommentDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SensorDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access Comments of a ModelType
+		#region Static methods to access Sensors of a ModelType
 		/// <summary>
-		/// Gets a list of Comments.
+		/// Gets a list of Sensors.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Comment> GetComments(ModelType element)
+		public static DslModeling::LinkedElementCollection<Sensor> GetSensors(ModelType element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Comment>, Comment>(element, SubjectDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Sensor>, Sensor>(element, SubjectDomainRoleId);
 		}
 		#endregion
 		#region Subject domain role code
@@ -1418,9 +929,9 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// DomainRole Subject
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.CommentReferencesSubjects/Subject.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.CommentReferencesSubjects/Subject.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Comments", PropertyDisplayNameKey="Ufba.ShHome.CommentReferencesSubjects/Subject.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.SensorReferencesSubjects/Subject.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.SensorReferencesSubjects/Subject.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Sensors", PropertyDisplayNameKey="Ufba.ShHome.SensorReferencesSubjects/Subject.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("4f55a23a-7939-48b3-92a5-d13f26fb77fc")]
 		public virtual ModelType Subject
 		{
@@ -1437,51 +948,51 @@ namespace Ufba.ShHome
 		}
 				
 		#endregion
-		#region Static methods to access Subjects of a Comment
+		#region Static methods to access Subjects of a Sensor
 		/// <summary>
 		/// Gets a list of Subjects.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ModelType> GetSubjects(Comment element)
+		public static DslModeling::LinkedElementCollection<ModelType> GetSubjects(Sensor element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, CommentDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, SensorDomainRoleId);
 		}
 		#endregion
-		#region Comment link accessor
+		#region Sensor link accessor
 		/// <summary>
-		/// Get the list of CommentReferencesSubjects links to a Comment.
+		/// Get the list of SensorReferencesSubjects links to a Sensor.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.CommentReferencesSubjects> GetLinksToSubjects ( global::Ufba.ShHome.Comment commentInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.SensorReferencesSubjects> GetLinksToSubjects ( global::Ufba.ShHome.Sensor sensorInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.CommentReferencesSubjects>(commentInstance, global::Ufba.ShHome.CommentReferencesSubjects.CommentDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.SensorReferencesSubjects>(sensorInstance, global::Ufba.ShHome.SensorReferencesSubjects.SensorDomainRoleId);
 		}
 		#endregion
 		#region Subject link accessor
 		/// <summary>
-		/// Get the list of CommentReferencesSubjects links to a ModelType.
+		/// Get the list of SensorReferencesSubjects links to a ModelType.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.CommentReferencesSubjects> GetLinksToComments ( global::Ufba.ShHome.ModelType subjectInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.SensorReferencesSubjects> GetLinksToSensors ( global::Ufba.ShHome.ModelType subjectInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.CommentReferencesSubjects>(subjectInstance, global::Ufba.ShHome.CommentReferencesSubjects.SubjectDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.SensorReferencesSubjects>(subjectInstance, global::Ufba.ShHome.SensorReferencesSubjects.SubjectDomainRoleId);
 		}
 		#endregion
-		#region CommentReferencesSubjects instance accessors
+		#region SensorReferencesSubjects instance accessors
 		
 		/// <summary>
-		/// Get any CommentReferencesSubjects links between a given Comment and a ModelType.
+		/// Get any SensorReferencesSubjects links between a given Sensor and a ModelType.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.CommentReferencesSubjects> GetLinks( global::Ufba.ShHome.Comment source, global::Ufba.ShHome.ModelType target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.SensorReferencesSubjects> GetLinks( global::Ufba.ShHome.Sensor source, global::Ufba.ShHome.ModelType target )
 		{
-			global::System.Collections.Generic.List<global::Ufba.ShHome.CommentReferencesSubjects> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.CommentReferencesSubjects>();
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.CommentReferencesSubjects> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.CommentReferencesSubjects>(source, global::Ufba.ShHome.CommentReferencesSubjects.CommentDomainRoleId);
-			foreach ( global::Ufba.ShHome.CommentReferencesSubjects link in links )
+			global::System.Collections.Generic.List<global::Ufba.ShHome.SensorReferencesSubjects> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.SensorReferencesSubjects>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.SensorReferencesSubjects> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.SensorReferencesSubjects>(source, global::Ufba.ShHome.SensorReferencesSubjects.SensorDomainRoleId);
+			foreach ( global::Ufba.ShHome.SensorReferencesSubjects link in links )
 			{
 				if ( target.Equals(link.Subject) )
 				{
@@ -1491,14 +1002,14 @@ namespace Ufba.ShHome
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one CommentReferencesSubjects link between a given Commentand a ModelType.
+		/// Get the one SensorReferencesSubjects link between a given Sensorand a ModelType.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Ufba.ShHome.CommentReferencesSubjects GetLink( global::Ufba.ShHome.Comment source, global::Ufba.ShHome.ModelType target )
+		public static global::Ufba.ShHome.SensorReferencesSubjects GetLink( global::Ufba.ShHome.Sensor source, global::Ufba.ShHome.ModelType target )
 		{
-			global::System.Collections.Generic.IList<global::Ufba.ShHome.CommentReferencesSubjects> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.CommentReferencesSubjects>(source, global::Ufba.ShHome.CommentReferencesSubjects.CommentDomainRoleId);
-			foreach ( global::Ufba.ShHome.CommentReferencesSubjects link in links )
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.SensorReferencesSubjects> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.SensorReferencesSubjects>(source, global::Ufba.ShHome.SensorReferencesSubjects.SensorDomainRoleId);
+			foreach ( global::Ufba.ShHome.SensorReferencesSubjects link in links )
 			{
 				if ( target.Equals(link.Subject) )
 				{
