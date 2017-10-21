@@ -84,7 +84,7 @@ namespace Ufba.ShHome
 				typeof(SensorConnector),
 				typeof(CommentBoxShape),
 				typeof(DeviceShape),
-				typeof(ClassShape),
+				typeof(FeatureShape),
 				typeof(global::Ufba.ShHome.FixUpDiagram),
 				typeof(global::Ufba.ShHome.ConnectorRolePlayerChanged),
 			};
@@ -157,7 +157,7 @@ namespace Ufba.ShHome
 				createElementMap.Add(typeof(SensorConnector), 7);
 				createElementMap.Add(typeof(CommentBoxShape), 8);
 				createElementMap.Add(typeof(DeviceShape), 9);
-				createElementMap.Add(typeof(ClassShape), 10);
+				createElementMap.Add(typeof(FeatureShape), 10);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -181,7 +181,7 @@ namespace Ufba.ShHome
 				case 7: return new SensorConnector(partition, propertyAssignments);
 				case 8: return new CommentBoxShape(partition, propertyAssignments);
 				case 9: return new DeviceShape(partition, propertyAssignments);
-				case 10: return new ClassShape(partition, propertyAssignments);
+				case 10: return new FeatureShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

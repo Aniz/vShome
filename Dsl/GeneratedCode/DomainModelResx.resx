@@ -593,22 +593,6 @@
     <value>Description for Ufba.ShHome.TypeDevice.Sensor</value>
     <comment>Description for EnumerationLiteral &apos;Sensor&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ClassShape.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainClass &apos;ClassShape&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.ClassShape.DisplayName" xml:space="preserve">
-    <value>Class Shape</value>
-    <comment>DisplayName for DomainClass &apos;ClassShape&apos;</comment>
-  </data>
-  <data name="ClassShapeNameDefaultText" xml:space="preserve">
-    <value>Name</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="ClassShapeTypeFeatureDefaultText" xml:space="preserve">
-    <value>TypeFeature</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="Ufba.ShHome.CommentBoxShape.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;CommentBoxShape&apos;</comment>
@@ -635,6 +619,18 @@
   </data>
   <data name="DeviceShapeTypeDeviceDefaultText" xml:space="preserve">
     <value>TypeDevice</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Ufba.ShHome.FeatureShape.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.FeatureShape</value>
+    <comment>Description for DomainClass &apos;FeatureShape&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.FeatureShape.DisplayName" xml:space="preserve">
+    <value>Feature Shape</value>
+    <comment>DisplayName for DomainClass &apos;FeatureShape&apos;</comment>
+  </data>
+  <data name="FeatureShapeNameDefaultText" xml:space="preserve">
+    <value>Name</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">
