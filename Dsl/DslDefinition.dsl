@@ -252,17 +252,6 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <CompartmentShape Id="45e46dec-1e1c-4013-a613-7dc083306bd0" Description="" Name="ClassShape" DisplayName="Class Shape" Namespace="Ufba.ShHome" FixedTooltipText="Class Shape" FillColor="211, 220, 239" InitialHeight="0.3" OutlineThickness="0.01" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TypeFeature" DisplayName="Type Feature" DefaultText="TypeFeature" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <ExpandCollapseDecorator Name="ExpandCollapseDecorator1" DisplayName="Expand Collapse Decorator1" />
-      </ShapeHasDecorators>
-    </CompartmentShape>
     <GeometryShape Id="f8a9826d-feac-4884-9a74-917b85bab175" Description="" Name="CommentBoxShape" DisplayName="Comment Box Shape" Namespace="Ufba.ShHome" FixedTooltipText="Comment Box Shape" FillColor="255, 255, 204" OutlineColor="204, 204, 102" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Comment" DisplayName="Comment" DefaultText="BusinessRulesShapeNameDecorator" />
@@ -344,9 +333,6 @@
             <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
           </XmlRelationshipData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ClassShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="classShapeMoniker" ElementName="classShape" MonikerTypeName="ClassShapeMoniker">
-        <CompartmentShapeMoniker Name="ClassShape" />
       </XmlClassData>
       <XmlClassData TypeName="CommentBoxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentBoxShapeMoniker" ElementName="commentBoxShape" MonikerTypeName="CommentBoxShapeMoniker">
         <GeometryShapeMoniker Name="CommentBoxShape" />
