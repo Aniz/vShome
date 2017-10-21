@@ -270,6 +270,14 @@
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="ee96fc9d-3b9e-4398-8082-ec9f23cc7c88" Description="Description for Ufba.ShHome.FShape" Name="FShape" DisplayName="FShape" Namespace="Ufba.ShHome" FixedTooltipText="FShape" FillColor="192, 255, 255" InitialHeight="0.5" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TypeFeature" DisplayName="Type Feature" DefaultText="TypeFeature" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="6c2cbcc9-1c05-49ce-b1e9-b0fe3b2a7803" Description="" Name="CommentConnector" DisplayName="Comment Connector" Namespace="Ufba.ShHome" FixedTooltipText="Comment Connector" Color="113, 111, 110" DashStyle="Dot" Thickness="0.01" RoutingStyle="Straight" />
@@ -374,6 +382,9 @@
       </XmlClassData>
       <XmlClassData TypeName="FeatureShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="featureShapeMoniker" ElementName="featureShape" MonikerTypeName="FeatureShapeMoniker">
         <GeometryShapeMoniker Name="FeatureShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="FShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="fShapeMoniker" ElementName="fShape" MonikerTypeName="FShapeMoniker">
+        <GeometryShapeMoniker Name="FShape" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -486,14 +497,22 @@
           <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="FeatureShape/Name" />
+          <TextDecoratorMoniker Name="FShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ModelClass/Name" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <GeometryShapeMoniker Name="FeatureShape" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FShape/TypeFeature" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ModelClass/TypeFeature" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="FShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>

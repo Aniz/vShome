@@ -192,7 +192,7 @@ namespace Ufba.ShHome
 		{
 			if(element is global::Ufba.ShHome.ModelClass)
 			{
-				global::Ufba.ShHome.FeatureShape newShape = new global::Ufba.ShHome.FeatureShape(this.Partition);
+				global::Ufba.ShHome.FShape newShape = new global::Ufba.ShHome.FShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -236,7 +236,7 @@ namespace Ufba.ShHome
 			base.InitializeShapeFields(shapeFields);
 			global::Ufba.ShHome.CommentBoxShape.DecoratorsInitialized += CommentBoxShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Ufba.ShHome.DeviceShape.DecoratorsInitialized += DeviceShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Ufba.ShHome.FeatureShape.DecoratorsInitialized += FeatureShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Ufba.ShHome.FShape.DecoratorsInitialized += FShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -279,12 +279,12 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for FeatureShape.
+		/// Class containing decorator path traversal methods for FShape.
 		/// </summary>
-		internal static partial class FeatureShapeDecoratorMap
+		internal static partial class FShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for FeatureShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for FShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -293,6 +293,9 @@ namespace Ufba.ShHome
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.TypeFeatureDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeFeature").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

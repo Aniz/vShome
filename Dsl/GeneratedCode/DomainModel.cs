@@ -85,6 +85,7 @@ namespace Ufba.ShHome
 				typeof(CommentBoxShape),
 				typeof(DeviceShape),
 				typeof(FeatureShape),
+				typeof(FShape),
 				typeof(global::Ufba.ShHome.FixUpDiagram),
 				typeof(global::Ufba.ShHome.ConnectorRolePlayerChanged),
 			};
@@ -146,7 +147,7 @@ namespace Ufba.ShHome
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementMap.Add(typeof(ModelRoot), 0);
 				createElementMap.Add(typeof(ModelClass), 1);
 				createElementMap.Add(typeof(Comment), 2);
@@ -158,6 +159,7 @@ namespace Ufba.ShHome
 				createElementMap.Add(typeof(CommentBoxShape), 8);
 				createElementMap.Add(typeof(DeviceShape), 9);
 				createElementMap.Add(typeof(FeatureShape), 10);
+				createElementMap.Add(typeof(FShape), 11);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -182,6 +184,7 @@ namespace Ufba.ShHome
 				case 8: return new CommentBoxShape(partition, propertyAssignments);
 				case 9: return new DeviceShape(partition, propertyAssignments);
 				case 10: return new FeatureShape(partition, propertyAssignments);
+				case 11: return new FShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

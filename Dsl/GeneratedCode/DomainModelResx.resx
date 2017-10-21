@@ -633,6 +633,22 @@
     <value>Name</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="Ufba.ShHome.FShape.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.FShape</value>
+    <comment>Description for DomainClass &apos;FShape&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.FShape.DisplayName" xml:space="preserve">
+    <value>FShape</value>
+    <comment>DisplayName for DomainClass &apos;FShape&apos;</comment>
+  </data>
+  <data name="FShapeNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FShapeTypeFeatureDefaultText" xml:space="preserve">
+    <value>TypeFeature</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;CommentConnector&apos;</comment>
