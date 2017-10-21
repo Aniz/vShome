@@ -14,6 +14,455 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace Ufba.ShHome
 {
 	/// <summary>
+	/// DomainClass AssociationConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.AssociationConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.AssociationConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("9003480d-707f-44b5-843a-27d9ef9f7d00")]
+	public abstract partial class AssociationConnector : DslDiagrams::BinaryLinkShape
+	{
+		
+		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.Width = 0.01f;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		#endregion
+		
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TargetMultiplicity");
+			field1.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("AssociationConnectorTargetMultiplicityDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+			DslDiagrams::TextField field2 = new DslDiagrams::TextField("SourceMultiplicity");
+			field2.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("AssociationConnectorSourceMultiplicityDefaultText");
+			field2.DefaultFocusable = true;
+			field2.DefaultAutoSize = true;
+			field2.AnchoringBehavior.MinimumHeightInLines = 1;
+			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator2);
+				
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("TargetRoleName");
+			field3.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("AssociationConnectorTargetRoleNameDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator3);
+				
+			DslDiagrams::TextField field4 = new DslDiagrams::TextField("SourceRoleName");
+			field4.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("AssociationConnectorSourceRoleNameDefaultText");
+			field4.DefaultFocusable = true;
+			field4.DefaultAutoSize = true;
+			field4.AnchoringBehavior.MinimumHeightInLines = 1;
+			field4.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field4.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator4 = new DslDiagrams::ConnectorDecorator(field4, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator4);
+				
+		}
+		
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AssociationConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9003480d, 0x707f, 0x44b5, 0x84, 0x3a, 0x27, 0xd9, 0xef, 0x9f, 0x7d, 0x00);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected AssociationConnector(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainClass MultipleAssociationRoleConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.MultipleAssociationRoleConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.MultipleAssociationRoleConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("931eac67-e6e0-427b-b430-26f76b44d84c")]
+	public partial class MultipleAssociationRoleConnector : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with MultipleAssociationRoleConnector.
+		/// </summary>
+		public static DslDiagrams::Decorator FindMultipleAssociationRoleConnectorDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		
+		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.Width = 0.01f;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		#endregion
+		
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TargetMultiplicity");
+			field1.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MultipleAssociationRoleConnectorTargetMultiplicityDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+			DslDiagrams::TextField field2 = new DslDiagrams::TextField("TargetRoleName");
+			field2.DefaultText = global::Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MultipleAssociationRoleConnectorTargetRoleNameDefaultText");
+			field2.DefaultFocusable = true;
+			field2.DefaultAutoSize = true;
+			field2.AnchoringBehavior.MinimumHeightInLines = 1;
+			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator2);
+				
+		}
+		
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// MultipleAssociationRoleConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x931eac67, 0xe6e0, 0x427b, 0xb4, 0x30, 0x26, 0xf7, 0x6b, 0x44, 0xd8, 0x4c);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MultipleAssociationRoleConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MultipleAssociationRoleConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainClass AssociationClassConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.AssociationClassConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.AssociationClassConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("b88462be-8aac-496d-b58b-547dabca8a1a")]
+	public partial class AssociationClassConnector : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with AssociationClassConnector.
+		/// </summary>
+		public static DslDiagrams::Decorator FindAssociationClassConnectorDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DarkGray);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.Width = 0.01f;
+			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dash;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DarkGray);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AssociationClassConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb88462be, 0x8aac, 0x496d, 0xb5, 0x8b, 0x54, 0x7d, 0xab, 0xca, 0x8a, 0x1a);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AssociationClassConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AssociationClassConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
 	/// DomainClass GeneralizationConnector
 	/// </summary>
 	[DslDesign::DisplayNameResource("Ufba.ShHome.GeneralizationConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
@@ -150,6 +599,152 @@ namespace Ufba.ShHome
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public GeneralizationConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainClass ImplementationConnector
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ImplementationConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ImplementationConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("0d08af50-81f1-4df1-9326-855a96d11398")]
+	public partial class ImplementationConnector : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ImplementationConnector.
+		/// </summary>
+		public static DslDiagrams::Decorator FindImplementationConnectorDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.Width = 0.01f;
+			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dash;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(DslDiagrams::LinkDecorator.DecoratorHollowArrow, new DslDiagrams::SizeD(0.1,0.1), null, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ImplementationConnector domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0d08af50, 0x81f1, 0x4df1, 0x93, 0x26, 0x85, 0x5a, 0x96, 0xd1, 0x13, 0x98);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImplementationConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImplementationConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

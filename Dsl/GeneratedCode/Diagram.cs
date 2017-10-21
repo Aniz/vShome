@@ -184,6 +184,28 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
+		/// Most connectors are mapped to element links, but there can be exceptions. This method tell if a connector should be
+		/// mapped to an element link.
+		/// </summary>
+		public override bool IsConnectorMappedToLink(DslDiagrams::BinaryLinkShape connector)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert(connector != null);
+			if (connector == null)
+				throw new global::System.ArgumentNullException("connector");
+			#endregion
+			if (connector.GetType() == typeof(global::Ufba.ShHome.AssociationConnector))
+				return false;
+			if (connector.GetType() == typeof(global::Ufba.ShHome.MultipleAssociationRoleConnector))
+				return false;
+			if (connector.GetType() == typeof(global::Ufba.ShHome.AssociationClassConnector))
+				return false;
+			if (connector.GetType() == typeof(global::Ufba.ShHome.ImplementationConnector))
+				return false;
+			return base.IsConnectorMappedToLink(connector);
+		}
+		
+		/// <summary>
 		/// Creates a new shape for the given model element as part of view fixup
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
@@ -196,13 +218,13 @@ namespace Ufba.ShHome
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Ufba.ShHome.Sensor)
+			if(element is global::Ufba.ShHome.Comment)
 			{
 				global::Ufba.ShHome.CommentBoxShape newShape = new global::Ufba.ShHome.CommentBoxShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Ufba.ShHome.SensorReferencesSubjects)
+			if(element is global::Ufba.ShHome.CommentReferencesSubjects)
 			{
 				global::Ufba.ShHome.CommentConnector newShape = new global::Ufba.ShHome.CommentConnector(this.Partition);
 				return newShape;
@@ -258,7 +280,7 @@ namespace Ufba.ShHome
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Sensor.TextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Comment.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Comment").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -430,8 +452,8 @@ namespace Ufba.ShHome
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelClass), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.Sensor), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.SensorReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.Comment), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.CommentReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.Generalization), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -452,9 +474,9 @@ namespace Ufba.ShHome
 				{
 					parentElement = GetParentForModelClass((global::Ufba.ShHome.ModelClass)childElement);
 				} else
-				if(childElement is global::Ufba.ShHome.Sensor)
+				if(childElement is global::Ufba.ShHome.Comment)
 				{
-					parentElement = GetParentForSensor((global::Ufba.ShHome.Sensor)childElement);
+					parentElement = GetParentForComment((global::Ufba.ShHome.Comment)childElement);
 				} else
 				{
 					parentElement = null;
@@ -472,7 +494,7 @@ namespace Ufba.ShHome
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Ufba.ShHome.ModelRoot GetParentForSensor( global::Ufba.ShHome.Sensor root )
+			public static global::Ufba.ShHome.ModelRoot GetParentForComment( global::Ufba.ShHome.Comment root )
 			{
 				// Segments 0 and 1
 				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;
@@ -568,7 +590,7 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.SensorReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.CommentReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.Generalization), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
