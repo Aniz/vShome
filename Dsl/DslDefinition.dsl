@@ -36,12 +36,17 @@
       <Properties>
         <DomainProperty Id="8005df81-3e86-4f6d-9bbd-54ed3bbd34de" Description="" Name="Name" DisplayName="Name" DefaultValue="">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="NameFeature" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="143e82e0-a08a-4fb4-8a21-9b0633878971" Description="Description for Ufba.ShHome.ModelClass.Type Feature" Name="TypeFeature" DisplayName="Type Feature">
           <Type>
             <DomainEnumerationMoniker Name="TypeFeature" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="bce70a21-cde2-4743-8ac1-68ad80be4c68" Description="Description for Ufba.ShHome.ModelClass.Serial" Name="Serial" DisplayName="Serial">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -250,6 +255,20 @@
         <EnumerationLiteral Description="Description for Ufba.ShHome.TypeDevice.Sensor" Name="Sensor" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="NameFeature" Namespace="Ufba.ShHome" Description="Description for Ufba.ShHome.NameFeature">
+      <Literals>
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.UserAirConditionerControl" Name="UserAirConditionerControl" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.PresenceIlusion" Name="PresenceIlusion" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.UserWindowControl" Name="UserWindowControl" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AutomatedWindowControl" Name="AutomatedWindowControl" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AutomatedIluminationByLuminosity" Name="AutomatedIluminationByLuminosity" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.UserIlumination" Name="UserIlumination" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AutomatedIluminationByPresence" Name="AutomatedIluminationByPresence" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AutomatedAirConditionerControl" Name="AutomatedAirConditionerControl" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.LockDoors" Name="LockDoors" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery" Name="AlarmAgainstRobbery" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <GeometryShape Id="f8a9826d-feac-4884-9a74-917b85bab175" Description="" Name="CommentBoxShape" DisplayName="Comment Box Shape" Namespace="Ufba.ShHome" FixedTooltipText="Comment Box Shape" FillColor="255, 255, 204" OutlineColor="204, 204, 102" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
@@ -265,24 +284,30 @@
         <TextDecorator Name="TypeDevice" DisplayName="Type Device" DefaultText="TypeDevice" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="e8a145df-2f5e-4754-ad8c-6f26dbf2f370" Description="Description for Ufba.ShHome.FeatureShape" Name="FeatureShape" DisplayName="Feature Shape" Namespace="Ufba.ShHome" FixedTooltipText="Feature Shape" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="ee96fc9d-3b9e-4398-8082-ec9f23cc7c88" Description="Description for Ufba.ShHome.FShape" Name="FShape" DisplayName="FShape" Namespace="Ufba.ShHome" FixedTooltipText="FShape" FillColor="192, 255, 255" InitialHeight="0.8" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TypeFeature" DisplayName="Type Feature" DefaultText="TypeFeature" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Serial" DisplayName="Serial" DefaultText="Serial" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="ee96fc9d-3b9e-4398-8082-ec9f23cc7c88" Description="Description for Ufba.ShHome.FShape" Name="FShape" DisplayName="FShape" Namespace="Ufba.ShHome" FixedTooltipText="FShape" FillColor="192, 255, 255" InitialHeight="0.5" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="64ae7ae5-2a71-432b-9065-edc05e56e58a" Description="Description for Ufba.ShHome.DShape" Name="DShape" DisplayName="DShape" Namespace="Ufba.ShHome" FixedTooltipText="DShape" FillColor="255, 192, 128" InitialHeight="0.5" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TypeFeature" DisplayName="Type Feature" DefaultText="TypeFeature" />
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TypeDevice" DisplayName="Type Device" DefaultText="TypeDevice" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="6c2cbcc9-1c05-49ce-b1e9-b0fe3b2a7803" Description="" Name="CommentConnector" DisplayName="Comment Connector" Namespace="Ufba.ShHome" FixedTooltipText="Comment Connector" Color="113, 111, 110" DashStyle="Dot" Thickness="0.01" RoutingStyle="Straight" />
     <Connector Id="6450202c-4c1c-41df-9326-c65c3cb41719" Description="Description for Ufba.ShHome.ActuatorConnector" Name="ActuatorConnector" DisplayName="Actuator Connector" Namespace="Ufba.ShHome" FixedTooltipText="Actuator Connector" />
-    <Connector Id="242600fd-4f55-4c97-927c-94b4628f7f14" Description="Description for Ufba.ShHome.SensorConnector" Name="SensorConnector" DisplayName="Sensor Connector" Namespace="Ufba.ShHome" FixedTooltipText="Sensor Connector" />
+    <Connector Id="f2dadd51-e785-41c8-89d3-48a1f6a115a5" Description="Description for Ufba.ShHome.SConnector" Name="SConnector" DisplayName="SConnector" Namespace="Ufba.ShHome" FixedTooltipText="SConnector" DashStyle="Dot" />
   </Connectors>
   <XmlSerializationBehavior Name="ShHomeSerializationBehavior" Namespace="Ufba.ShHome">
     <ClassData>
@@ -317,6 +342,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="typeFeature">
             <DomainPropertyMoniker Name="ModelClass/TypeFeature" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="serial">
+            <DomainPropertyMoniker Name="ModelClass/Serial" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -377,14 +405,14 @@
       <XmlClassData TypeName="ModelTypeReferencesSensor" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesSensorMoniker" ElementName="modelTypeReferencesSensor" MonikerTypeName="ModelTypeReferencesSensorMoniker">
         <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
       </XmlClassData>
-      <XmlClassData TypeName="SensorConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="sensorConnectorMoniker" ElementName="sensorConnector" MonikerTypeName="SensorConnectorMoniker">
-        <ConnectorMoniker Name="SensorConnector" />
-      </XmlClassData>
-      <XmlClassData TypeName="FeatureShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="featureShapeMoniker" ElementName="featureShape" MonikerTypeName="FeatureShapeMoniker">
-        <GeometryShapeMoniker Name="FeatureShape" />
-      </XmlClassData>
       <XmlClassData TypeName="FShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="fShapeMoniker" ElementName="fShape" MonikerTypeName="FShapeMoniker">
         <GeometryShapeMoniker Name="FShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="DShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="dShapeMoniker" ElementName="dShape" MonikerTypeName="DShapeMoniker">
+        <GeometryShapeMoniker Name="DShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="SConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="sConnectorMoniker" ElementName="sConnector" MonikerTypeName="SConnectorMoniker">
+        <ConnectorMoniker Name="SConnector" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -469,29 +497,6 @@
         <GeometryShapeMoniker Name="CommentBoxShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="Device" />
-        <ParentElementPath>
-          <DomainPath>ModelHasDevices.ModelRoot/!ModelRoot</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="DeviceShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Device/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="DeviceShape/TypeDevice" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Device/TypeDevice" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="DeviceShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="ModelClass" />
         <ParentElementPath>
           <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot</DomainPath>
@@ -512,7 +517,38 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FShape/Serial" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ModelClass/Serial" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="FShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Device" />
+        <ParentElementPath>
+          <DomainPath>ModelHasDevices.ModelRoot/!ModelRoot</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="DShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Device/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="DShape/TypeDevice" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Device/TypeDevice" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="DShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -525,7 +561,7 @@
         <DomainRelationshipMoniker Name="ModelTypeReferencesActuator" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="SensorConnector" />
+        <ConnectorMoniker Name="SConnector" />
         <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
       </ConnectorMap>
     </ConnectorMaps>

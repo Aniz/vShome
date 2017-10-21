@@ -204,7 +204,7 @@ namespace Ufba.ShHome
 			}
 			if(element is global::Ufba.ShHome.Device)
 			{
-				global::Ufba.ShHome.DeviceShape newShape = new global::Ufba.ShHome.DeviceShape(this.Partition);
+				global::Ufba.ShHome.DShape newShape = new global::Ufba.ShHome.DShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -220,7 +220,7 @@ namespace Ufba.ShHome
 			}
 			if(element is global::Ufba.ShHome.ModelTypeReferencesSensor)
 			{
-				global::Ufba.ShHome.SensorConnector newShape = new global::Ufba.ShHome.SensorConnector(this.Partition);
+				global::Ufba.ShHome.SConnector newShape = new global::Ufba.ShHome.SConnector(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -235,8 +235,8 @@ namespace Ufba.ShHome
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::Ufba.ShHome.CommentBoxShape.DecoratorsInitialized += CommentBoxShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Ufba.ShHome.DeviceShape.DecoratorsInitialized += DeviceShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Ufba.ShHome.FShape.DecoratorsInitialized += FShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Ufba.ShHome.DShape.DecoratorsInitialized += DShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -258,27 +258,6 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for DeviceShape.
-		/// </summary>
-		internal static partial class DeviceShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for DeviceShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.TypeDeviceDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeDevice").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
 		/// Class containing decorator path traversal methods for FShape.
 		/// </summary>
 		internal static partial class FShapeDecoratorMap
@@ -296,6 +275,30 @@ namespace Ufba.ShHome
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.TypeFeatureDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeFeature").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.SerialDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Serial").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for DShape.
+		/// </summary>
+		internal static partial class DShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for DShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.TypeDeviceDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeDevice").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -529,14 +532,14 @@ namespace Ufba.ShHome
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Ufba.ShHome.ModelRoot GetParentForDevice( global::Ufba.ShHome.Device root )
+			public static global::Ufba.ShHome.ModelRoot GetParentForModelClass( global::Ufba.ShHome.ModelType root )
 			{
 				// Segments 0 and 1
 				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Ufba.ShHome.ModelRoot GetParentForModelClass( global::Ufba.ShHome.ModelType root )
+			public static global::Ufba.ShHome.ModelRoot GetParentForDevice( global::Ufba.ShHome.Device root )
 			{
 				// Segments 0 and 1
 				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;

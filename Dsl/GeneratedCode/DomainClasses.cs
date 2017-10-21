@@ -293,16 +293,15 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private NameFeature namePropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
 		/// </summary>
 		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/Name.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/Name.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::DomainObjectId("8005df81-3e86-4f6d-9bbd-54ed3bbd34de")]
-		public global::System.String Name
+		public NameFeature Name
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -318,7 +317,7 @@ namespace Ufba.ShHome
 		/// <summary>
 		/// Value handler for the ModelClass.Name domain property.
 		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, global::System.String>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, NameFeature>
 		{
 			private NamePropertyHandler() { }
 		
@@ -344,7 +343,7 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ModelClass element)
+			public override sealed NameFeature GetValue(ModelClass element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.namePropertyStorage;
@@ -355,11 +354,11 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ModelClass element, global::System.String newValue)
+			public override sealed void SetValue(ModelClass element, NameFeature newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				NameFeature oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -451,6 +450,93 @@ namespace Ufba.ShHome
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.typeFeaturePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Serial domain property code
+		
+		/// <summary>
+		/// Serial domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid SerialDomainPropertyId = new global::System.Guid(0xbce70a21, 0xcde2, 0x4743, 0x8a, 0xc1, 0x68, 0xad, 0x80, 0xbe, 0x4c, 0x68);
+		
+		/// <summary>
+		/// Storage for Serial
+		/// </summary>
+		private global::System.String serialPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Serial domain property.
+		/// Description for Ufba.ShHome.ModelClass.Serial
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/Serial.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/Serial.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("bce70a21-cde2-4743-8ac1-68ad80be4c68")]
+		public global::System.String Serial
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return serialPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				SerialPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ModelClass.Serial domain property.
+		/// </summary>
+		internal sealed partial class SerialPropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, global::System.String>
+		{
+			private SerialPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ModelClass.Serial domain property value handler.
+			/// </summary>
+			public static readonly SerialPropertyHandler Instance = new SerialPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ModelClass.Serial domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return SerialDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ModelClass element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.serialPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ModelClass element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.serialPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

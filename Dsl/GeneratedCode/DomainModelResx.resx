@@ -157,6 +157,14 @@
     <value>Type Feature</value>
     <comment>DisplayName for DomainProperty &apos;TypeFeature&apos; on DomainClass &apos;ModelClass&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.ModelClass/Serial.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelClass.Serial</value>
+    <comment>Description for DomainProperty &apos;Serial&apos; on DomainClass &apos;ModelClass&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelClass/Serial.DisplayName" xml:space="preserve">
+    <value>Serial</value>
+    <comment>DisplayName for DomainProperty &apos;Serial&apos; on DomainClass &apos;ModelClass&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.Comment.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;Comment&apos;</comment>
@@ -593,6 +601,86 @@
     <value>Description for Ufba.ShHome.TypeDevice.Sensor</value>
     <comment>Description for EnumerationLiteral &apos;Sensor&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.NameFeature/UserAirConditionerControl.DisplayName" xml:space="preserve">
+    <value>UserAirConditionerControl</value>
+    <comment>Display name for EnumerationLiteral &apos;UserAirConditionerControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/UserAirConditionerControl.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.UserAirConditionerControl</value>
+    <comment>Description for EnumerationLiteral &apos;UserAirConditionerControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/PresenceIlusion.DisplayName" xml:space="preserve">
+    <value>PresenceIlusion</value>
+    <comment>Display name for EnumerationLiteral &apos;PresenceIlusion&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/PresenceIlusion.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.PresenceIlusion</value>
+    <comment>Description for EnumerationLiteral &apos;PresenceIlusion&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/UserWindowControl.DisplayName" xml:space="preserve">
+    <value>UserWindowControl</value>
+    <comment>Display name for EnumerationLiteral &apos;UserWindowControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/UserWindowControl.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.UserWindowControl</value>
+    <comment>Description for EnumerationLiteral &apos;UserWindowControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedWindowControl.DisplayName" xml:space="preserve">
+    <value>AutomatedWindowControl</value>
+    <comment>Display name for EnumerationLiteral &apos;AutomatedWindowControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedWindowControl.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.AutomatedWindowControl</value>
+    <comment>Description for EnumerationLiteral &apos;AutomatedWindowControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedIluminationByLuminosity.DisplayName" xml:space="preserve">
+    <value>AutomatedIluminationByLuminosity</value>
+    <comment>Display name for EnumerationLiteral &apos;AutomatedIluminationByLuminosity&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedIluminationByLuminosity.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.AutomatedIluminationByLuminosity</value>
+    <comment>Description for EnumerationLiteral &apos;AutomatedIluminationByLuminosity&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/UserIlumination.DisplayName" xml:space="preserve">
+    <value>UserIlumination</value>
+    <comment>Display name for EnumerationLiteral &apos;UserIlumination&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/UserIlumination.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.UserIlumination</value>
+    <comment>Description for EnumerationLiteral &apos;UserIlumination&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedIluminationByPresence.DisplayName" xml:space="preserve">
+    <value>AutomatedIluminationByPresence</value>
+    <comment>Display name for EnumerationLiteral &apos;AutomatedIluminationByPresence&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedIluminationByPresence.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.AutomatedIluminationByPresence</value>
+    <comment>Description for EnumerationLiteral &apos;AutomatedIluminationByPresence&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedAirConditionerControl.DisplayName" xml:space="preserve">
+    <value>AutomatedAirConditionerControl</value>
+    <comment>Display name for EnumerationLiteral &apos;AutomatedAirConditionerControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AutomatedAirConditionerControl.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.AutomatedAirConditionerControl</value>
+    <comment>Description for EnumerationLiteral &apos;AutomatedAirConditionerControl&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/LockDoors.DisplayName" xml:space="preserve">
+    <value>LockDoors</value>
+    <comment>Display name for EnumerationLiteral &apos;LockDoors&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/LockDoors.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.LockDoors</value>
+    <comment>Description for EnumerationLiteral &apos;LockDoors&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AlarmAgainstRobbery.DisplayName" xml:space="preserve">
+    <value>AlarmAgainstRobbery</value>
+    <comment>Display name for EnumerationLiteral &apos;AlarmAgainstRobbery&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/AlarmAgainstRobbery.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery</value>
+    <comment>Description for EnumerationLiteral &apos;AlarmAgainstRobbery&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.CommentBoxShape.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;CommentBoxShape&apos;</comment>
@@ -621,18 +709,6 @@
     <value>TypeDevice</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Ufba.ShHome.FeatureShape.Description" xml:space="preserve">
-    <value>Description for Ufba.ShHome.FeatureShape</value>
-    <comment>Description for DomainClass &apos;FeatureShape&apos;</comment>
-  </data>
-  <data name="Ufba.ShHome.FeatureShape.DisplayName" xml:space="preserve">
-    <value>Feature Shape</value>
-    <comment>DisplayName for DomainClass &apos;FeatureShape&apos;</comment>
-  </data>
-  <data name="FeatureShapeNameDefaultText" xml:space="preserve">
-    <value>Name</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="Ufba.ShHome.FShape.Description" xml:space="preserve">
     <value>Description for Ufba.ShHome.FShape</value>
     <comment>Description for DomainClass &apos;FShape&apos;</comment>
@@ -647,6 +723,26 @@
   </data>
   <data name="FShapeTypeFeatureDefaultText" xml:space="preserve">
     <value>TypeFeature</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FShapeSerialDefaultText" xml:space="preserve">
+    <value>Serial</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Ufba.ShHome.DShape.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.DShape</value>
+    <comment>Description for DomainClass &apos;DShape&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.DShape.DisplayName" xml:space="preserve">
+    <value>DShape</value>
+    <comment>DisplayName for DomainClass &apos;DShape&apos;</comment>
+  </data>
+  <data name="DShapeNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="DShapeTypeDeviceDefaultText" xml:space="preserve">
+    <value>TypeDevice</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">
@@ -665,13 +761,13 @@
     <value>Actuator Connector</value>
     <comment>DisplayName for DomainClass &apos;ActuatorConnector&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.SensorConnector.Description" xml:space="preserve">
-    <value>Description for Ufba.ShHome.SensorConnector</value>
-    <comment>Description for DomainClass &apos;SensorConnector&apos;</comment>
+  <data name="Ufba.ShHome.SConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.SConnector</value>
+    <comment>Description for DomainClass &apos;SConnector&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.SensorConnector.DisplayName" xml:space="preserve">
-    <value>Sensor Connector</value>
-    <comment>DisplayName for DomainClass &apos;SensorConnector&apos;</comment>
+  <data name="Ufba.ShHome.SConnector.DisplayName" xml:space="preserve">
+    <value>SConnector</value>
+    <comment>DisplayName for DomainClass &apos;SConnector&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>Class Diagrams (*.vShome)|*.vShome</value>

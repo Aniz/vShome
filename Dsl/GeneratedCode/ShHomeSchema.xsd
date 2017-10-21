@@ -112,9 +112,11 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: Name -->
-        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="name" type="NameFeature" />
         <!-- Property: TypeFeature -->
         <xsd:attribute name="typeFeature" type="TypeFeature" />
+        <!-- Property: Serial -->
+        <xsd:attribute name="serial" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -593,6 +595,22 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="Actuator"/>
       <xsd:enumeration value="Sensor"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum NameFeature -->
+  <xsd:simpleType name="NameFeature">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="UserAirConditionerControl"/>
+      <xsd:enumeration value="PresenceIlusion"/>
+      <xsd:enumeration value="UserWindowControl"/>
+      <xsd:enumeration value="AutomatedWindowControl"/>
+      <xsd:enumeration value="AutomatedIluminationByLuminosity"/>
+      <xsd:enumeration value="UserIlumination"/>
+      <xsd:enumeration value="AutomatedIluminationByPresence"/>
+      <xsd:enumeration value="AutomatedAirConditionerControl"/>
+      <xsd:enumeration value="LockDoors"/>
+      <xsd:enumeration value="AlarmAgainstRobbery"/>
     </xsd:restriction>
   </xsd:simpleType>
   

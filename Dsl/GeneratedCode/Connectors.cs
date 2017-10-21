@@ -279,15 +279,15 @@ namespace Ufba.ShHome
 namespace Ufba.ShHome
 {
 	/// <summary>
-	/// DomainClass SensorConnector
-	/// Description for Ufba.ShHome.SensorConnector
+	/// DomainClass SConnector
+	/// Description for Ufba.ShHome.SConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Ufba.ShHome.SensorConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Ufba.ShHome.SensorConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Ufba.ShHome.SConnector.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.SConnector.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("242600fd-4f55-4c97-927c-94b4628f7f14")]
-	public partial class SensorConnector : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("f2dadd51-e785-41c8-89d3-48a1f6a115a5")]
+	public partial class SConnector : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -352,9 +352,9 @@ namespace Ufba.ShHome
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with SensorConnector.
+		/// Finds a decorator associated with SConnector.
 		/// </summary>
-		public static DslDiagrams::Decorator FindSensorConnectorDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindSConnectorDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -363,20 +363,34 @@ namespace Ufba.ShHome
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dot;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// SensorConnector domain class Id.
+		/// SConnector domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x242600fd, 0x4f55, 0x4c97, 0x92, 0x7c, 0x94, 0xb4, 0x62, 0x8f, 0x7f, 0x14);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf2dadd51, 0xe785, 0x41c8, 0x89, 0xd3, 0x48, 0xa1, 0xf6, 0xa1, 0x15, 0xa5);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public SensorConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public SConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -386,7 +400,7 @@ namespace Ufba.ShHome
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public SensorConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public SConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

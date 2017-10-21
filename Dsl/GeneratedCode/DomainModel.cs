@@ -81,11 +81,11 @@ namespace Ufba.ShHome
 				typeof(ShHomeDiagram),
 				typeof(CommentConnector),
 				typeof(ActuatorConnector),
-				typeof(SensorConnector),
+				typeof(SConnector),
 				typeof(CommentBoxShape),
 				typeof(DeviceShape),
-				typeof(FeatureShape),
 				typeof(FShape),
+				typeof(DShape),
 				typeof(global::Ufba.ShHome.FixUpDiagram),
 				typeof(global::Ufba.ShHome.ConnectorRolePlayerChanged),
 			};
@@ -101,6 +101,7 @@ namespace Ufba.ShHome
 			{
 				new DomainMemberInfo(typeof(ModelClass), "Name", ModelClass.NameDomainPropertyId, typeof(ModelClass.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(ModelClass), "TypeFeature", ModelClass.TypeFeatureDomainPropertyId, typeof(ModelClass.TypeFeaturePropertyHandler)),
+				new DomainMemberInfo(typeof(ModelClass), "Serial", ModelClass.SerialDomainPropertyId, typeof(ModelClass.SerialPropertyHandler)),
 				new DomainMemberInfo(typeof(Comment), "Text", Comment.TextDomainPropertyId, typeof(Comment.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(Device), "Name", Device.NameDomainPropertyId, typeof(Device.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Device), "TypeDevice", Device.TypeDeviceDomainPropertyId, typeof(Device.TypeDevicePropertyHandler)),
@@ -155,11 +156,11 @@ namespace Ufba.ShHome
 				createElementMap.Add(typeof(ShHomeDiagram), 4);
 				createElementMap.Add(typeof(CommentConnector), 5);
 				createElementMap.Add(typeof(ActuatorConnector), 6);
-				createElementMap.Add(typeof(SensorConnector), 7);
+				createElementMap.Add(typeof(SConnector), 7);
 				createElementMap.Add(typeof(CommentBoxShape), 8);
 				createElementMap.Add(typeof(DeviceShape), 9);
-				createElementMap.Add(typeof(FeatureShape), 10);
-				createElementMap.Add(typeof(FShape), 11);
+				createElementMap.Add(typeof(FShape), 10);
+				createElementMap.Add(typeof(DShape), 11);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -180,11 +181,11 @@ namespace Ufba.ShHome
 				case 4: return new ShHomeDiagram(partition, propertyAssignments);
 				case 5: return new CommentConnector(partition, propertyAssignments);
 				case 6: return new ActuatorConnector(partition, propertyAssignments);
-				case 7: return new SensorConnector(partition, propertyAssignments);
+				case 7: return new SConnector(partition, propertyAssignments);
 				case 8: return new CommentBoxShape(partition, propertyAssignments);
 				case 9: return new DeviceShape(partition, propertyAssignments);
-				case 10: return new FeatureShape(partition, propertyAssignments);
-				case 11: return new FShape(partition, propertyAssignments);
+				case 10: return new FShape(partition, propertyAssignments);
+				case 11: return new DShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -681,6 +682,77 @@ namespace Ufba.ShHome
 		/// </summary>
 		[DslDesign::DescriptionResource("Ufba.ShHome.TypeDevice/Sensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		Sensor,
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainEnumeration: NameFeature
+	/// Description for Ufba.ShHome.NameFeature
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum NameFeature
+	{
+		/// <summary>
+		/// UserAirConditionerControl
+		/// Description for Ufba.ShHome.NameFeature.UserAirConditionerControl
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/UserAirConditionerControl.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		UserAirConditionerControl,
+		/// <summary>
+		/// PresenceIlusion
+		/// Description for Ufba.ShHome.NameFeature.PresenceIlusion
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/PresenceIlusion.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		PresenceIlusion,
+		/// <summary>
+		/// UserWindowControl
+		/// Description for Ufba.ShHome.NameFeature.UserWindowControl
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/UserWindowControl.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		UserWindowControl,
+		/// <summary>
+		/// AutomatedWindowControl
+		/// Description for Ufba.ShHome.NameFeature.AutomatedWindowControl
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AutomatedWindowControl.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		AutomatedWindowControl,
+		/// <summary>
+		/// AutomatedIluminationByLuminosity
+		/// Description for Ufba.ShHome.NameFeature.AutomatedIluminationByLuminosity
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AutomatedIluminationByLuminosity.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		AutomatedIluminationByLuminosity,
+		/// <summary>
+		/// UserIlumination
+		/// Description for Ufba.ShHome.NameFeature.UserIlumination
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/UserIlumination.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		UserIlumination,
+		/// <summary>
+		/// AutomatedIluminationByPresence
+		/// Description for Ufba.ShHome.NameFeature.AutomatedIluminationByPresence
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AutomatedIluminationByPresence.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		AutomatedIluminationByPresence,
+		/// <summary>
+		/// AutomatedAirConditionerControl
+		/// Description for Ufba.ShHome.NameFeature.AutomatedAirConditionerControl
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AutomatedAirConditionerControl.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		AutomatedAirConditionerControl,
+		/// <summary>
+		/// LockDoors
+		/// Description for Ufba.ShHome.NameFeature.LockDoors
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/LockDoors.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		LockDoors,
+		/// <summary>
+		/// AlarmAgainstRobbery
+		/// Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AlarmAgainstRobbery.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		AlarmAgainstRobbery,
 	}
 }
 
