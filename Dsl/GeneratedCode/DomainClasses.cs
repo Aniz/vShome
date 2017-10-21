@@ -283,59 +283,59 @@ namespace Ufba.ShHome
 		{
 		}
 		#endregion
-		#region Kind domain property code
+		#region Name domain property code
 		
 		/// <summary>
-		/// Kind domain property Id.
+		/// Name domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid KindDomainPropertyId = new global::System.Guid(0x8005df81, 0x3e86, 0x4f6d, 0x9b, 0xbd, 0x54, 0xed, 0x3b, 0xbd, 0x34, 0xde);
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x8005df81, 0x3e86, 0x4f6d, 0x9b, 0xbd, 0x54, 0xed, 0x3b, 0xbd, 0x34, 0xde);
 		
 		/// <summary>
-		/// Storage for Kind
+		/// Storage for Name
 		/// </summary>
-		private global::System.String kindPropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of Kind domain property.
+		/// Gets or sets the value of Name domain property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/Kind.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/Kind.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/Name.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/Name.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::DomainObjectId("8005df81-3e86-4f6d-9bbd-54ed3bbd34de")]
-		public global::System.String Kind
+		public global::System.String Name
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return kindPropertyStorage;
+				return namePropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				KindPropertyHandler.Instance.SetValue(this, value);
+				NamePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ModelClass.Kind domain property.
+		/// Value handler for the ModelClass.Name domain property.
 		/// </summary>
-		internal sealed partial class KindPropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, global::System.String>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, global::System.String>
 		{
-			private KindPropertyHandler() { }
+			private NamePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ModelClass.Kind domain property value handler.
+			/// Gets the singleton instance of the ModelClass.Name domain property value handler.
 			/// </summary>
-			public static readonly KindPropertyHandler Instance = new KindPropertyHandler();
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ModelClass.Kind domain property.
+			/// Gets the Id of the ModelClass.Name domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return KindDomainPropertyId;
+					return NameDomainPropertyId;
 				}
 			}
 			
@@ -347,7 +347,7 @@ namespace Ufba.ShHome
 			public override sealed global::System.String GetValue(ModelClass element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.kindPropertyStorage;
+				return element.namePropertyStorage;
 			}
 		
 			/// <summary>
@@ -363,66 +363,66 @@ namespace Ufba.ShHome
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.kindPropertyStorage = newValue;
+					element.namePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region IsAbstract domain property code
+		#region TypeFeature domain property code
 		
 		/// <summary>
-		/// IsAbstract domain property Id.
+		/// TypeFeature domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid IsAbstractDomainPropertyId = new global::System.Guid(0x67eb5c64, 0xddc3, 0x47b8, 0xa6, 0xd2, 0x17, 0xc1, 0xe5, 0x35, 0x3e, 0xd7);
+		public static readonly global::System.Guid TypeFeatureDomainPropertyId = new global::System.Guid(0x143e82e0, 0xa08a, 0x4fb4, 0x8a, 0x21, 0x9b, 0x06, 0x33, 0x87, 0x89, 0x71);
 		
 		/// <summary>
-		/// Storage for IsAbstract
+		/// Storage for TypeFeature
 		/// </summary>
-		private InheritanceModifier isAbstractPropertyStorage = InheritanceModifier.None;
+		private TypeFeature typeFeaturePropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of IsAbstract domain property.
+		/// Gets or sets the value of TypeFeature domain property.
+		/// Description for Ufba.ShHome.ModelClass.Type Feature
 		/// </summary>
-		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/IsAbstract.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/IsAbstract.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue(InheritanceModifier.None)]
-		[DslModeling::DomainObjectId("67eb5c64-ddc3-47b8-a6d2-17c1e5353ed7")]
-		public InheritanceModifier IsAbstract
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelClass/TypeFeature.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelClass/TypeFeature.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("143e82e0-a08a-4fb4-8a21-9b0633878971")]
+		public TypeFeature TypeFeature
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return isAbstractPropertyStorage;
+				return typeFeaturePropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				IsAbstractPropertyHandler.Instance.SetValue(this, value);
+				TypeFeaturePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ModelClass.IsAbstract domain property.
+		/// Value handler for the ModelClass.TypeFeature domain property.
 		/// </summary>
-		internal sealed partial class IsAbstractPropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, InheritanceModifier>
+		internal sealed partial class TypeFeaturePropertyHandler : DslModeling::DomainPropertyValueHandler<ModelClass, TypeFeature>
 		{
-			private IsAbstractPropertyHandler() { }
+			private TypeFeaturePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ModelClass.IsAbstract domain property value handler.
+			/// Gets the singleton instance of the ModelClass.TypeFeature domain property value handler.
 			/// </summary>
-			public static readonly IsAbstractPropertyHandler Instance = new IsAbstractPropertyHandler();
+			public static readonly TypeFeaturePropertyHandler Instance = new TypeFeaturePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ModelClass.IsAbstract domain property.
+			/// Gets the Id of the ModelClass.TypeFeature domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return IsAbstractDomainPropertyId;
+					return TypeFeatureDomainPropertyId;
 				}
 			}
 			
@@ -431,10 +431,10 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed InheritanceModifier GetValue(ModelClass element)
+			public override sealed TypeFeature GetValue(ModelClass element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.isAbstractPropertyStorage;
+				return element.typeFeaturePropertyStorage;
 			}
 		
 			/// <summary>
@@ -442,15 +442,15 @@ namespace Ufba.ShHome
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ModelClass element, InheritanceModifier newValue)
+			public override sealed void SetValue(ModelClass element, TypeFeature newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				InheritanceModifier oldValue = GetValue(element);
+				TypeFeature oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.isAbstractPropertyStorage = newValue;
+					element.typeFeaturePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -952,6 +952,93 @@ namespace Ufba.ShHome
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TypeDevice domain property code
+		
+		/// <summary>
+		/// TypeDevice domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TypeDeviceDomainPropertyId = new global::System.Guid(0x00270314, 0x107d, 0x481b, 0x89, 0x75, 0xfd, 0xef, 0x25, 0x11, 0x39, 0xb8);
+		
+		/// <summary>
+		/// Storage for TypeDevice
+		/// </summary>
+		private TypeDevice typeDevicePropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of TypeDevice domain property.
+		/// Description for Ufba.ShHome.Device.Type Device
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.Device/TypeDevice.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.Device/TypeDevice.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("00270314-107d-481b-8975-fdef251139b8")]
+		public TypeDevice TypeDevice
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return typeDevicePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TypeDevicePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Device.TypeDevice domain property.
+		/// </summary>
+		internal sealed partial class TypeDevicePropertyHandler : DslModeling::DomainPropertyValueHandler<Device, TypeDevice>
+		{
+			private TypeDevicePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Device.TypeDevice domain property value handler.
+			/// </summary>
+			public static readonly TypeDevicePropertyHandler Instance = new TypeDevicePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Device.TypeDevice domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TypeDeviceDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TypeDevice GetValue(Device element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.typeDevicePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Device element, TypeDevice newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TypeDevice oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.typeDevicePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

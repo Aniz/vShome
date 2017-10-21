@@ -234,27 +234,9 @@ namespace Ufba.ShHome
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Ufba.ShHome.ClassShape.DecoratorsInitialized += ClassShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Ufba.ShHome.CommentBoxShape.DecoratorsInitialized += CommentBoxShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Ufba.ShHome.DeviceShape.DecoratorsInitialized += DeviceShapeDecoratorMap.OnDecoratorsInitialized;
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for ClassShape.
-		/// </summary>
-		internal static partial class ClassShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for ClassShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.IsAbstractDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-			}
+			global::Ufba.ShHome.ClassShape.DecoratorsInitialized += ClassShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -290,6 +272,30 @@ namespace Ufba.ShHome
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.Device.TypeDeviceDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeDevice").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ClassShape.
+		/// </summary>
+		internal static partial class ClassShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ClassShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Ufba.ShHome.ModelClass.TypeFeatureDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TypeFeature").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -516,13 +522,6 @@ namespace Ufba.ShHome
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Ufba.ShHome.ModelRoot GetParentForModelClass( global::Ufba.ShHome.ModelType root )
-			{
-				// Segments 0 and 1
-				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;
-				if ( result == null ) return null;
-				return result;
-			}
 			public static global::Ufba.ShHome.ModelRoot GetParentForComment( global::Ufba.ShHome.Comment root )
 			{
 				// Segments 0 and 1
@@ -531,6 +530,13 @@ namespace Ufba.ShHome
 				return result;
 			}
 			public static global::Ufba.ShHome.ModelRoot GetParentForDevice( global::Ufba.ShHome.Device root )
+			{
+				// Segments 0 and 1
+				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Ufba.ShHome.ModelRoot GetParentForModelClass( global::Ufba.ShHome.ModelType root )
 			{
 				// Segments 0 and 1
 				global::Ufba.ShHome.ModelRoot result = root.ModelRoot;

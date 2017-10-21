@@ -1094,37 +1094,37 @@ namespace Ufba.ShHome
 			ModelClass instanceOfModelClass = element as ModelClass;
 			global::System.Diagnostics.Debug.Assert(instanceOfModelClass != null, "Expecting an instance of ModelClass");
 	
-			// Kind
+			// Name
 			if (!serializationContext.Result.Failed)
 			{
-				string attribKind = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "kind");
-				if (attribKind != null)
+				string attribName = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "name");
+				if (attribName != null)
 				{
-					global::System.String valueOfKind;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribKind, out valueOfKind))
+					global::System.String valueOfName;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribName, out valueOfName))
 					{
-						instanceOfModelClass.Kind = valueOfKind;
+						instanceOfModelClass.Name = valueOfName;
 					}
 					else
 					{	// Invalid property value, ignored.
-						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "kind", typeof(global::System.String), attribKind);
+						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "name", typeof(global::System.String), attribName);
 					}
 				}
 			}
-			// IsAbstract
+			// TypeFeature
 			if (!serializationContext.Result.Failed)
 			{
-				string attribIsAbstract = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "isAbstract");
-				if (attribIsAbstract != null)
+				string attribTypeFeature = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "typeFeature");
+				if (attribTypeFeature != null)
 				{
-					InheritanceModifier valueOfIsAbstract;
-					if (DslModeling::SerializationUtilities.TryGetValue<InheritanceModifier>(serializationContext, attribIsAbstract, out valueOfIsAbstract))
+					TypeFeature valueOfTypeFeature;
+					if (DslModeling::SerializationUtilities.TryGetValue<TypeFeature>(serializationContext, attribTypeFeature, out valueOfTypeFeature))
 					{
-						instanceOfModelClass.IsAbstract = valueOfIsAbstract;
+						instanceOfModelClass.TypeFeature = valueOfTypeFeature;
 					}
 					else
 					{	// Invalid property value, ignored.
-						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "isAbstract", typeof(InheritanceModifier), attribIsAbstract);
+						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "typeFeature", typeof(TypeFeature), attribTypeFeature);
 					}
 				}
 			}
@@ -1530,29 +1530,26 @@ namespace Ufba.ShHome
 			ModelClass instanceOfModelClass = element as ModelClass;
 			global::System.Diagnostics.Debug.Assert(instanceOfModelClass != null, "Expecting an instance of ModelClass");
 	
-			// Kind
+			// Name
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfModelClass.Kind;
+				global::System.String propValue = instanceOfModelClass.Name;
 				if (!serializationContext.Result.Failed)
 				{
 					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, string.Empty) != 0))
 					{	// No need to write the value out if it's the same as default value.
-						ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "kind", propValue);
+						ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "name", propValue);
 					}
 				}
 			}
-			// IsAbstract
+			// TypeFeature
 			if (!serializationContext.Result.Failed)
 			{
-				InheritanceModifier propValue = instanceOfModelClass.IsAbstract;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<InheritanceModifier>(serializationContext, propValue);
+				TypeFeature propValue = instanceOfModelClass.TypeFeature;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TypeFeature>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "None") != 0)
-					{	// No need to write the value out if it's the same as default value.
-						ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "isAbstract", serializedPropValue);
-					}
+					ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "typeFeature", serializedPropValue);
 				}
 			}
 		}
@@ -3270,6 +3267,23 @@ namespace Ufba.ShHome
 					}
 				}
 			}
+			// TypeDevice
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTypeDevice = ShHomeSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "typeDevice");
+				if (attribTypeDevice != null)
+				{
+					TypeDevice valueOfTypeDevice;
+					if (DslModeling::SerializationUtilities.TryGetValue<TypeDevice>(serializationContext, attribTypeDevice, out valueOfTypeDevice))
+					{
+						instanceOfDevice.TypeDevice = valueOfTypeDevice;
+					}
+					else
+					{	// Invalid property value, ignored.
+						ShHomeSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "typeDevice", typeof(TypeDevice), attribTypeDevice);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -3704,6 +3718,16 @@ namespace Ufba.ShHome
 					if (!string.IsNullOrEmpty(propValue))
 						ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "name", propValue);
 	
+				}
+			}
+			// TypeDevice
+			if (!serializationContext.Result.Failed)
+			{
+				TypeDevice propValue = instanceOfDevice.TypeDevice;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TypeDevice>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					ShHomeSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "typeDevice", serializedPropValue);
 				}
 			}
 		}

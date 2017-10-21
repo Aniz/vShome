@@ -34,14 +34,14 @@
         <DomainClassMoniker Name="ModelType" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="8005df81-3e86-4f6d-9bbd-54ed3bbd34de" Description="" Name="Kind" DisplayName="Kind" DefaultValue="">
+        <DomainProperty Id="8005df81-3e86-4f6d-9bbd-54ed3bbd34de" Description="" Name="Name" DisplayName="Name" DefaultValue="">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="67eb5c64-ddc3-47b8-a6d2-17c1e5353ed7" Description="" Name="IsAbstract" DisplayName="Is Abstract" DefaultValue="None">
+        <DomainProperty Id="143e82e0-a08a-4fb4-8a21-9b0633878971" Description="Description for Ufba.ShHome.ModelClass.Type Feature" Name="TypeFeature" DisplayName="Type Feature">
           <Type>
-            <DomainEnumerationMoniker Name="InheritanceModifier" />
+            <DomainEnumerationMoniker Name="TypeFeature" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -73,6 +73,11 @@
         <DomainProperty Id="e36a8795-537d-4446-86cd-684817d55883" Description="Description for Ufba.ShHome.Device.Name" Name="Name" DisplayName="Name">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="00270314-107d-481b-8975-fdef251139b8" Description="Description for Ufba.ShHome.Device.Type Device" Name="TypeDevice" DisplayName="Type Device">
+          <Type>
+            <DomainEnumerationMoniker Name="TypeDevice" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -230,14 +235,32 @@
         <EnumerationLiteral Description="" Name="Concurrent" Value="2" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="TypeFeature" Namespace="Ufba.ShHome" Description="Description for Ufba.ShHome.TypeFeature">
+      <Literals>
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeFeature.Mandatory" Name="Mandatory" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeFeature.EnumerationLiteral2" Name="EnumerationLiteral2" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeFeature.OR" Name="OR" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeFeature.Optional" Name="Optional" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeFeature.Alternative" Name="Alternative" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TypeDevice" Namespace="Ufba.ShHome" Description="Description for Ufba.ShHome.TypeDevice">
+      <Literals>
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeDevice.Actuator" Name="Actuator" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.TypeDevice.Sensor" Name="Sensor" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <CompartmentShape Id="45e46dec-1e1c-4013-a613-7dc083306bd0" Description="" Name="ClassShape" DisplayName="Class Shape" Namespace="Ufba.ShHome" FixedTooltipText="Class Shape" FillColor="211, 220, 239" InitialHeight="0.3" OutlineThickness="0.01" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
-        <ExpandCollapseDecorator Name="ExpandCollapse" DisplayName="Expand Collapse" />
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TypeFeature" DisplayName="Type Feature" DefaultText="TypeFeature" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <ExpandCollapseDecorator Name="ExpandCollapseDecorator1" DisplayName="Expand Collapse Decorator1" />
       </ShapeHasDecorators>
     </CompartmentShape>
     <GeometryShape Id="f8a9826d-feac-4884-9a74-917b85bab175" Description="" Name="CommentBoxShape" DisplayName="Comment Box Shape" Namespace="Ufba.ShHome" FixedTooltipText="Comment Box Shape" FillColor="255, 255, 204" OutlineColor="204, 204, 102" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
@@ -248,6 +271,9 @@
     <GeometryShape Id="fbc21c43-dc5b-43c6-99e4-7b6c63a64506" Description="Description for Ufba.ShHome.DeviceShape" Name="DeviceShape" DisplayName="Device Shape" Namespace="Ufba.ShHome" FixedTooltipText="Device Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TypeDevice" DisplayName="Type Device" DefaultText="TypeDevice" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -284,11 +310,11 @@
       <XmlClassData TypeName="ModelClass" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelClassMoniker" ElementName="modelClass" MonikerTypeName="ModelClassMoniker">
         <DomainClassMoniker Name="ModelClass" />
         <ElementData>
-          <XmlPropertyData XmlName="kind">
-            <DomainPropertyMoniker Name="ModelClass/Kind" />
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="ModelClass/Name" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="isAbstract">
-            <DomainPropertyMoniker Name="ModelClass/IsAbstract" />
+          <XmlPropertyData XmlName="typeFeature">
+            <DomainPropertyMoniker Name="ModelClass/TypeFeature" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -331,6 +357,9 @@
         <ElementData>
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Device/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="typeDevice">
+            <DomainPropertyMoniker Name="Device/TypeDevice" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -419,21 +448,6 @@
       <DomainClassMoniker Name="ModelRoot" />
     </Class>
     <ShapeMaps>
-      <CompartmentShapeMap>
-        <DomainClassMoniker Name="ModelClass" />
-        <ParentElementPath>
-          <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ClassShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ModelClass/IsAbstract" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <CompartmentShapeMoniker Name="ClassShape" />
-      </CompartmentShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Comment" />
         <ParentElementPath>
@@ -462,8 +476,39 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="DeviceShape/TypeDevice" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Device/TypeDevice" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="DeviceShape" />
       </ShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="ModelClass" />
+        <ParentElementPath>
+          <DomainPath>ModelRootHasTypes.ModelRoot/!ModelRoot</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClassShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ModelClass/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClassShape/TypeFeature" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ModelClass/TypeFeature" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="ClassShape" />
+      </CompartmentShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>

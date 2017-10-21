@@ -98,10 +98,11 @@ namespace Ufba.ShHome
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(ModelClass), "Kind", ModelClass.KindDomainPropertyId, typeof(ModelClass.KindPropertyHandler)),
-				new DomainMemberInfo(typeof(ModelClass), "IsAbstract", ModelClass.IsAbstractDomainPropertyId, typeof(ModelClass.IsAbstractPropertyHandler)),
+				new DomainMemberInfo(typeof(ModelClass), "Name", ModelClass.NameDomainPropertyId, typeof(ModelClass.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(ModelClass), "TypeFeature", ModelClass.TypeFeatureDomainPropertyId, typeof(ModelClass.TypeFeaturePropertyHandler)),
 				new DomainMemberInfo(typeof(Comment), "Text", Comment.TextDomainPropertyId, typeof(Comment.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(Device), "Name", Device.NameDomainPropertyId, typeof(Device.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Device), "TypeDevice", Device.TypeDeviceDomainPropertyId, typeof(Device.TypeDevicePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -613,6 +614,70 @@ namespace Ufba.ShHome
 		/// </summary>
 		[DslDesign::DescriptionResource("Ufba.ShHome.OperationConcurrency/Concurrent.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		Concurrent = 2,
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainEnumeration: TypeFeature
+	/// Description for Ufba.ShHome.TypeFeature
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TypeFeature
+	{
+		/// <summary>
+		/// Mandatory
+		/// Description for Ufba.ShHome.TypeFeature.Mandatory
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeFeature/Mandatory.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		Mandatory,
+		/// <summary>
+		/// EnumerationLiteral2
+		/// Description for Ufba.ShHome.TypeFeature.EnumerationLiteral2
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeFeature/EnumerationLiteral2.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		EnumerationLiteral2,
+		/// <summary>
+		/// OR
+		/// Description for Ufba.ShHome.TypeFeature.OR
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeFeature/OR.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		OR,
+		/// <summary>
+		/// Optional
+		/// Description for Ufba.ShHome.TypeFeature.Optional
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeFeature/Optional.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		Optional,
+		/// <summary>
+		/// Alternative
+		/// Description for Ufba.ShHome.TypeFeature.Alternative
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeFeature/Alternative.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		Alternative,
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainEnumeration: TypeDevice
+	/// Description for Ufba.ShHome.TypeDevice
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TypeDevice
+	{
+		/// <summary>
+		/// Actuator
+		/// Description for Ufba.ShHome.TypeDevice.Actuator
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeDevice/Actuator.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		Actuator,
+		/// <summary>
+		/// Sensor
+		/// Description for Ufba.ShHome.TypeDevice.Sensor
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.TypeDevice/Sensor.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		Sensor,
 	}
 }
 

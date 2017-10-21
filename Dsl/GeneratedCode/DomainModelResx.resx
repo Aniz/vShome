@@ -141,21 +141,21 @@
     <value>Model Class</value>
     <comment>DisplayName for DomainClass &apos;ModelClass&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ModelClass/Kind.Description" xml:space="preserve">
+  <data name="Ufba.ShHome.ModelClass/Name.Description" xml:space="preserve">
     <value></value>
-    <comment>Description for DomainProperty &apos;Kind&apos; on DomainClass &apos;ModelClass&apos;</comment>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ModelClass&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ModelClass/Kind.DisplayName" xml:space="preserve">
-    <value>Kind</value>
-    <comment>DisplayName for DomainProperty &apos;Kind&apos; on DomainClass &apos;ModelClass&apos;</comment>
+  <data name="Ufba.ShHome.ModelClass/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ModelClass&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ModelClass/IsAbstract.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainProperty &apos;IsAbstract&apos; on DomainClass &apos;ModelClass&apos;</comment>
+  <data name="Ufba.ShHome.ModelClass/TypeFeature.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelClass.Type Feature</value>
+    <comment>Description for DomainProperty &apos;TypeFeature&apos; on DomainClass &apos;ModelClass&apos;</comment>
   </data>
-  <data name="Ufba.ShHome.ModelClass/IsAbstract.DisplayName" xml:space="preserve">
-    <value>Is Abstract</value>
-    <comment>DisplayName for DomainProperty &apos;IsAbstract&apos; on DomainClass &apos;ModelClass&apos;</comment>
+  <data name="Ufba.ShHome.ModelClass/TypeFeature.DisplayName" xml:space="preserve">
+    <value>Type Feature</value>
+    <comment>DisplayName for DomainProperty &apos;TypeFeature&apos; on DomainClass &apos;ModelClass&apos;</comment>
   </data>
   <data name="Ufba.ShHome.Comment.Description" xml:space="preserve">
     <value></value>
@@ -196,6 +196,14 @@
   <data name="Ufba.ShHome.Device/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device/TypeDevice.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.Device.Type Device</value>
+    <comment>Description for DomainProperty &apos;TypeDevice&apos; on DomainClass &apos;Device&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.Device/TypeDevice.DisplayName" xml:space="preserve">
+    <value>Type Device</value>
+    <comment>DisplayName for DomainProperty &apos;TypeDevice&apos; on DomainClass &apos;Device&apos;</comment>
   </data>
   <data name="Ufba.ShHome.ModelRootHasComments.Description" xml:space="preserve">
     <value></value>
@@ -529,6 +537,62 @@
     <value></value>
     <comment>Description for EnumerationLiteral &apos;Concurrent&apos; on DomainEnumeration &apos;OperationConcurrency&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.TypeFeature/Mandatory.DisplayName" xml:space="preserve">
+    <value>Mandatory</value>
+    <comment>Display name for EnumerationLiteral &apos;Mandatory&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/Mandatory.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeFeature.Mandatory</value>
+    <comment>Description for EnumerationLiteral &apos;Mandatory&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/EnumerationLiteral2.DisplayName" xml:space="preserve">
+    <value>EnumerationLiteral2</value>
+    <comment>Display name for EnumerationLiteral &apos;EnumerationLiteral2&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/EnumerationLiteral2.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeFeature.EnumerationLiteral2</value>
+    <comment>Description for EnumerationLiteral &apos;EnumerationLiteral2&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/OR.DisplayName" xml:space="preserve">
+    <value>OR</value>
+    <comment>Display name for EnumerationLiteral &apos;OR&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/OR.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeFeature.OR</value>
+    <comment>Description for EnumerationLiteral &apos;OR&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/Optional.DisplayName" xml:space="preserve">
+    <value>Optional</value>
+    <comment>Display name for EnumerationLiteral &apos;Optional&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/Optional.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeFeature.Optional</value>
+    <comment>Description for EnumerationLiteral &apos;Optional&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/Alternative.DisplayName" xml:space="preserve">
+    <value>Alternative</value>
+    <comment>Display name for EnumerationLiteral &apos;Alternative&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeFeature/Alternative.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeFeature.Alternative</value>
+    <comment>Description for EnumerationLiteral &apos;Alternative&apos; on DomainEnumeration &apos;TypeFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeDevice/Actuator.DisplayName" xml:space="preserve">
+    <value>Actuator</value>
+    <comment>Display name for EnumerationLiteral &apos;Actuator&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeDevice/Actuator.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeDevice.Actuator</value>
+    <comment>Description for EnumerationLiteral &apos;Actuator&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeDevice/Sensor.DisplayName" xml:space="preserve">
+    <value>Sensor</value>
+    <comment>Display name for EnumerationLiteral &apos;Sensor&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.TypeDevice/Sensor.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.TypeDevice.Sensor</value>
+    <comment>Description for EnumerationLiteral &apos;Sensor&apos; on DomainEnumeration &apos;TypeDevice&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.ClassShape.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;ClassShape&apos;</comment>
@@ -539,6 +603,10 @@
   </data>
   <data name="ClassShapeNameDefaultText" xml:space="preserve">
     <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ClassShapeTypeFeatureDefaultText" xml:space="preserve">
+    <value>TypeFeature</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Ufba.ShHome.CommentBoxShape.Description" xml:space="preserve">
@@ -563,6 +631,10 @@
   </data>
   <data name="DeviceShapeNameDefaultText" xml:space="preserve">
     <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="DeviceShapeTypeDeviceDefaultText" xml:space="preserve">
+    <value>TypeDevice</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Ufba.ShHome.CommentConnector.Description" xml:space="preserve">

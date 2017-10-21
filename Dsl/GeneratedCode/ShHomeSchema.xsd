@@ -111,10 +111,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: Kind -->
-        <xsd:attribute name="kind" type="xsd:string" />
-        <!-- Property: IsAbstract -->
-        <xsd:attribute name="isAbstract" type="InheritanceModifier" />
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: TypeFeature -->
+        <xsd:attribute name="typeFeature" type="TypeFeature" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -266,6 +266,8 @@
         </xsd:attribute>
         <!-- Property: Name -->
         <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: TypeDevice -->
+        <xsd:attribute name="typeDevice" type="TypeDevice" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -572,6 +574,25 @@
       <xsd:enumeration value="Sequential"/>
       <xsd:enumeration value="Guarded"/>
       <xsd:enumeration value="Concurrent"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TypeFeature -->
+  <xsd:simpleType name="TypeFeature">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Mandatory"/>
+      <xsd:enumeration value="EnumerationLiteral2"/>
+      <xsd:enumeration value="OR"/>
+      <xsd:enumeration value="Optional"/>
+      <xsd:enumeration value="Alternative"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TypeDevice -->
+  <xsd:simpleType name="TypeDevice">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Actuator"/>
+      <xsd:enumeration value="Sensor"/>
     </xsd:restriction>
   </xsd:simpleType>
   
