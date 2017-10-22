@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" xmlns="http://schemas.microsoft.com/dsltools/ShHome">
+  <comments>
+    <comment Id="5699bdc8-9182-4d4d-b111-6a4dd84e0dbe" text="Automated Features have a sensor" />
+  </comments>
   <types>
     <modelClass Id="5b7f8b39-2bcf-4861-97e4-f930ba4fdc10" name="UserAirConditionerControl" typeFeature="Optional" serial="5575292698449566428L">
       <actuator>

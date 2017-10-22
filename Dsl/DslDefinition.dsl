@@ -373,8 +373,8 @@
     <Connector Id="6450202c-4c1c-41df-9326-c65c3cb41719" Description="Description for Ufba.ShHome.ActuatorConnector" Name="ActuatorConnector" DisplayName="Actuator Connector" Namespace="Ufba.ShHome" FixedTooltipText="Actuator Connector" />
     <Connector Id="f2dadd51-e785-41c8-89d3-48a1f6a115a5" Description="Description for Ufba.ShHome.SConnector" Name="SConnector" DisplayName="SConnector" Namespace="Ufba.ShHome" FixedTooltipText="SConnector" DashStyle="Dot" />
     <Connector Id="7824f42a-cde7-40a2-9cbf-132fa0051da0" Description="Description for Ufba.ShHome.FatherConnector" Name="FatherConnector" DisplayName="Father Connector" Namespace="Ufba.ShHome" FixedTooltipText="Father Connector" Color="Plum" TargetEndStyle="FilledArrow" />
-    <Connector Id="0aad65e9-83be-4ffd-896b-889b4ff5921b" Description="Description for Ufba.ShHome.BrotherConnector" Name="BrotherConnector" DisplayName="Brother Connector" Namespace="Ufba.ShHome" FixedTooltipText="Brother Connector" Color="DarkViolet" TargetEndStyle="EmptyArrow" />
-    <Connector Id="db29ed0d-9e24-4347-8385-cdfd835f681a" Description="Description for Ufba.ShHome.AlternativesConnector" Name="AlternativesConnector" DisplayName="Alternatives Connector" Namespace="Ufba.ShHome" FixedTooltipText="Alternatives Connector" Color="Indigo" TargetEndStyle="EmptyDiamond" />
+    <Connector Id="0aad65e9-83be-4ffd-896b-889b4ff5921b" Description="Description for Ufba.ShHome.BrotherConnector" Name="BrotherConnector" DisplayName="Brother Connector" Namespace="Ufba.ShHome" FixedTooltipText="Brother Connector" Color="DarkViolet" SourceEndStyle="EmptyArrow" TargetEndStyle="EmptyArrow" />
+    <Connector Id="db29ed0d-9e24-4347-8385-cdfd835f681a" Description="Description for Ufba.ShHome.AlternativesConnector" Name="AlternativesConnector" DisplayName="Alternatives Connector" Namespace="Ufba.ShHome" FixedTooltipText="Alternatives Connector" Color="Indigo" SourceEndStyle="EmptyDiamond" TargetEndStyle="EmptyDiamond" />
   </Connectors>
   <XmlSerializationBehavior Name="ShHomeSerializationBehavior" Namespace="Ufba.ShHome">
     <ClassData>

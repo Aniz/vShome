@@ -59,35 +59,35 @@
     <fShape Id="a2badf7e-ab77-4d99-bc87-60e172121328" absoluteBounds="6.25, 7, 1.875, 0.75">
       <modelClassMoniker Id="24f361ec-aae2-4513-9901-49cce2b4f437" />
     </fShape>
-    <actuatorConnector Id="76391d66-9421-4ba9-aa06-4007adac2076" edgePoints="[(3.125 : 4.75); (3.125 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="76391d66-9421-4ba9-aa06-4007adac2076" edgePoints="[(3.125 : 4.75); (3.125 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="faae602e-66ff-4c0a-a024-ebbb284e5cb2" />
       <nodes>
         <fShapeMoniker Id="8b7c456b-314b-4bd9-aa6e-137ed4dbfde6" />
         <dShapeMoniker Id="9bdc7847-0382-48a3-b07e-e8e2f6777de3" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="adc5597b-a1d9-43ca-bcb0-35fb3eab4002" edgePoints="[(5 : 4.75); (5 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="adc5597b-a1d9-43ca-bcb0-35fb3eab4002" edgePoints="[(5 : 4.75); (5 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="bbc2d618-8ca9-4576-a691-57791200252a" />
       <nodes>
         <fShapeMoniker Id="a7239796-67db-414c-acc4-7782179ad9ec" />
         <dShapeMoniker Id="45eee179-5ca3-44f0-b6c8-cd2b0e564169" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="dae5c13b-90c2-4182-b666-2ed7f06fe106" edgePoints="[(2 : 6.5); (3.625 : 6.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="dae5c13b-90c2-4182-b666-2ed7f06fe106" edgePoints="[(2 : 6.5); (3.625 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="e032e894-8bbc-4b75-af0a-c0fd14f9b4cd" />
       <nodes>
         <fShapeMoniker Id="f6b4d1c9-eea9-4179-abe8-51b271f88e58" />
         <dShapeMoniker Id="c3f7e590-d9b0-4638-976c-0c6cf208b43c" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="18bfeba1-7ad0-43d9-a36b-fc0335fa17ed" edgePoints="[(2.5 : 7.46875); (4.0195290625 : 7.46875); (4.0195290625 : 6.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="18bfeba1-7ad0-43d9-a36b-fc0335fa17ed" edgePoints="[(2.5 : 7.46875); (4.0195290625 : 7.46875); (4.0195290625 : 6.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="c56cd62a-b2a5-4b62-9449-038852c75def" />
       <nodes>
         <fShapeMoniker Id="fcc2ab4f-298b-4799-9648-5f70514fb155" />
         <dShapeMoniker Id="c3f7e590-d9b0-4638-976c-0c6cf208b43c" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="3b917e0a-2f59-4e25-8725-bd56190aada8" edgePoints="[(6.25 : 7.1875); (4.7812525 : 7.1875); (4.7812525 : 6.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="3b917e0a-2f59-4e25-8725-bd56190aada8" edgePoints="[(6.25 : 7.1875); (4.7812525 : 7.1875); (4.7812525 : 6.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="acf73b8f-5be2-42f7-ad98-45caa47b5d4c" />
       <nodes>
         <fShapeMoniker Id="a2badf7e-ab77-4d99-bc87-60e172121328" />
@@ -101,7 +101,7 @@
         <dShapeMoniker Id="99b100e0-d205-480e-a5cb-f596c4da5263" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="dedf8a64-03e0-41c7-9c11-a44cc9977d1e" edgePoints="[(3.125 : 1.25); (3.125 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="dedf8a64-03e0-41c7-9c11-a44cc9977d1e" edgePoints="[(3.125 : 1.25); (3.125 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="f9c2ad82-172d-4b0a-9972-39a906d4fd43" />
       <nodes>
         <fShapeMoniker Id="4ea96b5a-01ef-4709-9968-ff65b6af84c6" />
@@ -115,14 +115,14 @@
         <dShapeMoniker Id="99b100e0-d205-480e-a5cb-f596c4da5263" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="cca22e95-cc7d-465d-9425-16647b6339cb" edgePoints="[(3.875 : 2.75); (4.25 : 2.75); (4.25 : 0.75); (3.875 : 0.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="cca22e95-cc7d-465d-9425-16647b6339cb" edgePoints="[(3.125 : 2.375); (3.125 : 2.0625); (3.9375 : 2.0625); (3.9375 : 0.75); (3.875 : 0.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <modelTypeReferencesActuatorMoniker Id="45d5de6a-9c3e-45b2-b232-4d6c7c2a777b" />
       <nodes>
         <fShapeMoniker Id="d287f4a5-d964-49d8-be8c-42c8cd83650e" />
         <dShapeMoniker Id="b1d54962-9d59-4af7-b9e1-f8ee2e31e2ab" />
       </nodes>
     </actuatorConnector>
-    <actuatorConnector Id="670c6f85-81f6-4249-9727-ea75feb338b4" edgePoints="[(4.476563125 : 8.125); (4.476563125 : 6.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <actuatorConnector Id="670c6f85-81f6-4249-9727-ea75feb338b4" edgePoints="[(4.476563125 : 8.125); (4.476563125 : 6.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesActuatorMoniker Id="b5d6a3d3-7316-4dd9-9fbe-2077901c5024" />
       <nodes>
         <fShapeMoniker Id="16b4d0dc-508c-47e2-8f35-451ea6cdb06a" />
@@ -136,75 +136,78 @@
         <dShapeMoniker Id="c3f7e590-d9b0-4638-976c-0c6cf208b43c" />
       </nodes>
     </actuatorConnector>
-    <sConnector Id="bc68935c-8e1c-4f77-bdca-ceb824f7d891" edgePoints="[(1.25 : 3.125); (1.25 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <sConnector Id="bc68935c-8e1c-4f77-bdca-ceb824f7d891" edgePoints="[(1.25 : 3.125); (1.25 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesSensorMoniker Id="4cf28876-1561-466e-b53f-c6828ae55772" />
       <nodes>
         <fShapeMoniker Id="93309018-bb18-4063-8de1-3a5b8c2e4c28" />
         <dShapeMoniker Id="f79ff003-d1e8-43b7-8a73-74a4c64d88cf" />
       </nodes>
     </sConnector>
-    <sConnector Id="04c7fcf1-f7dd-41c1-8e6f-30b2d7580b19" edgePoints="[(3.125 : 3.125); (3.125 : 3.71875); (2 : 3.71875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <sConnector Id="04c7fcf1-f7dd-41c1-8e6f-30b2d7580b19" edgePoints="[(3.125 : 3.125); (3.125 : 3.71875); (2 : 3.71875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesSensorMoniker Id="4b76cff7-4d65-4dbc-b7c4-9f78ee30cda5" />
       <nodes>
         <fShapeMoniker Id="d287f4a5-d964-49d8-be8c-42c8cd83650e" />
         <dShapeMoniker Id="f79ff003-d1e8-43b7-8a73-74a4c64d88cf" />
       </nodes>
     </sConnector>
-    <fatherConnector Id="eeb15b95-a482-45ec-9cfb-5cbd7047a101" edgePoints="[(1.25 : 2.375); (1.25 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <fatherConnector Id="eeb15b95-a482-45ec-9cfb-5cbd7047a101" edgePoints="[(1.25 : 2.375); (1.25 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesFatherMoniker Id="ed49b0b5-d03a-46b3-b895-e2338e0ad1c4" />
       <nodes>
         <fShapeMoniker Id="93309018-bb18-4063-8de1-3a5b8c2e4c28" />
         <fShapeMoniker Id="291a1b23-4d9d-49e9-88d8-50de59334347" />
       </nodes>
     </fatherConnector>
-    <fatherConnector Id="22d8c994-30ae-4caa-bb69-af5da0f4e48e" edgePoints="[(3.125 : 2.375); (3.125 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <fatherConnector Id="22d8c994-30ae-4caa-bb69-af5da0f4e48e" edgePoints="[(3.125 : 2.375); (3.125 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesFatherMoniker Id="91fe37dd-e857-48d8-bbb2-f0564a11a0c0" />
       <nodes>
         <fShapeMoniker Id="d287f4a5-d964-49d8-be8c-42c8cd83650e" />
         <fShapeMoniker Id="4ea96b5a-01ef-4709-9968-ff65b6af84c6" />
       </nodes>
     </fatherConnector>
-    <fatherConnector Id="66a77798-5124-4e2e-8331-0d16b06753af" edgePoints="[(1.25 : 7); (1.25 : 6.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <fatherConnector Id="66a77798-5124-4e2e-8331-0d16b06753af" edgePoints="[(1.25 : 7); (1.25 : 6.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesFatherMoniker Id="c3adff65-35d6-44b9-afab-38e8a47934be" />
       <nodes>
         <fShapeMoniker Id="fcc2ab4f-298b-4799-9648-5f70514fb155" />
         <fShapeMoniker Id="f6b4d1c9-eea9-4179-abe8-51b271f88e58" />
       </nodes>
     </fatherConnector>
-    <fatherConnector Id="eb1ebe71-c353-4680-bc8a-a17a4dc0f23c" edgePoints="[(7.125 : 7); (7.125 : 6.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <fatherConnector Id="eb1ebe71-c353-4680-bc8a-a17a4dc0f23c" edgePoints="[(7.125 : 7); (7.125 : 6.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesFatherMoniker Id="3a974306-7118-4703-aef5-0ef05b9e9d6e" />
       <nodes>
         <fShapeMoniker Id="a2badf7e-ab77-4d99-bc87-60e172121328" />
         <fShapeMoniker Id="e2ac4066-72ce-44fc-bafe-98a183af318e" />
       </nodes>
     </fatherConnector>
-    <sConnector Id="cec9a0ee-90fb-4db2-8864-06024be906e2" edgePoints="[(1.625 : 7.75); (1.625 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <sConnector Id="cec9a0ee-90fb-4db2-8864-06024be906e2" edgePoints="[(1.625 : 7.75); (1.625 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesSensorMoniker Id="18136b0d-f217-4057-aacc-2929b057c9cc" />
       <nodes>
         <fShapeMoniker Id="fcc2ab4f-298b-4799-9648-5f70514fb155" />
         <dShapeMoniker Id="67da744d-6840-4291-ae6e-09ee0470dd71" />
       </nodes>
     </sConnector>
-    <sConnector Id="acd0fdcf-1284-4a3c-8e25-0db10ab1d8b8" edgePoints="[(7.125 : 7.75); (7.125 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <sConnector Id="acd0fdcf-1284-4a3c-8e25-0db10ab1d8b8" edgePoints="[(7.125 : 7.75); (7.125 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesSensorMoniker Id="5b432111-e53a-40df-b39f-bb15676ada4c" />
       <nodes>
         <fShapeMoniker Id="a2badf7e-ab77-4d99-bc87-60e172121328" />
         <dShapeMoniker Id="5e7a338b-7568-448f-b4bc-108cf12edb06" />
       </nodes>
     </sConnector>
-    <alternativesConnector Id="7c613c91-cdd7-4461-883d-15b064e2ec32" edgePoints="[(2.375 : 2.75); (2.28125 : 2.75); (2.28125 : 1.625); (2 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <alternativesConnector Id="7c613c91-cdd7-4461-883d-15b064e2ec32" edgePoints="[(2.375 : 2.75); (2.28125 : 2.75); (2.28125 : 1.625); (2 : 1.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesAlternativesMoniker Id="1e69db85-35a9-4b97-9357-843e4ef7e958" />
       <nodes>
         <fShapeMoniker Id="d287f4a5-d964-49d8-be8c-42c8cd83650e" />
         <fShapeMoniker Id="291a1b23-4d9d-49e9-88d8-50de59334347" />
       </nodes>
     </alternativesConnector>
-    <brotherConnector Id="054c3c4d-bda7-4a3e-a291-814d65740025" edgePoints="[(2.5 : 7.671875); (4.39322979166667 : 7.671875 : JumpStart); (4.55989645833333 : 7.671875 : JumpEnd); (6.25 : 7.671875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <brotherConnector Id="054c3c4d-bda7-4a3e-a291-814d65740025" edgePoints="[(2.5 : 7.671875); (4.39322979166667 : 7.671875 : JumpStart); (4.55989645833333 : 7.671875 : JumpEnd); (6.25 : 7.671875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <modelTypeReferencesBrotherMoniker Id="de469abb-3fc6-40ea-8739-3b64121f1a17" />
       <nodes>
         <fShapeMoniker Id="fcc2ab4f-298b-4799-9648-5f70514fb155" />
         <fShapeMoniker Id="a2badf7e-ab77-4d99-bc87-60e172121328" />
       </nodes>
     </brotherConnector>
+    <commentBoxShape Id="a2dc018b-6680-46e0-899c-e62fe9bf4854" absoluteBounds="5.5, 1.625, 2.125, 0.75">
+      <commentMoniker Id="5699bdc8-9182-4d4d-b111-6a4dd84e0dbe" />
+    </commentBoxShape>
   </nestedChildShapes>
 </shHomeDiagram>
