@@ -1,1 +1,29 @@
-﻿ErrorGeneratingOutput
+﻿
+Report template
+use Optional UserAirConditionerControl
+		actuator: AirConditioner
+		use Mandatory PresenceIlusion
+		actuator: Led
+		use Alternative AutomatedIluminationByLuminosity
+		actuator: Led
+				sensor: LightSensor 			
+		use Mandatory UserIlumination
+		actuator: Led
+		use OR AutomatedAirConditionerControl
+		actuator: AirConditioner
+				sensor: TemperatureSensor 			
+		use Optional LockDoors
+		actuator: AutomaticDoor 
+		use Mandatory AutomatedWindowControl
+		actuator: AutomaticWindow
+				sensor: TemperatureSensor 			
+		use Mandatory PanicMode
+		actuator: Led
+		use Optional AlarmAgainstRobbery
+		actuator: Alarm
+		use Alternative UserWindowControl
+		actuator: AutomaticWindow
+		use OR AutomatedIluminationByPresence
+		actuator: Led
+				sensor: PresenceSensor 			
+		

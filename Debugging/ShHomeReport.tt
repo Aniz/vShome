@@ -3,27 +3,20 @@
 <#@ ShHome processor="ShHomeDirectiveProcessor" requires="fileName='Sample.vShome'"  #>
 
 Report template
-
-<#= this.ModelRoot.Name #>
 <#
-  // When you change the DSL Definition, some of the code below may not work.
-  foreach (ModelType type in this.ModelRoot.Types)
+   foreach (ModelType type in this.ModelRoot.Types)
   {
 #>
 <#
 	ModelClass modelClass = type as ModelClass;
 	if (modelClass != null)
 	{
-	  if (modelClass.Targets.Count > 0)
-	  {
-		// Direct jump to linked elements (compare with the association loop below)
-		foreach (ModelClass target in modelClass.Targets)
-		{
-#>
-			 <#= target.Name #>
-<#	    
+	#>use <#= modelClass.TypeFeature #> <#= modelClass.Name #>
+		actuator: <#= modelClass.Actuator.Name #>
+		<# if (modelClass.Sensor != null){ #>
+		sensor: <#= modelClass.Sensor.Name #>			
+		<#	    
 		}
-	  } 
 	}
   }
 #>
