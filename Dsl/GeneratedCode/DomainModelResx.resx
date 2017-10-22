@@ -409,6 +409,102 @@
     <value>Feature Has Sensor</value>
     <comment>PropertyDisplayName for DomainRole &apos;Device&apos; on DomainRelationship &apos;ModelTypeReferencesSensor&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesFather</value>
+    <comment>Description for DomainClass &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather.DisplayName" xml:space="preserve">
+    <value>Model Type References Father</value>
+    <comment>DisplayName for DomainClass &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesFather.SourceModelType</value>
+    <comment>Description for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.DisplayName" xml:space="preserve">
+    <value>Source Model Type</value>
+    <comment>DisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Father</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesFather.TargetModelType</value>
+    <comment>Description for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.DisplayName" xml:space="preserve">
+    <value>Target Model Type</value>
+    <comment>DisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Model Has Father</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesFather&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesBrother</value>
+    <comment>Description for DomainClass &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother.DisplayName" xml:space="preserve">
+    <value>Model Type References Brother</value>
+    <comment>DisplayName for DomainClass &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesBrother.SourceModelType</value>
+    <comment>Description for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.DisplayName" xml:space="preserve">
+    <value>Source Model Type</value>
+    <comment>DisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Brother</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesBrother.TargetModelType</value>
+    <comment>Description for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.DisplayName" xml:space="preserve">
+    <value>Target Model Type</value>
+    <comment>DisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Model Has Brother</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesBrother&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesAlternatives</value>
+    <comment>Description for DomainClass &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives.DisplayName" xml:space="preserve">
+    <value>Model Type References Alternatives</value>
+    <comment>DisplayName for DomainClass &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelType</value>
+    <comment>Description for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.DisplayName" xml:space="preserve">
+    <value>Source Model Type</value>
+    <comment>DisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Alternatives</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelType</value>
+    <comment>Description for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.DisplayName" xml:space="preserve">
+    <value>Target Model Type</value>
+    <comment>DisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.PropertyDisplayName" xml:space="preserve">
+    <value>Model Has Alternatives</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetModelType&apos; on DomainRelationship &apos;ModelTypeReferencesAlternatives&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.AccessModifier/Public.DisplayName" xml:space="preserve">
     <value>Public</value>
     <comment>Display name for EnumerationLiteral &apos;Public&apos; on DomainEnumeration &apos;AccessModifier&apos;</comment>
@@ -689,6 +785,14 @@
     <value>Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery</value>
     <comment>Description for EnumerationLiteral &apos;AlarmAgainstRobbery&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.NameFeature/PanicMode.DisplayName" xml:space="preserve">
+    <value>PanicMode</value>
+    <comment>Display name for EnumerationLiteral &apos;PanicMode&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.NameFeature/PanicMode.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.NameFeature.PanicMode</value>
+    <comment>Description for EnumerationLiteral &apos;PanicMode&apos; on DomainEnumeration &apos;NameFeature&apos;</comment>
+  </data>
   <data name="Ufba.ShHome.ReturnType/BOOL.DisplayName" xml:space="preserve">
     <value>BOOL</value>
     <comment>Display name for EnumerationLiteral &apos;BOOL&apos; on DomainEnumeration &apos;ReturnType&apos;</comment>
@@ -805,6 +909,30 @@
     <value>SConnector</value>
     <comment>DisplayName for DomainClass &apos;SConnector&apos;</comment>
   </data>
+  <data name="Ufba.ShHome.FatherConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.FatherConnector</value>
+    <comment>Description for DomainClass &apos;FatherConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.FatherConnector.DisplayName" xml:space="preserve">
+    <value>Father Connector</value>
+    <comment>DisplayName for DomainClass &apos;FatherConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.BrotherConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.BrotherConnector</value>
+    <comment>Description for DomainClass &apos;BrotherConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.BrotherConnector.DisplayName" xml:space="preserve">
+    <value>Brother Connector</value>
+    <comment>DisplayName for DomainClass &apos;BrotherConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.AlternativesConnector.Description" xml:space="preserve">
+    <value>Description for Ufba.ShHome.AlternativesConnector</value>
+    <comment>Description for DomainClass &apos;AlternativesConnector&apos;</comment>
+  </data>
+  <data name="Ufba.ShHome.AlternativesConnector.DisplayName" xml:space="preserve">
+    <value>Alternatives Connector</value>
+    <comment>DisplayName for DomainClass &apos;AlternativesConnector&apos;</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>Class Diagrams (*.vShome)|*.vShome</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -871,6 +999,30 @@
   </data>
   <data name="SensorToolboxTooltip" xml:space="preserve">
     <value>Sensor</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="FatherToolboxItem" xml:space="preserve">
+    <value>Father</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="FatherToolboxTooltip" xml:space="preserve">
+    <value>Father</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="BrotherToolboxItem" xml:space="preserve">
+    <value>Brother</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="BrotherToolboxTooltip" xml:space="preserve">
+    <value>Brother</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AlternativesToolboxItem" xml:space="preserve">
+    <value>Alternatives</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AlternativesToolboxTooltip" xml:space="preserve">
+    <value>Alternatives</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1020,6 +1172,18 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="SensorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\..\..\Language4\Dsl\Resources\ObjectFlowTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="FatherToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\GeneralizationTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="BrotherToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\CompositeTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AlternativesToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\AggregationTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

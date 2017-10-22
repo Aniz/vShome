@@ -76,6 +76,30 @@ namespace Ufba.ShHome
 					"@SensorToolboxBitmap;Ufba.ShHome.Dsl.dll", 
 					0xff00ff,
 					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
+					"@FatherToolboxItem;Ufba.ShHome.Dsl.dll", 
+					"Ufba.ShHome.FatherToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Father", 
+					"@FatherToolboxBitmap;Ufba.ShHome.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
+					"@BrotherToolboxItem;Ufba.ShHome.Dsl.dll", 
+					"Ufba.ShHome.BrotherToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Brother", 
+					"@BrotherToolboxBitmap;Ufba.ShHome.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("Ufba.ShHome.Class DiagramsToolboxTab",
+					"@AlternativesToolboxItem;Ufba.ShHome.Dsl.dll", 
+					"Ufba.ShHome.AlternativesToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Alternatives", 
+					"@AlternativesToolboxBitmap;Ufba.ShHome.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
 	[VSShell::ProvideEditorFactory(typeof(ShHomeEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(ShHomeEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(ShHomeEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

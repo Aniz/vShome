@@ -190,6 +190,54 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="032f37ab-dce0-463c-8708-566a90b257c0" Description="Description for Ufba.ShHome.ModelTypeReferencesFather" Name="ModelTypeReferencesFather" DisplayName="Model Type References Father" Namespace="Ufba.ShHome">
+      <Source>
+        <DomainRole Id="45edf2fd-9d2a-4bdf-ae82-a0237186dd9e" Description="Description for Ufba.ShHome.ModelTypeReferencesFather.SourceModelType" Name="SourceModelType" DisplayName="Source Model Type" PropertyName="Father" Multiplicity="One" PropertyDisplayName="Father">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="6581e046-5cb9-4650-922e-e426bffccde2" Description="Description for Ufba.ShHome.ModelTypeReferencesFather.TargetModelType" Name="TargetModelType" DisplayName="Target Model Type" PropertyName="ModelHasFather" Multiplicity="One" PropertyDisplayName="Model Has Father">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="a1c42c73-f069-4a01-a313-ada6c1159a78" Description="Description for Ufba.ShHome.ModelTypeReferencesBrother" Name="ModelTypeReferencesBrother" DisplayName="Model Type References Brother" Namespace="Ufba.ShHome">
+      <Source>
+        <DomainRole Id="5ac554f0-c99b-418f-b64f-b6bcc01b5f6f" Description="Description for Ufba.ShHome.ModelTypeReferencesBrother.SourceModelType" Name="SourceModelType" DisplayName="Source Model Type" PropertyName="Brother" Multiplicity="One" PropertyDisplayName="Brother">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="62cecac8-f225-4e57-8cf6-9373fc99b795" Description="Description for Ufba.ShHome.ModelTypeReferencesBrother.TargetModelType" Name="TargetModelType" DisplayName="Target Model Type" PropertyName="ModelHasBrother" Multiplicity="One" PropertyDisplayName="Model Has Brother">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="d0277136-6278-43cc-9dc9-8acf4095609e" Description="Description for Ufba.ShHome.ModelTypeReferencesAlternatives" Name="ModelTypeReferencesAlternatives" DisplayName="Model Type References Alternatives" Namespace="Ufba.ShHome">
+      <Source>
+        <DomainRole Id="dd9fe729-5529-4e8e-be7b-705796a8e4bd" Description="Description for Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelType" Name="SourceModelType" DisplayName="Source Model Type" PropertyName="Alternatives" PropertyDisplayName="Alternatives">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="82212c97-18b4-4818-831f-fcc54849b13a" Description="Description for Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelType" Name="TargetModelType" DisplayName="Target Model Type" PropertyName="ModelHasAlternatives" PropertyDisplayName="Model Has Alternatives">
+          <RolePlayer>
+            <DomainClassMoniker Name="ModelType" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -272,6 +320,7 @@
         <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AutomatedAirConditionerControl" Name="AutomatedAirConditionerControl" Value="" />
         <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.LockDoors" Name="LockDoors" Value="" />
         <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.AlarmAgainstRobbery" Name="AlarmAgainstRobbery" Value="" />
+        <EnumerationLiteral Description="Description for Ufba.ShHome.NameFeature.PanicMode" Name="PanicMode" Value="" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="ReturnType" Namespace="Ufba.ShHome" Description="Description for Ufba.ShHome.ReturnType">
@@ -323,6 +372,9 @@
     <Connector Id="6c2cbcc9-1c05-49ce-b1e9-b0fe3b2a7803" Description="" Name="CommentConnector" DisplayName="Comment Connector" Namespace="Ufba.ShHome" FixedTooltipText="Comment Connector" Color="113, 111, 110" DashStyle="Dot" Thickness="0.01" RoutingStyle="Straight" />
     <Connector Id="6450202c-4c1c-41df-9326-c65c3cb41719" Description="Description for Ufba.ShHome.ActuatorConnector" Name="ActuatorConnector" DisplayName="Actuator Connector" Namespace="Ufba.ShHome" FixedTooltipText="Actuator Connector" />
     <Connector Id="f2dadd51-e785-41c8-89d3-48a1f6a115a5" Description="Description for Ufba.ShHome.SConnector" Name="SConnector" DisplayName="SConnector" Namespace="Ufba.ShHome" FixedTooltipText="SConnector" DashStyle="Dot" />
+    <Connector Id="7824f42a-cde7-40a2-9cbf-132fa0051da0" Description="Description for Ufba.ShHome.FatherConnector" Name="FatherConnector" DisplayName="Father Connector" Namespace="Ufba.ShHome" FixedTooltipText="Father Connector" Color="Plum" TargetEndStyle="FilledArrow" />
+    <Connector Id="0aad65e9-83be-4ffd-896b-889b4ff5921b" Description="Description for Ufba.ShHome.BrotherConnector" Name="BrotherConnector" DisplayName="Brother Connector" Namespace="Ufba.ShHome" FixedTooltipText="Brother Connector" Color="DarkViolet" TargetEndStyle="EmptyArrow" />
+    <Connector Id="db29ed0d-9e24-4347-8385-cdfd835f681a" Description="Description for Ufba.ShHome.AlternativesConnector" Name="AlternativesConnector" DisplayName="Alternatives Connector" Namespace="Ufba.ShHome" FixedTooltipText="Alternatives Connector" Color="Indigo" TargetEndStyle="EmptyDiamond" />
   </Connectors>
   <XmlSerializationBehavior Name="ShHomeSerializationBehavior" Namespace="Ufba.ShHome">
     <ClassData>
@@ -383,6 +435,15 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="sensor">
             <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="father">
+            <DomainRelationshipMoniker Name="ModelTypeReferencesFather" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="brother">
+            <DomainRelationshipMoniker Name="ModelTypeReferencesBrother" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="alternatives">
+            <DomainRelationshipMoniker Name="ModelTypeReferencesAlternatives" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="CommentBoxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="commentBoxShapeMoniker" ElementName="commentBoxShape" MonikerTypeName="CommentBoxShapeMoniker">
@@ -431,6 +492,24 @@
       </XmlClassData>
       <XmlClassData TypeName="SConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="sConnectorMoniker" ElementName="sConnector" MonikerTypeName="SConnectorMoniker">
         <ConnectorMoniker Name="SConnector" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelTypeReferencesFather" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesFatherMoniker" ElementName="modelTypeReferencesFather" MonikerTypeName="ModelTypeReferencesFatherMoniker">
+        <DomainRelationshipMoniker Name="ModelTypeReferencesFather" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelTypeReferencesBrother" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesBrotherMoniker" ElementName="modelTypeReferencesBrother" MonikerTypeName="ModelTypeReferencesBrotherMoniker">
+        <DomainRelationshipMoniker Name="ModelTypeReferencesBrother" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelTypeReferencesAlternatives" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTypeReferencesAlternativesMoniker" ElementName="modelTypeReferencesAlternatives" MonikerTypeName="ModelTypeReferencesAlternativesMoniker">
+        <DomainRelationshipMoniker Name="ModelTypeReferencesAlternatives" />
+      </XmlClassData>
+      <XmlClassData TypeName="FatherConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="fatherConnectorMoniker" ElementName="fatherConnector" MonikerTypeName="FatherConnectorMoniker">
+        <ConnectorMoniker Name="FatherConnector" />
+      </XmlClassData>
+      <XmlClassData TypeName="BrotherConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="brotherConnectorMoniker" ElementName="brotherConnector" MonikerTypeName="BrotherConnectorMoniker">
+        <ConnectorMoniker Name="BrotherConnector" />
+      </XmlClassData>
+      <XmlClassData TypeName="AlternativesConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="alternativesConnectorMoniker" ElementName="alternativesConnector" MonikerTypeName="AlternativesConnectorMoniker">
+        <ConnectorMoniker Name="AlternativesConnector" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -488,6 +567,63 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Device" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ModelTypeReferencesFatherBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ModelTypeReferencesFather" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ModelTypeReferencesBrotherBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ModelTypeReferencesBrother" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ModelTypeReferencesAlternativesBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ModelTypeReferencesAlternatives" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ModelType" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -590,6 +726,18 @@
         <ConnectorMoniker Name="SConnector" />
         <DomainRelationshipMoniker Name="ModelTypeReferencesSensor" />
       </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="AlternativesConnector" />
+        <DomainRelationshipMoniker Name="ModelTypeReferencesAlternatives" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="BrotherConnector" />
+        <DomainRelationshipMoniker Name="ModelTypeReferencesBrother" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="FatherConnector" />
+        <DomainRelationshipMoniker Name="ModelTypeReferencesFather" />
+      </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="vShome" EditorGuid="0eb83710-3bb5-41eb-94d9-0d57d5ce3ca7">
@@ -617,6 +765,15 @@
       </ConnectionTool>
       <ConnectionTool Name="Sensor" ToolboxIcon="C:\Users\ana.ufba\Documents\Visual Studio 2015\Projects\Language4\Dsl\Resources\ObjectFlowTool.bmp" Caption="Sensor" Tooltip="Sensor" HelpKeyword="Sensor">
         <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesSensorBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Father" ToolboxIcon="Resources\GeneralizationTool.bmp" Caption="Father" Tooltip="Father" HelpKeyword="Father">
+        <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesFatherBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Brother" ToolboxIcon="Resources\CompositeTool.bmp" Caption="Brother" Tooltip="Brother" HelpKeyword="Brother">
+        <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesBrotherBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="Alternatives" ToolboxIcon="Resources\AggregationTool.bmp" Caption="Alternatives" Tooltip="Alternatives" HelpKeyword="Alternatives">
+        <ConnectionBuilderMoniker Name="ShHome/ModelTypeReferencesAlternativesBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -59,6 +59,18 @@ namespace Ufba.ShHome
 		/// Toolbox item filter string used to identify Sensor connector tool.
 		/// </summary>
 		public const string SensorFilterString = "Sensor.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify Father connector tool.
+		/// </summary>
+		public const string FatherFilterString = "Father.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify Brother connector tool.
+		/// </summary>
+		public const string BrotherFilterString = "Brother.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify Alternatives connector tool.
+		/// </summary>
+		public const string AlternativesFilterString = "Alternatives.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -106,7 +118,7 @@ namespace Ufba.ShHome
 		{
 			get
 			{
-				return 6;
+				return 9;
 			}
 		}
 		
@@ -255,6 +267,60 @@ namespace Ufba.ShHome
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(SensorFilterString)
+						});
+					break;
+				case "Ufba.ShHome.FatherToolboxItem":
+
+					// Add Father connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.FatherToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						7, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("FatherToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FatherToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Father", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("FatherToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(FatherFilterString)
+						});
+					break;
+				case "Ufba.ShHome.BrotherToolboxItem":
+
+					// Add Brother connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.BrotherToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						8, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("BrotherToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("BrotherToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Brother", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("BrotherToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(BrotherFilterString)
+						});
+					break;
+				case "Ufba.ShHome.AlternativesToolboxItem":
+
+					// Add Alternatives connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Ufba.ShHome.AlternativesToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						9, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AlternativesToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AlternativesToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Ufba.ShHome.Class DiagramsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Class DiagramsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Alternatives", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AlternativesToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(AlternativesFilterString)
 						});
 					break;
 				default:

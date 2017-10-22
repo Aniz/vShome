@@ -223,6 +223,21 @@ namespace Ufba.ShHome
 				global::Ufba.ShHome.SConnector newShape = new global::Ufba.ShHome.SConnector(this.Partition);
 				return newShape;
 			}
+			if(element is global::Ufba.ShHome.ModelTypeReferencesAlternatives)
+			{
+				global::Ufba.ShHome.AlternativesConnector newShape = new global::Ufba.ShHome.AlternativesConnector(this.Partition);
+				return newShape;
+			}
+			if(element is global::Ufba.ShHome.ModelTypeReferencesBrother)
+			{
+				global::Ufba.ShHome.BrotherConnector newShape = new global::Ufba.ShHome.BrotherConnector(this.Partition);
+				return newShape;
+			}
+			if(element is global::Ufba.ShHome.ModelTypeReferencesFather)
+			{
+				global::Ufba.ShHome.FatherConnector newShape = new global::Ufba.ShHome.FatherConnector(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -312,6 +327,9 @@ namespace Ufba.ShHome
 		private global::Ufba.ShHome.CommentsReferenceTypesConnectAction commentsReferenceTypesConnectAction;
 		private global::Ufba.ShHome.ActuatorConnectAction actuatorConnectAction;
 		private global::Ufba.ShHome.SensorConnectAction sensorConnectAction;
+		private global::Ufba.ShHome.FatherConnectAction fatherConnectAction;
+		private global::Ufba.ShHome.BrotherConnectAction brotherConnectAction;
+		private global::Ufba.ShHome.AlternativesConnectAction alternativesConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -360,6 +378,33 @@ namespace Ufba.ShHome
 						this.sensorConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.sensorConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Ufba.ShHome.ShHomeToolboxHelper.FatherFilterString))
+				{
+					if (this.fatherConnectAction == null)
+					{
+						this.fatherConnectAction = new global::Ufba.ShHome.FatherConnectAction(this);
+						this.fatherConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.fatherConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Ufba.ShHome.ShHomeToolboxHelper.BrotherFilterString))
+				{
+					if (this.brotherConnectAction == null)
+					{
+						this.brotherConnectAction = new global::Ufba.ShHome.BrotherConnectAction(this);
+						this.brotherConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.brotherConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Ufba.ShHome.ShHomeToolboxHelper.AlternativesFilterString))
+				{
+					if (this.alternativesConnectAction == null)
+					{
+						this.alternativesConnectAction = new global::Ufba.ShHome.AlternativesConnectAction(this);
+						this.alternativesConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.alternativesConnectAction;
 				} 
 				else
 				{
@@ -433,6 +478,21 @@ namespace Ufba.ShHome
 						this.sensorConnectAction.Dispose();
 						this.sensorConnectAction = null;
 					}
+					if(this.fatherConnectAction != null)
+					{
+						this.fatherConnectAction.Dispose();
+						this.fatherConnectAction = null;
+					}
+					if(this.brotherConnectAction != null)
+					{
+						this.brotherConnectAction.Dispose();
+						this.brotherConnectAction = null;
+					}
+					if(this.alternativesConnectAction != null)
+					{
+						this.alternativesConnectAction.Dispose();
+						this.alternativesConnectAction = null;
+					}
 				}
 			}
 			finally
@@ -492,6 +552,9 @@ namespace Ufba.ShHome
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.CommentReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesActuator), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesSensor), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesAlternatives), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesBrother), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesFather), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -641,6 +704,9 @@ namespace Ufba.ShHome
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.CommentReferencesSubjects), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesActuator), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesSensor), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesAlternatives), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesBrother), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Ufba.ShHome.ModelTypeReferencesFather), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

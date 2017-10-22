@@ -1,25 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" xmlns="http://schemas.microsoft.com/dsltools/ShHome">
-  <types>
-    <modelClass Id="44677f6d-593b-4c56-ba02-8c927eb20470" name="AlarmAgainstRobbery" typeFeature="Mandatory">
-      <actuator>
-        <modelTypeReferencesActuator Id="62aaeff3-163f-41b2-95f3-43f124624df3">
-          <deviceMoniker Id="1bdf0466-acc3-4017-ba8c-abdc0ad21d79" />
-        </modelTypeReferencesActuator>
-      </actuator>
-      <sensor>
-        <modelTypeReferencesSensor Id="fc51a3c3-5d26-4c15-ae62-c04c2eb3cc8b">
-          <deviceMoniker Id="27635d8c-0c6f-40d6-9d3b-bf4166162612" />
-        </modelTypeReferencesSensor>
-      </sensor>
-    </modelClass>
-  </types>
-  <devices>
-    <modelHasDevices Id="d2009e39-32df-4079-a3e9-fd96396e54be">
-      <device Id="1bdf0466-acc3-4017-ba8c-abdc0ad21d79" name="Alarm" typeDevice="Actuator" />
-    </modelHasDevices>
-    <modelHasDevices Id="a9c2af96-c1e0-4031-9820-60b6629e9d33">
-      <device Id="27635d8c-0c6f-40d6-9d3b-bf4166162612" typeDevice="Actuator" />
-    </modelHasDevices>
-  </devices>
-</modelRoot>
+<modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" xmlns="http://schemas.microsoft.com/dsltools/ShHome" />

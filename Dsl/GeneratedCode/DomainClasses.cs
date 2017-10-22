@@ -802,6 +802,112 @@ namespace Ufba.ShHome
 			}
 		}
 		#endregion
+		#region Father opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Father.
+		/// Description for Ufba.ShHome.ModelTypeReferencesFather.SourceModelType
+		/// </summary>
+		public virtual ModelType Father
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesFather.SourceModelTypeDomainRoleId) as ModelType;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesFather.SourceModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ModelHasFather opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ModelHasFather.
+		/// Description for Ufba.ShHome.ModelTypeReferencesFather.TargetModelType
+		/// </summary>
+		public virtual ModelType ModelHasFather
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesFather.TargetModelTypeDomainRoleId) as ModelType;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesFather.TargetModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Brother opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Brother.
+		/// Description for Ufba.ShHome.ModelTypeReferencesBrother.SourceModelType
+		/// </summary>
+		public virtual ModelType Brother
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesBrother.SourceModelTypeDomainRoleId) as ModelType;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesBrother.SourceModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ModelHasBrother opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ModelHasBrother.
+		/// Description for Ufba.ShHome.ModelTypeReferencesBrother.TargetModelType
+		/// </summary>
+		public virtual ModelType ModelHasBrother
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesBrother.TargetModelTypeDomainRoleId) as ModelType;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Ufba.ShHome.ModelTypeReferencesBrother.TargetModelTypeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Alternatives opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Alternatives.
+		/// Description for Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelType
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ModelType> Alternatives
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId);
+			}
+		}
+		#endregion
+		#region ModelHasAlternatives opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ModelHasAlternatives.
+		/// Description for Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelType
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ModelType> ModelHasAlternatives
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(global::Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelTypeDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the

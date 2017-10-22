@@ -1,29 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <shHomeDiagram dslVersion="1.0.0.0" Id="bf0a73b9-0d9f-4acf-bacf-9d468aeb4814" absoluteBounds="0, 0, 11, 8.5" name="Test">
   <modelRootMoniker Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" />
-  <nestedChildShapes>
-    <fShape Id="7585de24-0361-4087-a561-bdd79d7d23b0" absoluteBounds="0.5, 1.75, 1.5, 0.75">
-      <modelClassMoniker Id="44677f6d-593b-4c56-ba02-8c927eb20470" />
-    </fShape>
-    <dShape Id="78066577-917e-4dab-aed5-3e9e121f7356" absoluteBounds="2.5, 0.625, 1.5, 0.5">
-      <deviceMoniker Id="1bdf0466-acc3-4017-ba8c-abdc0ad21d79" />
-    </dShape>
-    <dShape Id="ea1b9885-e9b4-4d7d-b618-885f5e63a043" absoluteBounds="2.5, 1.5, 1.5, 0.5">
-      <deviceMoniker Id="27635d8c-0c6f-40d6-9d3b-bf4166162612" />
-    </dShape>
-    <sConnector Id="d172652c-70e2-4506-a31b-e28071b456e8" edgePoints="[(2 : 1.875); (2.5 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <modelTypeReferencesSensorMoniker Id="fc51a3c3-5d26-4c15-ae62-c04c2eb3cc8b" />
-      <nodes>
-        <fShapeMoniker Id="7585de24-0361-4087-a561-bdd79d7d23b0" />
-        <dShapeMoniker Id="ea1b9885-e9b4-4d7d-b618-885f5e63a043" />
-      </nodes>
-    </sConnector>
-    <actuatorConnector Id="4bbbcc8e-a89d-4327-aa66-65aaab535d6a" edgePoints="[(1.25 : 1.75); (1.25 : 0.875); (2.5 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <modelTypeReferencesActuatorMoniker Id="62aaeff3-163f-41b2-95f3-43f124624df3" />
-      <nodes>
-        <fShapeMoniker Id="7585de24-0361-4087-a561-bdd79d7d23b0" />
-        <dShapeMoniker Id="78066577-917e-4dab-aed5-3e9e121f7356" />
-      </nodes>
-    </actuatorConnector>
-  </nestedChildShapes>
 </shHomeDiagram>

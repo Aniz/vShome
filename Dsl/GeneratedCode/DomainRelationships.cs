@@ -1415,3 +1415,739 @@ namespace Ufba.ShHome
 		#endregion
 	}
 }
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelTypeReferencesFather
+	/// Description for Ufba.ShHome.ModelTypeReferencesFather
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesFather.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesFather.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("032f37ab-dce0-463c-8708-566a90b257c0")]
+	public partial class ModelTypeReferencesFather : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelTypeReferencesFather domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x032f37ab, 0xdce0, 0x463c, 0x87, 0x08, 0x56, 0x6a, 0x90, 0xb2, 0x57, 0xc0);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelTypeReferencesFather link in the same Partition as the given ModelType
+		/// </summary>
+		/// <param name="source">ModelType to use as the source of the relationship.</param>
+		/// <param name="target">ModelType to use as the target of the relationship.</param>
+		public ModelTypeReferencesFather(ModelType source, ModelType target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTypeReferencesFather.SourceModelTypeDomainRoleId, source), new DslModeling::RoleAssignment(ModelTypeReferencesFather.TargetModelTypeDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesFather(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesFather(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesFather(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesFather(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceModelType domain role code
+		
+		/// <summary>
+		/// SourceModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceModelTypeDomainRoleId = new global::System.Guid(0x45edf2fd, 0x9d2a, 0x4bdf, 0xae, 0x82, 0xa0, 0x23, 0x71, 0x86, 0xdd, 0x9e);
+		
+		/// <summary>
+		/// DomainRole SourceModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesFather.SourceModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Father", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesFather/SourceModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("45edf2fd-9d2a-4bdf-ae82-a0237186dd9e")]
+		public virtual ModelType SourceModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ModelHasFather of a ModelType
+		/// <summary>
+		/// Gets ModelHasFather.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModelType GetModelHasFather(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TargetModelTypeDomainRoleId) as ModelType;
+		}
+		
+		/// <summary>
+		/// Sets ModelHasFather.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModelHasFather(ModelType element, ModelType newSourceModelType)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TargetModelTypeDomainRoleId, newSourceModelType);
+		}
+		#endregion
+		#region TargetModelType domain role code
+		
+		/// <summary>
+		/// TargetModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetModelTypeDomainRoleId = new global::System.Guid(0x6581e046, 0x5cb9, 0x4650, 0x92, 0x2e, 0xe4, 0x26, 0xbf, 0xfc, 0xcd, 0xe2);
+		
+		/// <summary>
+		/// DomainRole TargetModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesFather.TargetModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelHasFather", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesFather/TargetModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("6581e046-5cb9-4650-922e-e426bffccde2")]
+		public virtual ModelType TargetModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Father of a ModelType
+		/// <summary>
+		/// Gets Father.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModelType GetFather(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SourceModelTypeDomainRoleId) as ModelType;
+		}
+		
+		/// <summary>
+		/// Sets Father.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetFather(ModelType element, ModelType newTargetModelType)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SourceModelTypeDomainRoleId, newTargetModelType);
+		}
+		#endregion
+		#region SourceModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesFather link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesFather GetLinkToFather (global::Ufba.ShHome.ModelType sourceModelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesFather> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesFather>(sourceModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesFather.SourceModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SourceModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TargetModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesFather link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesFather GetLinkToModelHasFather (global::Ufba.ShHome.ModelType targetModelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesFather> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesFather>(targetModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesFather.TargetModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TargetModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelTypeReferencesFather instance accessors
+		
+		/// <summary>
+		/// Get any ModelTypeReferencesFather links between a given ModelType and a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesFather> GetLinks( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesFather> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesFather>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesFather> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesFather>(source, global::Ufba.ShHome.ModelTypeReferencesFather.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesFather link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelTypeReferencesFather link between a given ModelTypeand a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesFather GetLink( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesFather> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesFather>(source, global::Ufba.ShHome.ModelTypeReferencesFather.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesFather link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelTypeReferencesBrother
+	/// Description for Ufba.ShHome.ModelTypeReferencesBrother
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesBrother.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesBrother.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("a1c42c73-f069-4a01-a313-ada6c1159a78")]
+	public partial class ModelTypeReferencesBrother : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelTypeReferencesBrother domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa1c42c73, 0xf069, 0x4a01, 0xa3, 0x13, 0xad, 0xa6, 0xc1, 0x15, 0x9a, 0x78);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelTypeReferencesBrother link in the same Partition as the given ModelType
+		/// </summary>
+		/// <param name="source">ModelType to use as the source of the relationship.</param>
+		/// <param name="target">ModelType to use as the target of the relationship.</param>
+		public ModelTypeReferencesBrother(ModelType source, ModelType target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTypeReferencesBrother.SourceModelTypeDomainRoleId, source), new DslModeling::RoleAssignment(ModelTypeReferencesBrother.TargetModelTypeDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesBrother(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesBrother(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesBrother(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesBrother(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceModelType domain role code
+		
+		/// <summary>
+		/// SourceModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceModelTypeDomainRoleId = new global::System.Guid(0x5ac554f0, 0xc99b, 0x418f, 0xb6, 0x4f, 0xb6, 0xbc, 0xc0, 0x1b, 0x5f, 0x6f);
+		
+		/// <summary>
+		/// DomainRole SourceModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesBrother.SourceModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Brother", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesBrother/SourceModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("5ac554f0-c99b-418f-b64f-b6bcc01b5f6f")]
+		public virtual ModelType SourceModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ModelHasBrother of a ModelType
+		/// <summary>
+		/// Gets ModelHasBrother.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModelType GetModelHasBrother(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TargetModelTypeDomainRoleId) as ModelType;
+		}
+		
+		/// <summary>
+		/// Sets ModelHasBrother.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModelHasBrother(ModelType element, ModelType newSourceModelType)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TargetModelTypeDomainRoleId, newSourceModelType);
+		}
+		#endregion
+		#region TargetModelType domain role code
+		
+		/// <summary>
+		/// TargetModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetModelTypeDomainRoleId = new global::System.Guid(0x62cecac8, 0xf225, 0x4e57, 0x8c, 0xf6, 0x93, 0x73, 0xfc, 0x99, 0xb7, 0x95);
+		
+		/// <summary>
+		/// DomainRole TargetModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesBrother.TargetModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelHasBrother", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesBrother/TargetModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("62cecac8-f225-4e57-8cf6-9373fc99b795")]
+		public virtual ModelType TargetModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Brother of a ModelType
+		/// <summary>
+		/// Gets Brother.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModelType GetBrother(ModelType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SourceModelTypeDomainRoleId) as ModelType;
+		}
+		
+		/// <summary>
+		/// Sets Brother.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetBrother(ModelType element, ModelType newTargetModelType)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SourceModelTypeDomainRoleId, newTargetModelType);
+		}
+		#endregion
+		#region SourceModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesBrother link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesBrother GetLinkToBrother (global::Ufba.ShHome.ModelType sourceModelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesBrother> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesBrother>(sourceModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesBrother.SourceModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SourceModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TargetModelType link accessor
+		/// <summary>
+		/// Get the ModelTypeReferencesBrother link to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesBrother GetLinkToModelHasBrother (global::Ufba.ShHome.ModelType targetModelTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesBrother> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesBrother>(targetModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesBrother.TargetModelTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TargetModelType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelTypeReferencesBrother instance accessors
+		
+		/// <summary>
+		/// Get any ModelTypeReferencesBrother links between a given ModelType and a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesBrother> GetLinks( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesBrother> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesBrother>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesBrother> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesBrother>(source, global::Ufba.ShHome.ModelTypeReferencesBrother.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesBrother link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelTypeReferencesBrother link between a given ModelTypeand a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesBrother GetLink( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesBrother> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesBrother>(source, global::Ufba.ShHome.ModelTypeReferencesBrother.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesBrother link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Ufba.ShHome
+{
+	/// <summary>
+	/// DomainRelationship ModelTypeReferencesAlternatives
+	/// Description for Ufba.ShHome.ModelTypeReferencesAlternatives
+	/// </summary>
+	[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesAlternatives.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesAlternatives.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Ufba.ShHome.ShHomeDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("d0277136-6278-43cc-9dc9-8acf4095609e")]
+	public partial class ModelTypeReferencesAlternatives : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelTypeReferencesAlternatives domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd0277136, 0x6278, 0x43cc, 0x9d, 0xc9, 0x8a, 0xcf, 0x40, 0x95, 0x60, 0x9e);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelTypeReferencesAlternatives link in the same Partition as the given ModelType
+		/// </summary>
+		/// <param name="source">ModelType to use as the source of the relationship.</param>
+		/// <param name="target">ModelType to use as the target of the relationship.</param>
+		public ModelTypeReferencesAlternatives(ModelType source, ModelType target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId, source), new DslModeling::RoleAssignment(ModelTypeReferencesAlternatives.TargetModelTypeDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesAlternatives(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesAlternatives(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelTypeReferencesAlternatives(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelTypeReferencesAlternatives(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceModelType domain role code
+		
+		/// <summary>
+		/// SourceModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceModelTypeDomainRoleId = new global::System.Guid(0xdd9fe729, 0x5529, 0x4e8e, 0xbe, 0x7b, 0x70, 0x57, 0x96, 0xa8, 0xe4, 0xbd);
+		
+		/// <summary>
+		/// DomainRole SourceModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Alternatives", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesAlternatives/SourceModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("dd9fe729-5529-4e8e-be7b-705796a8e4bd")]
+		public virtual ModelType SourceModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ModelHasAlternatives of a ModelType
+		/// <summary>
+		/// Gets a list of ModelHasAlternatives.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ModelType> GetModelHasAlternatives(ModelType element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, TargetModelTypeDomainRoleId);
+		}
+		#endregion
+		#region TargetModelType domain role code
+		
+		/// <summary>
+		/// TargetModelType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetModelTypeDomainRoleId = new global::System.Guid(0x82212c97, 0x18b4, 0x4818, 0x83, 0x1f, 0xfc, 0xc5, 0x48, 0x49, 0xb1, 0x3a);
+		
+		/// <summary>
+		/// DomainRole TargetModelType
+		/// Description for Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.DisplayName", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModelHasAlternatives", PropertyDisplayNameKey="Ufba.ShHome.ModelTypeReferencesAlternatives/TargetModelType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("82212c97-18b4-4818-831f-fcc54849b13a")]
+		public virtual ModelType TargetModelType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModelType)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetModelTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetModelTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Alternatives of a ModelType
+		/// <summary>
+		/// Gets a list of Alternatives.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ModelType> GetAlternatives(ModelType element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ModelType>, ModelType>(element, SourceModelTypeDomainRoleId);
+		}
+		#endregion
+		#region SourceModelType link accessor
+		/// <summary>
+		/// Get the list of ModelTypeReferencesAlternatives links to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesAlternatives> GetLinksToAlternatives ( global::Ufba.ShHome.ModelType sourceModelTypeInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesAlternatives>(sourceModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId);
+		}
+		#endregion
+		#region TargetModelType link accessor
+		/// <summary>
+		/// Get the list of ModelTypeReferencesAlternatives links to a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesAlternatives> GetLinksToModelHasAlternatives ( global::Ufba.ShHome.ModelType targetModelTypeInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesAlternatives>(targetModelTypeInstance, global::Ufba.ShHome.ModelTypeReferencesAlternatives.TargetModelTypeDomainRoleId);
+		}
+		#endregion
+		#region ModelTypeReferencesAlternatives instance accessors
+		
+		/// <summary>
+		/// Get any ModelTypeReferencesAlternatives links between a given ModelType and a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Ufba.ShHome.ModelTypeReferencesAlternatives> GetLinks( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesAlternatives> outLinks = new global::System.Collections.Generic.List<global::Ufba.ShHome.ModelTypeReferencesAlternatives>();
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesAlternatives> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesAlternatives>(source, global::Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesAlternatives link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelTypeReferencesAlternatives link between a given ModelTypeand a ModelType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Ufba.ShHome.ModelTypeReferencesAlternatives GetLink( global::Ufba.ShHome.ModelType source, global::Ufba.ShHome.ModelType target )
+		{
+			global::System.Collections.Generic.IList<global::Ufba.ShHome.ModelTypeReferencesAlternatives> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Ufba.ShHome.ModelTypeReferencesAlternatives>(source, global::Ufba.ShHome.ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId);
+			foreach ( global::Ufba.ShHome.ModelTypeReferencesAlternatives link in links )
+			{
+				if ( target.Equals(link.TargetModelType) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

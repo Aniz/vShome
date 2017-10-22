@@ -1,2 +1,158 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" xmlns="http://schemas.microsoft.com/dsltools/ShHome" />
+<modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bab1aa2a-7ab8-4442-8d7a-9699b1b90468" xmlns="http://schemas.microsoft.com/dsltools/ShHome">
+  <types>
+    <modelClass Id="5b7f8b39-2bcf-4861-97e4-f930ba4fdc10" name="UserAirConditionerControl" typeFeature="Optional" serial="5575292698449566428L">
+      <actuator>
+        <modelTypeReferencesActuator Id="280d3381-e0e5-4046-879a-cb1c78107018">
+          <deviceMoniker Id="32d7f41a-f4d5-4d55-ad25-3f139b20d71b" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="98fb1c46-11ad-41fc-bdfc-1fe596f4c5d7" name="PresenceIlusion" typeFeature="Mandatory" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="b80de278-12fe-4f22-85fd-6d7342d10e65">
+          <deviceMoniker Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="52690521-c253-4acc-b191-286518844dd7" name="AutomatedIluminationByLuminosity" typeFeature="Alternative" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="c56cd62a-b2a5-4b62-9449-038852c75def">
+          <deviceMoniker Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" />
+        </modelTypeReferencesActuator>
+      </actuator>
+      <sensor>
+        <modelTypeReferencesSensor Id="18136b0d-f217-4057-aacc-2929b057c9cc">
+          <deviceMoniker Id="4d491db2-e385-4a2a-97d3-723aeb9027b5" />
+        </modelTypeReferencesSensor>
+      </sensor>
+      <father>
+        <modelTypeReferencesFather Id="c3adff65-35d6-44b9-afab-38e8a47934be">
+          <modelClassMoniker Id="8a3f4f76-8ff0-43d0-b095-e1ebfd7b40a6" />
+        </modelTypeReferencesFather>
+      </father>
+      <brother>
+        <modelTypeReferencesBrother Id="de469abb-3fc6-40ea-8739-3b64121f1a17">
+          <modelClassMoniker Id="24f361ec-aae2-4513-9901-49cce2b4f437" />
+        </modelTypeReferencesBrother>
+      </brother>
+    </modelClass>
+    <modelClass Id="8a3f4f76-8ff0-43d0-b095-e1ebfd7b40a6" name="UserIlumination" typeFeature="Mandatory" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="e032e894-8bbc-4b75-af0a-c0fd14f9b4cd">
+          <deviceMoniker Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="9dc7d51c-ec8f-4528-bbbe-76047f4a2d2c" name="AutomatedAirConditionerControl" typeFeature="OR" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="250c9341-2246-4470-a6d5-f6f7b633123d">
+          <deviceMoniker Id="32d7f41a-f4d5-4d55-ad25-3f139b20d71b" />
+        </modelTypeReferencesActuator>
+      </actuator>
+      <sensor>
+        <modelTypeReferencesSensor Id="4cf28876-1561-466e-b53f-c6828ae55772">
+          <deviceMoniker Id="50ba4c4b-cf15-406b-b581-655d2ea3bef4" />
+        </modelTypeReferencesSensor>
+      </sensor>
+      <father>
+        <modelTypeReferencesFather Id="ed49b0b5-d03a-46b3-b895-e2338e0ad1c4">
+          <modelClassMoniker Id="5b7f8b39-2bcf-4861-97e4-f930ba4fdc10" />
+        </modelTypeReferencesFather>
+      </father>
+    </modelClass>
+    <modelClass Id="2f6c6146-4a1a-4a04-a004-a423fa053c7b" name="LockDoors" typeFeature="Optional" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="bbc2d618-8ca9-4576-a691-57791200252a">
+          <deviceMoniker Id="18ab80e8-72ae-4ea3-9dc2-64139a108148" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="27e831ae-52c8-4db9-8864-285f3e1d3243" name="AutomatedWindowControl" typeFeature="Mandatory" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="45d5de6a-9c3e-45b2-b232-4d6c7c2a777b">
+          <deviceMoniker Id="b762d310-02f7-4a9a-83c5-adfe69bb71aa" />
+        </modelTypeReferencesActuator>
+      </actuator>
+      <sensor>
+        <modelTypeReferencesSensor Id="4b76cff7-4d65-4dbc-b7c4-9f78ee30cda5">
+          <deviceMoniker Id="50ba4c4b-cf15-406b-b581-655d2ea3bef4" />
+        </modelTypeReferencesSensor>
+      </sensor>
+      <father>
+        <modelTypeReferencesFather Id="91fe37dd-e857-48d8-bbb2-f0564a11a0c0">
+          <modelClassMoniker Id="dd4b574a-d309-486c-9655-09e4c0718810" />
+        </modelTypeReferencesFather>
+      </father>
+      <alternatives>
+        <modelTypeReferencesAlternatives Id="1e69db85-35a9-4b97-9357-843e4ef7e958">
+          <modelClassMoniker Id="5b7f8b39-2bcf-4861-97e4-f930ba4fdc10" />
+        </modelTypeReferencesAlternatives>
+      </alternatives>
+    </modelClass>
+    <modelClass Id="48c2376a-79e7-4866-8391-18b5ab6af47f" name="PanicMode" typeFeature="Mandatory" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="b5d6a3d3-7316-4dd9-9fbe-2077901c5024">
+          <deviceMoniker Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="25ef3bec-5efb-4c99-9f42-eecb5051e053" name="AlarmAgainstRobbery" typeFeature="Optional" serial="5575292698449566428L">
+      <actuator>
+        <modelTypeReferencesActuator Id="faae602e-66ff-4c0a-a024-ebbb284e5cb2">
+          <deviceMoniker Id="97d8defe-acb1-48bd-a50a-d66f308da4de" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="dd4b574a-d309-486c-9655-09e4c0718810" name="UserWindowControl" typeFeature="Alternative" serial="5575292698449566428L">
+      <actuator>
+        <modelTypeReferencesActuator Id="f9c2ad82-172d-4b0a-9972-39a906d4fd43">
+          <deviceMoniker Id="b762d310-02f7-4a9a-83c5-adfe69bb71aa" />
+        </modelTypeReferencesActuator>
+      </actuator>
+    </modelClass>
+    <modelClass Id="24f361ec-aae2-4513-9901-49cce2b4f437" name="AutomatedIluminationByPresence" typeFeature="OR" serial="4435596811596503762L">
+      <actuator>
+        <modelTypeReferencesActuator Id="acf73b8f-5be2-42f7-ad98-45caa47b5d4c">
+          <deviceMoniker Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" />
+        </modelTypeReferencesActuator>
+      </actuator>
+      <sensor>
+        <modelTypeReferencesSensor Id="5b432111-e53a-40df-b39f-bb15676ada4c">
+          <deviceMoniker Id="fa973dc5-86bb-40e8-876b-3a8ebc8a06a2" />
+        </modelTypeReferencesSensor>
+      </sensor>
+      <father>
+        <modelTypeReferencesFather Id="3a974306-7118-4703-aef5-0ef05b9e9d6e">
+          <modelClassMoniker Id="98fb1c46-11ad-41fc-bdfc-1fe596f4c5d7" />
+        </modelTypeReferencesFather>
+      </father>
+    </modelClass>
+  </types>
+  <devices>
+    <modelHasDevices Id="335e7d5a-393e-4668-adfc-2b522221c865">
+      <device Id="f9ffe4cc-80d9-40d6-b9cf-bc4f648877b4" name="Led" typeDevice="Actuator" returnType="INFO" />
+    </modelHasDevices>
+    <modelHasDevices Id="2b8b0b5d-3a0c-4cb0-9d0e-b7114cdec55f">
+      <device Id="32d7f41a-f4d5-4d55-ad25-3f139b20d71b" name="AirConditioner" typeDevice="Actuator" returnType="INFO" />
+    </modelHasDevices>
+    <modelHasDevices Id="54fc390c-e47b-4364-9cb8-52f36d297b37">
+      <device Id="97d8defe-acb1-48bd-a50a-d66f308da4de" name="Alarm" typeDevice="Actuator" returnType="INFO" />
+    </modelHasDevices>
+    <modelHasDevices Id="8813a5a2-396e-4aed-ad08-2386c9e14b93">
+      <device Id="18ab80e8-72ae-4ea3-9dc2-64139a108148" name="AutomaticDoor " typeDevice="Actuator" returnType="INFO" />
+    </modelHasDevices>
+    <modelHasDevices Id="7b148b87-bf7a-473e-8a9e-977b838d1fd5">
+      <device Id="b762d310-02f7-4a9a-83c5-adfe69bb71aa" name="AutomaticWindow" typeDevice="Actuator" returnType="INFO" />
+    </modelHasDevices>
+    <modelHasDevices Id="a7b7456e-abfe-4cb6-b5e7-17ad43a42388">
+      <device Id="4d491db2-e385-4a2a-97d3-723aeb9027b5" name="LightSensor " typeDevice="Sensor" returnType="RANGE" />
+    </modelHasDevices>
+    <modelHasDevices Id="adda8217-f11d-4b84-b462-55fb038d55fa">
+      <device Id="50ba4c4b-cf15-406b-b581-655d2ea3bef4" name="TemperatureSensor " typeDevice="Sensor" returnType="RANGE" />
+    </modelHasDevices>
+    <modelHasDevices Id="d9dd547a-d55a-4215-902e-19a53303aabb">
+      <device Id="fa973dc5-86bb-40e8-876b-3a8ebc8a06a2" name="PresenceSensor " typeDevice="Sensor" returnType="BOOL" />
+    </modelHasDevices>
+  </devices>
+</modelRoot>

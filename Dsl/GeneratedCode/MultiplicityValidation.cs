@@ -30,6 +30,38 @@ namespace Ufba.ShHome
 						"ModelType", "", "Actuator"),
 						"DSL0001", this);
 			}
+			if (this.Father == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ModelType", "", "Father"),
+						"DSL0001", this);
+			}
+			if (this.ModelHasFather == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ModelType", "", "ModelHasFather"),
+						"DSL0001", this);
+			}
+			if (this.Brother == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ModelType", "", "Brother"),
+						"DSL0001", this);
+			}
+			if (this.ModelHasBrother == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Ufba.ShHome.ShHomeDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ModelType", "", "ModelHasBrother"),
+						"DSL0001", this);
+			}
 		} // ValidateModelTypeMultiplicity
 	} // class ModelType
 } // Ufba.ShHome

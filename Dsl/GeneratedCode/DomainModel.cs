@@ -78,10 +78,16 @@ namespace Ufba.ShHome
 				typeof(ModelHasDevices),
 				typeof(ModelTypeReferencesActuator),
 				typeof(ModelTypeReferencesSensor),
+				typeof(ModelTypeReferencesFather),
+				typeof(ModelTypeReferencesBrother),
+				typeof(ModelTypeReferencesAlternatives),
 				typeof(ShHomeDiagram),
 				typeof(CommentConnector),
 				typeof(ActuatorConnector),
 				typeof(SConnector),
+				typeof(FatherConnector),
+				typeof(BrotherConnector),
+				typeof(AlternativesConnector),
 				typeof(CommentBoxShape),
 				typeof(DeviceShape),
 				typeof(FShape),
@@ -128,6 +134,12 @@ namespace Ufba.ShHome
 				new DomainRolePlayerInfo(typeof(ModelTypeReferencesActuator), "Device", ModelTypeReferencesActuator.DeviceDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelTypeReferencesSensor), "ModelType", ModelTypeReferencesSensor.ModelTypeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelTypeReferencesSensor), "Device", ModelTypeReferencesSensor.DeviceDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesFather), "SourceModelType", ModelTypeReferencesFather.SourceModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesFather), "TargetModelType", ModelTypeReferencesFather.TargetModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesBrother), "SourceModelType", ModelTypeReferencesBrother.SourceModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesBrother), "TargetModelType", ModelTypeReferencesBrother.TargetModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesAlternatives), "SourceModelType", ModelTypeReferencesAlternatives.SourceModelTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelTypeReferencesAlternatives), "TargetModelType", ModelTypeReferencesAlternatives.TargetModelTypeDomainRoleId),
 			};
 		}
 		#endregion
@@ -149,7 +161,7 @@ namespace Ufba.ShHome
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(16);
 				createElementMap.Add(typeof(ModelRoot), 0);
 				createElementMap.Add(typeof(ModelClass), 1);
 				createElementMap.Add(typeof(Comment), 2);
@@ -158,10 +170,13 @@ namespace Ufba.ShHome
 				createElementMap.Add(typeof(CommentConnector), 5);
 				createElementMap.Add(typeof(ActuatorConnector), 6);
 				createElementMap.Add(typeof(SConnector), 7);
-				createElementMap.Add(typeof(CommentBoxShape), 8);
-				createElementMap.Add(typeof(DeviceShape), 9);
-				createElementMap.Add(typeof(FShape), 10);
-				createElementMap.Add(typeof(DShape), 11);
+				createElementMap.Add(typeof(FatherConnector), 8);
+				createElementMap.Add(typeof(BrotherConnector), 9);
+				createElementMap.Add(typeof(AlternativesConnector), 10);
+				createElementMap.Add(typeof(CommentBoxShape), 11);
+				createElementMap.Add(typeof(DeviceShape), 12);
+				createElementMap.Add(typeof(FShape), 13);
+				createElementMap.Add(typeof(DShape), 14);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -183,10 +198,13 @@ namespace Ufba.ShHome
 				case 5: return new CommentConnector(partition, propertyAssignments);
 				case 6: return new ActuatorConnector(partition, propertyAssignments);
 				case 7: return new SConnector(partition, propertyAssignments);
-				case 8: return new CommentBoxShape(partition, propertyAssignments);
-				case 9: return new DeviceShape(partition, propertyAssignments);
-				case 10: return new FShape(partition, propertyAssignments);
-				case 11: return new DShape(partition, propertyAssignments);
+				case 8: return new FatherConnector(partition, propertyAssignments);
+				case 9: return new BrotherConnector(partition, propertyAssignments);
+				case 10: return new AlternativesConnector(partition, propertyAssignments);
+				case 11: return new CommentBoxShape(partition, propertyAssignments);
+				case 12: return new DeviceShape(partition, propertyAssignments);
+				case 13: return new FShape(partition, propertyAssignments);
+				case 14: return new DShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -209,13 +227,16 @@ namespace Ufba.ShHome
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementLinkMap.Add(typeof(ModelRootHasComments), 0);
 				createElementLinkMap.Add(typeof(ModelRootHasTypes), 1);
 				createElementLinkMap.Add(typeof(CommentReferencesSubjects), 2);
 				createElementLinkMap.Add(typeof(ModelHasDevices), 3);
 				createElementLinkMap.Add(typeof(ModelTypeReferencesActuator), 4);
 				createElementLinkMap.Add(typeof(ModelTypeReferencesSensor), 5);
+				createElementLinkMap.Add(typeof(ModelTypeReferencesFather), 6);
+				createElementLinkMap.Add(typeof(ModelTypeReferencesBrother), 7);
+				createElementLinkMap.Add(typeof(ModelTypeReferencesAlternatives), 8);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -236,6 +257,9 @@ namespace Ufba.ShHome
 				case 3: return new ModelHasDevices(partition, roleAssignments, propertyAssignments);
 				case 4: return new ModelTypeReferencesActuator(partition, roleAssignments, propertyAssignments);
 				case 5: return new ModelTypeReferencesSensor(partition, roleAssignments, propertyAssignments);
+				case 6: return new ModelTypeReferencesFather(partition, roleAssignments, propertyAssignments);
+				case 7: return new ModelTypeReferencesBrother(partition, roleAssignments, propertyAssignments);
+				case 8: return new ModelTypeReferencesAlternatives(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -754,6 +778,12 @@ namespace Ufba.ShHome
 		/// </summary>
 		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/AlarmAgainstRobbery.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
 		AlarmAgainstRobbery,
+		/// <summary>
+		/// PanicMode
+		/// Description for Ufba.ShHome.NameFeature.PanicMode
+		/// </summary>
+		[DslDesign::DescriptionResource("Ufba.ShHome.NameFeature/PanicMode.Description", typeof(global::Ufba.ShHome.ShHomeDomainModel), "Ufba.ShHome.GeneratedCode.DomainModelResx")]
+		PanicMode,
 	}
 }
 namespace Ufba.ShHome
